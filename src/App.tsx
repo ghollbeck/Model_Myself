@@ -8,7 +8,7 @@ import ProfilePopup from './components/ProfilePopup';
 import TrainingPopup from './components/TrainingPopup';
 import Logs from './components/Logs';
 import ResponseDisplay from './components/ResponseDisplay';
-import KnowledgeGraphD3 from './components/KnowledgeGraphD3';
+import KnowledgeGraphD3, { KnowledgeGraphHandle } from './components/KnowledgeGraphD3';
 
 const App: React.FC = () => {
     const [response, setResponse] = useState<string>('');
@@ -32,6 +32,7 @@ const App: React.FC = () => {
     const dropdownRef = useRef<HTMLDivElement>(null);
     const uploadDropdownRef = useRef<HTMLDivElement>(null);
     const categoryDropdownRef = useRef<HTMLDivElement>(null);
+    const knowledgeGraphRef = useRef<KnowledgeGraphHandle>(null);
 
     const API_BASE_URL = 'http://localhost:8089';
 
@@ -531,6 +532,14 @@ const App: React.FC = () => {
         setShowTrainingPopup(true);
     };
 
+    const handleTrainingComplete = () => {
+        log('Training completed - refreshing knowledge graph...');
+        if (knowledgeGraphRef.current) {
+            knowledgeGraphRef.current.refresh();
+            log('Knowledge graph refreshed successfully');
+        }
+    };
+
     const formatFileSize = (bytes: number): string => {
         if (bytes === 0) return '0 B';
         const k = 1024;
@@ -597,7 +606,7 @@ const App: React.FC = () => {
                     onInferenceClick={handleInference}
                 />
             </div>
-            <KnowledgeGraphD3 />
+            <KnowledgeGraphD3 ref={knowledgeGraphRef} />
             <div className="central-action">
                 <button 
                     onClick={() => setShowPopup(true)}
@@ -621,6 +630,7 @@ const App: React.FC = () => {
                 category={selectedTraining}
                 onClose={() => setShowTrainingPopup(false)}
                 onLog={log}
+                onTrainingComplete={handleTrainingComplete}
             />
             <div className="bottom-sections">
                 <ResponseDisplay response={response} error={error} />

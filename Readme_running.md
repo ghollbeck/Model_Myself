@@ -79,6 +79,58 @@ This file logs all changes made to the Model Myself project codebase. It serves 
 
 **User Experience**: Mobile users can now properly see and interact with the training dropdown without it being cut off
 
+### 2025-01-XX - Knowledge Graph Integration with Training Data
+**Status**: ✅ COMPLETED
+**Description**: Integrated training questions and answers into the knowledge graph visualization with automatic updates
+
+#### Knowledge Graph Integration Features:
+- **Training Data Sync**: Automatically adds training Q&A to knowledge graph
+- **Hierarchical Structure**: Central blue "Training" node with category subnodes
+- **Category Mapping**: Maps training categories to knowledge graph categories
+- **Real-time Updates**: Knowledge graph refreshes automatically after training sessions
+- **Visual Distinction**: 
+  - Main Training node in blue
+  - Training category subnodes in light blue
+  - Individual training Q&A nodes in red
+- **Enhanced Tooltips**: Shows training category, answer type, timestamp, and other metadata
+
+#### Technical Implementation:
+- **Backend Files**:
+  - `backend/analysis/graph.py` - Extended with training data sync methods
+  - `backend/routes/training.py` - Added knowledge graph sync on answer save
+  - `backend/main.py` - Updated knowledge graph endpoint to include training data
+- **Frontend Files**:
+  - `src/components/KnowledgeGraphD3.tsx` - Added refresh capability and training node styling
+  - `src/components/TrainingPopup.tsx` - Added training completion callback
+  - `src/App.tsx` - Added knowledge graph refresh on training completion
+
+#### New Knowledge Graph Methods:
+- `add_training_entry()` - Adds training Q&A to graph
+- `sync_with_training_data()` - Syncs graph with training JSON file
+- `get_training_summary()` - Provides training data statistics
+
+#### Training Category Mapping:
+- Questions about knowledge → Knowledge
+- Questions about feelings and 5 personalities → Personalities
+- Question about importance of people → ImportanceOfPeople
+- Iteratively add to knowledge graph → Knowledge
+- Preferences → Preferences
+- Moral questions → Morals
+- Automatic questions → AutomaticQuestions
+
+#### User Experience:
+- Complete training session → Knowledge graph automatically updates
+- **Hierarchical Training Structure**:
+  - Central blue "Training" node as main hub
+  - Training category subnodes (Knowledge, Morals, etc.) in light blue
+  - Individual training Q&A nodes in red
+- Enhanced tooltips show training metadata (category, type, timestamp)
+- Real-time visualization of learning progress
+- Clear visual hierarchy showing training data organization
+- Persistent storage of training data in both JSON and graph formats
+
+**System Status**: Training data fully integrated with knowledge graph visualization and automatic updates
+
 ### 2025-07-16 - Mobile Optimization Implementation
 **Status**: ✅ COMPLETED
 **Description**: Implemented comprehensive mobile optimization for the Model Myself platform

@@ -182,5 +182,51 @@
     "answer_type": "text",
     "category": "Moral questions",
     "timestamp": "2025-07-16T10:59:04.358584"
+  },
+  {
+    "question_id": "pref_1",
+    "question": "What's your ideal way to spend free time?",
+    "answer": "\n",
+    "answer_type": "text",
+    "category": "Preferences",
+    "timestamp": "2025-07-16T11:16:21.932656"
+  },
+  {
+    "question_id": "pref_2",
+    "question": "In work/study environments, you prefer:",
+    "answer": [
+      "Quiet and focused"
+    ],
+    "answer_type": "multiple_choice",
+    "category": "Preferences",
+    "timestamp": "2025-07-16T11:16:23.451242"
+  },
+  {
+    "question_id": "pref_3",
+    "question": "What type of challenges do you enjoy most?",
+    "answer": [
+      "Social interactions"
+    ],
+    "answer_type": "multiple_choice",
+    "category": "Preferences",
+    "timestamp": "2025-07-16T11:16:24.624217"
+  },
+  {
+    "question_id": "pref_4",
+    "question": "How do you prefer to communicate?",
+    "answer": [
+      "Video calls"
+    ],
+    "answer_type": "multiple_choice",
+    "category": "Preferences",
+    "timestamp": "2025-07-16T11:16:25.874146"
+  },
+  {
+    "question_id": "pref_5",
+    "question": "What kind of feedback do you find most helpful?",
+    "answer": "hello",
+    "answer_type": "text",
+    "category": "Preferences",
+    "timestamp": "2025-07-16T11:16:27.420258"
   }
 ]

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useImperativeHandle, forwardRef } from 'react';
 import * as d3 from 'd3';
 import { getKnowledgeGraph } from '../utils/api';
 
@@ -7,6 +7,10 @@ interface NodeDatum extends d3.SimulationNodeDatum {
   type?: string;
   question?: string;
   answer?: string;
+  question_id?: string;
+  training_category?: string;
+  answer_type?: string;
+  timestamp?: string;
 }
 
 interface LinkDatum {
@@ -18,6 +22,7 @@ interface LinkDatum {
 interface GraphData {
   nodes: NodeDatum[];
   links: LinkDatum[];
+  training_summary?: any;
 }
 
 const CATEGORY_COLORS: Record<string, string> = {
@@ -30,22 +35,40 @@ const CATEGORY_COLORS: Record<string, string> = {
   AutomaticQuestions: '#d3d3d3',
 };
 
+const TRAINING_MAIN_COLOR = '#4169e1'; // Blue color for main Training node
+const TRAINING_CATEGORY_COLOR = '#87ceeb'; // Light blue for training category subnodes
+const TRAINING_NODE_COLOR = '#ff6b6b'; // Red for individual training Q&A nodes
 const NODE_RADIUS = 28;
 
-const KnowledgeGraphD3: React.FC = () => {
+export interface KnowledgeGraphHandle {
+  refresh: () => void;
+}
+
+const KnowledgeGraphD3 = forwardRef<KnowledgeGraphHandle>((props, ref) => {
   const svgRef = useRef<SVGSVGElement | null>(null);
+
+  const fetchAndRenderGraph = async () => {
+    try {
+      console.log('Fetching knowledge graph from backend...');
+      const data: GraphData = await getKnowledgeGraph();
+      console.log('Knowledge graph data received:', data);
+      console.log('Nodes:', data.nodes?.length || 0, 'Links:', data.links?.length || 0);
+      if (data.training_summary) {
+        console.log('Training data:', data.training_summary);
+      }
+      renderGraph(data);
+    } catch (error) {
+      console.error('Error fetching knowledge graph:', error);
+    }
+  };
+
+  useImperativeHandle(ref, () => ({
+    refresh: fetchAndRenderGraph
+  }));
 
   useEffect(() => {
     console.log('KnowledgeGraphD3 component mounted, fetching graph...');
-    getKnowledgeGraph()
-      .then((data: GraphData) => {
-        console.log('Knowledge graph data received:', data);
-        console.log('Nodes:', data.nodes?.length || 0, 'Links:', data.links?.length || 0);
-        renderGraph(data);
-      })
-      .catch((error) => {
-        console.error('Error fetching knowledge graph:', error);
-      });
+    fetchAndRenderGraph();
     // eslint-disable-next-line
   }, []);
 
@@ -118,7 +141,18 @@ const KnowledgeGraphD3: React.FC = () => {
       .data(data.nodes)
       .enter().append('circle')
       .attr('r', NODE_RADIUS)
-      .attr('fill', d => CATEGORY_COLORS[d.type || ''] || '#ccc')
+      .attr('fill', d => {
+        if (d.type === 'training_main') {
+          return TRAINING_MAIN_COLOR;
+        }
+        if (d.type === 'training_category') {
+          return TRAINING_CATEGORY_COLOR;
+        }
+        if (d.type === 'training_qa') {
+          return TRAINING_NODE_COLOR;
+        }
+        return CATEGORY_COLORS[d.id] || CATEGORY_COLORS[d.type || ''] || '#ccc';
+      })
       .attr('stroke', '#333')
       .attr('stroke-width', 2)
       .call(drag(simulation));
@@ -128,11 +162,28 @@ const KnowledgeGraphD3: React.FC = () => {
       .attr('class', 'd3-tooltip');
 
     node.on('mouseover', (event, d) => {
-      tooltip.html(
-        `<strong>${d.id}</strong><br/>` +
-        (d.question ? `<em>Q:</em> ${d.question}<br/>` : '') +
-        (d.answer ? `<em>A:</em> ${d.answer}` : '')
-      )
+      let tooltipContent = `<strong>${d.id}</strong><br/>`;
+      
+      if (d.type === 'training_main') {
+        tooltipContent += `<em>Main training hub containing all training categories</em>`;
+      } else if (d.type === 'training_category') {
+        tooltipContent += `<em>Training Category:</em> ${d.training_category}<br/>`;
+        tooltipContent += `<em>Contains training questions and answers for this category</em>`;
+      } else if (d.type === 'training_qa') {
+        tooltipContent += `<em>Category:</em> ${d.training_category}<br/>`;
+        tooltipContent += `<em>Type:</em> ${d.answer_type}<br/>`;
+        tooltipContent += `<em>Q:</em> ${d.question}<br/>`;
+        tooltipContent += `<em>A:</em> ${d.answer}`;
+        if (d.timestamp) {
+          const date = new Date(d.timestamp).toLocaleDateString();
+          tooltipContent += `<br/><em>Date:</em> ${date}`;
+        }
+      } else {
+        tooltipContent += (d.question ? `<em>Q:</em> ${d.question}<br/>` : '');
+        tooltipContent += (d.answer ? `<em>A:</em> ${d.answer}` : '');
+      }
+      
+      tooltip.html(tooltipContent)
         .style('visibility', 'visible');
     })
       .on('mousemove', (event) => {
@@ -155,7 +206,21 @@ const KnowledgeGraphD3: React.FC = () => {
       .attr('dy', 5)
       .attr('font-size', fontSize)
       .attr('pointer-events', 'none')
-      .text(d => d.type === 'category' ? d.id : (d.question ? d.question.slice(0, maxLabelLength) + (d.question.length > maxLabelLength ? '…' : '') : d.id));
+      .text(d => {
+        if (d.type === 'category') {
+          return d.id;
+        } else if (d.type === 'training_main') {
+          return 'Training';
+        } else if (d.type === 'training_category') {
+          // Extract the category name from Training_CategoryName format
+          const categoryName = d.id.replace('Training_', '');
+          return categoryName;
+        } else if (d.type === 'training_qa') {
+          return d.question ? d.question.slice(0, maxLabelLength) + (d.question.length > maxLabelLength ? '…' : '') : d.id;
+        } else {
+          return d.question ? d.question.slice(0, maxLabelLength) + (d.question.length > maxLabelLength ? '…' : '') : d.id;
+        }
+      });
 
     simulation.on('tick', () => {
       link
@@ -201,6 +266,6 @@ const KnowledgeGraphD3: React.FC = () => {
       </div>
     </div>
   );
-};
+});
 
 export default KnowledgeGraphD3; 

@@ -5,6 +5,16 @@ import json
 import os
 from datetime import datetime
 import logging
+import sys
+from pathlib import Path
+
+# Add the parent directory to the path to import the knowledge graph
+sys.path.append(str(Path(__file__).parent.parent))
+try:
+    from analysis.graph import KnowledgeGraph
+except ImportError:
+    KnowledgeGraph = None
+    print("Warning: Could not import KnowledgeGraph. Training data will not be synced to knowledge graph.")
 
 logger = logging.getLogger(__name__)
 
@@ -280,6 +290,40 @@ def save_training_data(data):
         logger.error(f"Error saving training data: {e}")
         raise
 
+def sync_knowledge_graph():
+    """Sync training data with knowledge graph"""
+    if KnowledgeGraph is None:
+        logger.warning("KnowledgeGraph not available, skipping sync")
+        return
+    
+    try:
+        kg = KnowledgeGraph()
+        
+        # Try to load existing graph
+        try:
+            kg.load("knowledge_graph.pkl")
+        except Exception as e:
+            logger.info(f"No existing graph found, creating new one: {e}")
+            # Create example data
+            kg.add_entry("Knowledge", "What is your expertise?", "AI, coding, philosophy")
+            kg.add_entry("Feelings", "How do you feel today?", "Curious and motivated")
+            kg.add_entry("Personalities", "Which of the Big Five fits you best?", "Openness to experience")
+            kg.add_entry("ImportanceOfPeople", "Who is most important in your life?", "Family and close friends")
+            kg.add_entry("Preferences", "What is your favorite hobby?", "Reading science fiction")
+            kg.add_entry("Morals", "Is honesty always the best policy?", "Usually, but context matters")
+            kg.add_entry("AutomaticQuestions", "What would you like to learn next?", "Graph databases")
+        
+        # Sync with training data
+        kg.sync_with_training_data(TRAINING_DATA_FILE)
+        
+        # Save the updated graph
+        kg.save("knowledge_graph.pkl")
+        
+        logger.info("Successfully synchronized training data with knowledge graph")
+        
+    except Exception as e:
+        logger.error(f"Error syncing knowledge graph: {e}")
+
 @router.get("/questions/{category}")
 async def get_training_questions(category: str):
     """Get predefined questions for a specific training category"""
@@ -314,6 +358,9 @@ async def save_training_answer(answer: TrainingAnswer):
     # Save updated data
     save_training_data(training_data)
     
+    # Sync with knowledge graph
+    sync_knowledge_graph()
+    
     logger.info(f"Answer saved successfully for question: {answer.question_id}")
     
     return {
@@ -339,6 +386,9 @@ async def save_training_session(session: TrainingSession):
     
     # Save updated data
     save_training_data(training_data)
+    
+    # Sync with knowledge graph
+    sync_knowledge_graph()
     
     logger.info(f"Training session saved successfully for category: {session.category}")
     

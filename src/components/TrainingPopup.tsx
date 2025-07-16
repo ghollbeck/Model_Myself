@@ -14,9 +14,10 @@ interface TrainingPopupProps {
     category: string;
     onClose: () => void;
     onLog: (message: string) => void;
+    onTrainingComplete?: () => void;
 }
 
-const TrainingPopup: React.FC<TrainingPopupProps> = ({ showPopup, category, onClose, onLog }) => {
+const TrainingPopup: React.FC<TrainingPopupProps> = ({ showPopup, category, onClose, onLog, onTrainingComplete }) => {
     const [questions, setQuestions] = useState<Question[]>([]);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [answer, setAnswer] = useState<string>('');
@@ -99,6 +100,13 @@ const TrainingPopup: React.FC<TrainingPopupProps> = ({ showPopup, category, onCl
             } else {
                 // All questions completed
                 onLog(`Training session completed for ${category}!`);
+                onLog('Knowledge graph will be updated automatically...');
+                
+                // Call completion callback to refresh knowledge graph
+                if (onTrainingComplete) {
+                    onTrainingComplete();
+                }
+                
                 onClose();
             }
             

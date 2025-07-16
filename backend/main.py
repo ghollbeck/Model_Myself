@@ -717,6 +717,7 @@ async def get_document_stats():
 async def get_knowledge_graph():
     """
     Returns the knowledge graph as a JSON object suitable for D3.js visualization.
+    Includes training data synchronization.
     """
     logger.info("Knowledge graph endpoint accessed")
     
@@ -740,6 +741,18 @@ async def get_knowledge_graph():
             kg.save("knowledge_graph.pkl")
             logger.info("Created and saved new knowledge graph with example data")
         
+        # Sync with training data
+        try:
+            kg.sync_with_training_data("training_data.json")
+            logger.info("Successfully synchronized knowledge graph with training data")
+            
+            # Save the updated graph
+            kg.save("knowledge_graph.pkl")
+            logger.info("Saved updated knowledge graph with training data")
+            
+        except Exception as e:
+            logger.warning(f"Could not sync training data: {e}")
+        
         G = kg.graph
         nodes = []
         for node, data in G.nodes(data=True):
@@ -753,8 +766,16 @@ async def get_knowledge_graph():
             link.update(data)
             links.append(link)
         
-        result = {"nodes": nodes, "links": links}
+        # Get training summary
+        training_summary = kg.get_training_summary()
+        
+        result = {
+            "nodes": nodes, 
+            "links": links,
+            "training_summary": training_summary
+        }
         logger.info(f"Returning knowledge graph with {len(nodes)} nodes and {len(links)} links")
+        logger.info(f"Training data: {training_summary['total_training_entries']} entries")
         
         return JSONResponse(content=result, status_code=200)
         
