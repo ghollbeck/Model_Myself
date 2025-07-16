@@ -27,6 +27,9 @@ import sys
 sys.path.append(str(Path(__file__).parent))
 from analysis.graph import KnowledgeGraph
 
+# Import training router
+from routes.training import router as training_router
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
@@ -82,6 +85,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Include training router
+app.include_router(training_router, prefix="/training", tags=["training"])
 
 def ensure_upload_dir():
     """Ensure upload directory exists"""

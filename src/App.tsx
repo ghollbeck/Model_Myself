@@ -5,6 +5,7 @@ import DocumentManagement from './components/DocumentManagement';
 import TrainingCard from './components/TrainingCard';
 import InferenceCard from './components/InferenceCard';
 import ProfilePopup from './components/ProfilePopup';
+import TrainingPopup from './components/TrainingPopup';
 import Logs from './components/Logs';
 import ResponseDisplay from './components/ResponseDisplay';
 import KnowledgeGraphD3 from './components/KnowledgeGraphD3';
@@ -26,6 +27,7 @@ const App: React.FC = () => {
     const [showPopup, setShowPopup] = useState<boolean>(false);
     const [popupContent, setPopupContent] = useState<string>('');
     const [popupTitle, setPopupTitle] = useState<string>('');
+    const [showTrainingPopup, setShowTrainingPopup] = useState<boolean>(false);
 
     const dropdownRef = useRef<HTMLDivElement>(null);
     const uploadDropdownRef = useRef<HTMLDivElement>(null);
@@ -49,17 +51,19 @@ const App: React.FC = () => {
         'Folder',
         'Chat history',
         'Voice recording',
-        'Voice transcription'
+        'Voice transcription',
+        'Image'
     ];
 
     const categoryOptions = [
         'Search history',
-        'Wa chats',
+        'Whatsapp chats',
         'Conversations during day',
         'Journals',
-        'QA',
         'Essays',
-        'CV'
+        'CV',
+        'Image',
+        'Other'
     ];
 
     const popupCategories = [
@@ -516,6 +520,17 @@ const App: React.FC = () => {
         setResponse('Inference functionality coming soon!');
     };
 
+    const handleStartTraining = () => {
+        if (!selectedTraining) {
+            log('No training category selected');
+            setError('Please select a training category first');
+            return;
+        }
+        
+        log(`Starting training for category: ${selectedTraining}`);
+        setShowTrainingPopup(true);
+    };
+
     const formatFileSize = (bytes: number): string => {
         if (bytes === 0) return '0 B';
         const k = 1024;
@@ -576,6 +591,7 @@ const App: React.FC = () => {
                     showTrainingDropdown={showTrainingDropdown}
                     setShowTrainingDropdown={setShowTrainingDropdown}
                     handleTrainingSelect={handleTrainingSelect}
+                    onStartTraining={handleStartTraining}
                 />
                 <InferenceCard
                     onInferenceClick={handleInference}
@@ -599,6 +615,12 @@ const App: React.FC = () => {
                 openPopup={openPopup}
                 setPopupTitle={setPopupTitle}
                 setPopupContent={setPopupContent}
+            />
+            <TrainingPopup
+                showPopup={showTrainingPopup}
+                category={selectedTraining}
+                onClose={() => setShowTrainingPopup(false)}
+                onLog={log}
             />
             <div className="bottom-sections">
                 <ResponseDisplay response={response} error={error} />

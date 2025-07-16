@@ -49,17 +49,43 @@ const KnowledgeGraphD3: React.FC = () => {
     // eslint-disable-next-line
   }, []);
 
+  // Re-render graph on window resize for mobile optimization
+  useEffect(() => {
+    const handleResize = () => {
+      if (svgRef.current) {
+        getKnowledgeGraph()
+          .then((data: GraphData) => {
+            renderGraph(data);
+          })
+          .catch((error) => {
+            console.error('Error re-rendering graph on resize:', error);
+          });
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const renderGraph = (data: GraphData) => {
     const svg = d3.select(svgRef.current);
     svg.selectAll('*').remove(); // Clear previous
-    const width = 800;
-    const height = 600;
+    
+    // Get container dimensions for responsive sizing
+    const container = svgRef.current?.parentElement;
+    const containerWidth = container?.clientWidth || 800;
+    const isMobile = containerWidth < 480;
+    
+    const width = Math.min(800, containerWidth);
+    const height = isMobile ? 500 : containerWidth < 768 ? 350 : 600;
 
-    svg.attr('viewBox', `0 0 ${width} ${height}`);
+    // Set viewBox for responsive scaling
+    svg.attr('viewBox', `0 0 ${width} ${height}`)
+       .attr('preserveAspectRatio', 'xMidYMid meet');
 
-    // Zoom and pan
+    // Zoom and pan with constraints (less zoom on mobile)
     const zoom = d3.zoom<SVGSVGElement, unknown>()
-      .scaleExtent([0.2, 2])
+      .scaleExtent([isMobile ? 0.5 : 0.3, isMobile ? 1.5 : 2])
       .on('zoom', (event) => {
         g.attr('transform', event.transform);
       });
@@ -67,11 +93,16 @@ const KnowledgeGraphD3: React.FC = () => {
 
     const g = svg.append('g');
 
-    // Simulation
+    // Simulation with responsive forces optimized for mobile
+    const linkDistance = isMobile ? 60 : Math.min(120, width * 0.15);
+    const chargeStrength = isMobile ? -150 : -Math.min(350, width * 0.4);
+    const collisionRadius = isMobile ? NODE_RADIUS + 2 : NODE_RADIUS + 5;
+    
     const simulation = d3.forceSimulation<NodeDatum>(data.nodes)
-      .force('link', d3.forceLink<NodeDatum, LinkDatum>(data.links).id(d => d.id).distance(120))
-      .force('charge', d3.forceManyBody().strength(-350))
-      .force('center', d3.forceCenter(width / 2, height / 2));
+      .force('link', d3.forceLink<NodeDatum, LinkDatum>(data.links).id(d => d.id).distance(linkDistance))
+      .force('charge', d3.forceManyBody().strength(chargeStrength))
+      .force('center', d3.forceCenter(width / 2, height / 2))
+      .force('collision', d3.forceCollide(collisionRadius));
 
     // Draw links
     const link = g.append('g')
@@ -94,15 +125,7 @@ const KnowledgeGraphD3: React.FC = () => {
 
     // Tooltips
     const tooltip = d3.select('body').append('div')
-      .attr('class', 'd3-tooltip')
-      .style('position', 'absolute')
-      .style('z-index', '10')
-      .style('visibility', 'hidden')
-      .style('background', '#fff')
-      .style('border', '1px solid #ccc')
-      .style('padding', '8px')
-      .style('border-radius', '6px')
-      .style('font-size', '14px');
+      .attr('class', 'd3-tooltip');
 
     node.on('mouseover', (event, d) => {
       tooltip.html(
@@ -120,16 +143,19 @@ const KnowledgeGraphD3: React.FC = () => {
         tooltip.style('visibility', 'hidden');
       });
 
-    // Node labels
+    // Node labels with mobile optimization
+    const fontSize = isMobile ? 10 : 13;
+    const maxLabelLength = isMobile ? 15 : 22;
+    
     const label = g.append('g')
       .selectAll('text')
       .data(data.nodes)
       .enter().append('text')
       .attr('text-anchor', 'middle')
       .attr('dy', 5)
-      .attr('font-size', 13)
+      .attr('font-size', fontSize)
       .attr('pointer-events', 'none')
-      .text(d => d.type === 'category' ? d.id : (d.question ? d.question.slice(0, 22) + (d.question.length > 22 ? '…' : '') : d.id));
+      .text(d => d.type === 'category' ? d.id : (d.question ? d.question.slice(0, maxLabelLength) + (d.question.length > maxLabelLength ? '…' : '') : d.id));
 
     simulation.on('tick', () => {
       link
@@ -168,9 +194,11 @@ const KnowledgeGraphD3: React.FC = () => {
   }
 
   return (
-    <div style={{ width: '100%', textAlign: 'center', margin: '2rem 0' }}>
+    <div className="knowledge-graph-container">
       <h2>Knowledge Graph Visualization</h2>
-      <svg ref={svgRef} width={800} height={600} style={{ border: '1px solid #ccc', background: '#fafafa' }} />
+      <div className="knowledge-graph-svg-container">
+        <svg ref={svgRef} />
+      </div>
     </div>
   );
 };

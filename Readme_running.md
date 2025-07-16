@@ -5,6 +5,207 @@ This file logs all changes made to the Model Myself project codebase. It serves 
 
 ## Latest Changes (2024-01-XX)
 
+### 2025-01-XX - Training Feature Implementation
+**Status**: ✅ COMPLETED
+**Description**: Implemented comprehensive training system with predefined questions and popup interface
+
+#### Training System Features:
+- **Backend Training API**: Created complete training route system with 7 categories
+- **Question Categories**: 5 questions each for knowledge, personality, relationships, graph building, preferences, morals, and automatic learning
+- **Popup Interface**: Beautiful training popup with progress tracking and question flow
+- **Answer Types**: Support for both text input and multiple choice questions
+- **Data Persistence**: Saves all answers to JSON file with timestamps
+- **Progress Tracking**: Visual progress bar and question counter
+- **Mobile Responsive**: Works seamlessly on desktop and mobile devices
+
+#### Technical Implementation:
+- **Backend Files**:
+  - `backend/routes/training.py` - Complete training API with endpoints
+  - `backend/main.py` - Integrated training router
+- **Frontend Files**:
+  - `src/components/TrainingPopup.tsx` - Full-featured training popup component
+  - `src/components/TrainingCard.tsx` - Updated with "Start Training" functionality
+  - `src/App.tsx` - Integrated training popup and state management
+  - `public/index.html` - Added comprehensive training popup CSS styles
+
+#### API Endpoints:
+- `GET /training/questions/{category}` - Retrieve predefined questions
+- `POST /training/answer` - Save individual answers
+- `POST /training/session` - Save complete training sessions
+- `GET /training/data` - Get training data with optional category filter
+- `GET /training/stats` - Get training statistics
+
+#### Question Categories:
+1. **Questions about my knowledge** - Expertise areas, learning styles, challenges
+2. **Questions about my feelings and 5 personalities** - Stress handling, social behavior, decision making
+3. **Question about the importance of people in my life** - Relationships, conflict resolution, social roles
+4. **Iteratively add to a knowledge graph** - Core concepts, connections, experiences
+5. **Preferences** - Free time, work environment, communication style
+6. **Moral questions** - Values, ethical dilemmas, helping others
+7. **Automatic questions to extend known knowledge** - Learning topics, frequency, progress tracking
+
+#### User Experience:
+- Select training category from dropdown
+- Click "Start Training" to open popup
+- Answer questions step-by-step with validation
+- Progress tracked with visual indicators
+- Immediate data persistence to backend
+- Smooth transitions and error handling
+
+**System Status**: Training feature fully implemented and functional
+
+### 2025-01-XX - Mobile Training Dropdown Fix
+**Status**: ✅ COMPLETED
+**Description**: Fixed mobile dropdown visibility issue in training card where dropdown was cut off on mobile devices
+
+#### Mobile Dropdown Issues Fixed:
+- **Dropdown Positioning**: Training dropdown was not fully visible on mobile devices
+- **Dynamic Positioning**: Implemented JavaScript-based positioning to ensure dropdown appears properly
+- **Mobile Responsiveness**: Dropdown now uses fixed positioning on mobile to overlay properly
+- **Z-Index Management**: Proper layering to ensure dropdown appears above other content
+
+#### Technical Implementation:
+- **File Modified**: `src/components/TrainingCard.tsx` - Added useRef and useEffect for dynamic positioning
+- **JavaScript Positioning**: Uses getBoundingClientRect() to calculate optimal dropdown position
+- **Mobile Detection**: Detects screen width <= 768px to apply mobile-specific positioning
+- **CSS Updates**: Updated mobile dropdown styles for better visibility
+
+#### Features:
+- Dropdown automatically positions below the button on mobile
+- Uses fixed positioning to overlay above card boundaries
+- Maintains proper spacing and margins on mobile devices
+- Responsive width that adapts to screen size
+- High z-index to ensure visibility above other elements
+
+**User Experience**: Mobile users can now properly see and interact with the training dropdown without it being cut off
+
+### 2025-07-16 - Mobile Optimization Implementation
+**Status**: ✅ COMPLETED
+**Description**: Implemented comprehensive mobile optimization for the Model Myself platform
+
+#### Mobile Improvements:
+- **Responsive Design**: Enhanced responsive breakpoints for tablets (768px) and mobile (480px)
+- **Touch-Friendly Elements**: All buttons now meet iOS minimum touch target size (44px)
+- **Mobile Layout**: Improved card layouts, document management, and popup modal for mobile screens
+- **Touch Interactions**: Added touch-specific styles and active states for better user feedback
+- **Scrolling**: Improved scrolling behavior with -webkit-overflow-scrolling: touch
+- **Text Readability**: Adjusted font sizes and spacing for better mobile readability
+- **Popup Modal**: Optimized popup modal to use 95% width on mobile with better spacing
+- **Document Management**: Improved document item layout to stack vertically on mobile
+
+#### Technical Changes:
+- **File Modified**: `Model_Myself/public/index.html` - Added extensive mobile CSS optimizations
+- **New Breakpoints**: Added @media queries for 768px and 480px screen sizes
+- **Touch Detection**: Added @media (hover: none) and (pointer: coarse) for touch devices
+- **Scrollbar Styling**: Added thin scrollbars for mobile with webkit-scrollbar customization
+- **Button Sizing**: All interactive elements now have minimum 44px touch targets
+- **Grid Layouts**: Improved grid layouts for mobile - single column on very small screens
+
+#### Features Optimized for Mobile:
+- Document upload area with improved touch interactions
+- Category selection dropdown with better mobile spacing
+- Training options with touch-friendly buttons
+- Knowledge graph visualization container
+- Profile exploration popup with mobile-optimized layout
+- Document management with stacked actions on mobile
+- Logs display with appropriate mobile sizing
+
+**System Status**: Mobile-optimized and fully functional across all device sizes
+
+### 2025-07-16 - Knowledge Graph Mobile Optimization & Horizontal Scroll Fix
+**Status**: ✅ COMPLETED
+**Description**: Fixed horizontal scrolling issues on mobile and made D3.js knowledge graph visualization fully responsive
+
+#### Mobile Scrolling Fixes:
+- **Horizontal Scroll Prevention**: Added `overflow-x: hidden` to body, html, and container elements
+- **Viewport Constraints**: Set `max-width: 100vw` and `width: 100%` to prevent content overflow
+- **Box Sizing**: Applied `box-sizing: border-box` globally for consistent sizing
+- **Element Constraints**: Added `max-width: 100%` to all major components to prevent overflow
+
+#### Knowledge Graph Responsive Optimization:
+- **Responsive SVG**: Replaced fixed width/height with viewBox and preserveAspectRatio
+- **CSS Classes**: Created dedicated CSS classes for `.knowledge-graph-container` and `.knowledge-graph-svg-container`
+- **Mobile Sizing**: Graph container adapts to screen size (300px height on tablets, 250px on mobile)
+- **Force Simulation**: Made force parameters responsive to container width for better mobile experience
+- **Collision Detection**: Added collision force to prevent node overlap
+- **Tooltip Styling**: Moved tooltip styles to CSS for better consistency and mobile optimization
+
+#### Technical Changes:
+- **Files Modified**: 
+  - `Model_Myself/public/index.html` - Added responsive graph styles and horizontal scroll prevention
+  - `Model_Myself/src/components/KnowledgeGraphD3.tsx` - Made graph fully responsive with viewBox
+- **New CSS Classes**: `.knowledge-graph-container`, `.knowledge-graph-svg-container`, `.d3-tooltip`
+- **Responsive Parameters**: Force simulation now adapts to container width
+- **Mobile Breakpoints**: Added specific graph sizing for 768px and 480px screens
+
+#### Mobile Experience Improvements:
+- No horizontal scrolling on any screen size
+- Knowledge graph fits perfectly within viewport
+- Touch-friendly zoom controls with constrained scaling (0.3x to 2x)
+- Proper tooltip positioning and styling for mobile devices
+- Responsive force simulation that works well on small screens
+
+**System Status**: Fully responsive with no horizontal scrolling issues on mobile devices
+
+### 2025-07-16 - Enhanced Mobile Knowledge Graph Optimization
+**Status**: ✅ COMPLETED
+**Description**: Further optimized the D3.js knowledge graph visualization for mobile devices with precise screen width fitting
+
+#### Enhanced Mobile Graph Optimizations:
+- **Precise Mobile Sizing**: Graph container now uses `calc(100vw - 30px)` for tablets and `calc(100vw - 16px)` for mobile
+- **Dynamic Dimensions**: D3.js component now detects container width and adjusts graph dimensions accordingly
+- **Mobile-Specific Heights**: Optimized heights to 350px (tablet) and 300px (mobile) for better mobile experience
+- **Responsive Forces**: Optimized force simulation parameters specifically for mobile screens
+- **Mobile Labels**: Reduced font size to 10px and label length to 15 characters on mobile
+- **Constrained Zoom**: Limited zoom range to 0.5x-1.5x on mobile for better touch interaction
+- **Window Resize Handler**: Added resize event listener to re-render graph on orientation changes
+
+#### Mobile-Specific Technical Changes:
+- **Container Detection**: Added `containerWidth` detection to determine mobile vs desktop rendering
+- **Responsive Parameters**: Link distance reduced to 60px, charge strength to -150, collision radius to NODE_RADIUS + 2 on mobile
+- **Height Adaptation**: Graph height dynamically adjusts: 300px (mobile), 350px (tablet), 600px (desktop)
+- **Label Optimization**: Shortened labels and reduced font size for better mobile readability
+- **Overflow Prevention**: Added `overflow: hidden` and `margin: 0 auto` to center and contain the graph
+
+#### Mobile User Experience Improvements:
+- Knowledge graph now fits exactly within mobile viewport width
+- No horizontal scrolling caused by graph visualization
+- Touch-friendly zoom controls optimized for mobile screens
+- Proper label sizing and truncation for mobile readability
+- Responsive force simulation that works well in constrained mobile space
+- Automatic re-rendering on device orientation changes
+
+**Files Modified**:
+- `Model_Myself/public/index.html` - Enhanced mobile CSS with precise viewport calculations
+- `Model_Myself/src/components/KnowledgeGraphD3.tsx` - Added mobile detection and responsive rendering
+
+**System Status**: Knowledge graph perfectly optimized for mobile with no horizontal scrolling
+
+### 2025-07-16 - Mobile Knowledge Graph Height Adjustment  
+**Status**: ✅ COMPLETED
+**Description**: Increased the height of the knowledge graph visualization on mobile devices for better visibility and user experience
+
+#### Height Adjustments:
+- **Mobile (480px and below)**: Increased from 220px to 300px height (+80px)
+- **Tablet (768px)**: Increased from 280px to 350px height (+70px)
+- **Desktop**: Remains at 600px height
+- **Responsive Adaptation**: D3.js component dynamically adjusts to new heights
+
+#### User Experience Benefits:
+- **Better Graph Visibility**: More vertical space for nodes and connections
+- **Improved Readability**: Labels and node relationships are easier to see
+- **Enhanced Mobile Experience**: Graph feels more substantial and usable on mobile
+- **Maintained Responsiveness**: Still fits perfectly within viewport without horizontal scrolling
+
+#### Technical Changes:
+- **Files Modified**: 
+  - `Model_Myself/public/index.html` - Updated CSS heights for mobile breakpoints
+  - `Model_Myself/src/components/KnowledgeGraphD3.tsx` - Updated height calculation logic
+- **CSS Updates**: Modified `.knowledge-graph-svg-container` heights for both mobile breakpoints
+- **D3.js Updates**: Updated height calculation to use 300px (mobile) and 350px (tablet)
+
+**System Status**: Knowledge graph now has optimal height for mobile viewing while maintaining responsive design
+
 ### 2025-07-16 - System Fully Operational on Port 8089
 **Status**: ✅ COMPLETED
 **Description**: Successfully deployed complete document storage system with backend running on port 8089

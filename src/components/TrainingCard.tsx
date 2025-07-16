@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 
 interface TrainingCardProps {
     trainingOptions: string[];
@@ -6,6 +6,7 @@ interface TrainingCardProps {
     showTrainingDropdown: boolean;
     setShowTrainingDropdown: (show: boolean) => void;
     handleTrainingSelect: (option: string) => void;
+    onStartTraining: () => void;
 }
 
 const TrainingCard: React.FC<TrainingCardProps> = ({
@@ -13,14 +14,40 @@ const TrainingCard: React.FC<TrainingCardProps> = ({
     selectedTraining,
     showTrainingDropdown,
     setShowTrainingDropdown,
-    handleTrainingSelect
-}) => (
+    handleTrainingSelect,
+    onStartTraining
+}) => {
+    const dropdownRef = useRef<HTMLDivElement>(null);
+    const buttonRef = useRef<HTMLButtonElement>(null);
+
+    useEffect(() => {
+        if (showTrainingDropdown && dropdownRef.current && buttonRef.current) {
+            const button = buttonRef.current;
+            const dropdown = dropdownRef.current;
+            const buttonRect = button.getBoundingClientRect();
+            const isMobile = window.innerWidth <= 768;
+
+            if (isMobile) {
+                // Position dropdown below the button with some margin
+                dropdown.style.position = 'fixed';
+                dropdown.style.top = `${buttonRect.bottom + 8}px`;
+                dropdown.style.left = `${Math.max(10, buttonRect.left)}px`;
+                dropdown.style.right = '10px';
+                dropdown.style.width = 'auto';
+                dropdown.style.maxWidth = `${Math.min(300, window.innerWidth - 20)}px`;
+                dropdown.style.zIndex = '99999';
+            }
+        }
+    }, [showTrainingDropdown]);
+
+    return (
     <div className="card">
         <h3>🎯 Training</h3>
         <div className="training-section">
             <h4 style={{color: '#495057', fontSize: '1.1em', marginBottom: '15px'}}>Q&A Training Options:</h4>
             <div className="dropdown" style={{ position: 'relative' }}>
                 <button 
+                    ref={buttonRef}
                     className="dropdown-btn"
                     onClick={() => setShowTrainingDropdown(!showTrainingDropdown)}
                 >
@@ -28,27 +55,13 @@ const TrainingCard: React.FC<TrainingCardProps> = ({
                     <span>▼</span>
                 </button>
                 {showTrainingDropdown && (
-                    <div className="dropdown-content" style={{
-                        position: 'absolute',
-                        top: '100%',
-                        left: '0',
-                        right: '0',
-                        zIndex: 1000,
-                        backgroundColor: 'white',
-                        border: '1px solid #ddd',
-                        borderRadius: '4px',
-                        boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
-                        maxHeight: '200px',
-                        overflowY: 'auto'
-                    }}>
+                    <div ref={dropdownRef} className="dropdown-content">
                         {trainingOptions.map((option, index) => (
                             <div 
                                 key={index}
                                 className="dropdown-item"
                                 onClick={() => handleTrainingSelect(option)}
                                 style={{
-                                    padding: '10px 15px',
-                                    cursor: 'pointer',
                                     borderBottom: index < trainingOptions.length - 1 ? '1px solid #f0f0f0' : 'none'
                                 }}
                                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f5f5f5'}
@@ -63,13 +76,17 @@ const TrainingCard: React.FC<TrainingCardProps> = ({
             {selectedTraining && (
                 <div className="selected-training">
                     <p>Selected: <strong>{selectedTraining}</strong></p>
-                    <button className="start-training-btn">
+                    <button 
+                        className="start-training-btn"
+                        onClick={onStartTraining}
+                    >
                         Start Training
                     </button>
                 </div>
             )}
         </div>
     </div>
-);
+    );
+};
 
 export default TrainingCard; 
