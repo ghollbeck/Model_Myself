@@ -1,5 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
+import DocumentUpload from './components/DocumentUpload';
+import DocumentManagement from './components/DocumentManagement';
+import TrainingCard from './components/TrainingCard';
+import InferenceCard from './components/InferenceCard';
+import ProfilePopup from './components/ProfilePopup';
+import Logs from './components/Logs';
+import ResponseDisplay from './components/ResponseDisplay';
+import KnowledgeGraphD3 from './components/KnowledgeGraphD3';
 
 const App: React.FC = () => {
     const [response, setResponse] = useState<string>('');
@@ -538,276 +546,42 @@ const App: React.FC = () => {
         <div className="container">
             <h1>Model Myself - MongoDB Document Storage</h1>
             <p>Welcome to the Model Myself platform with MongoDB integration!</p>
-            
             <div className="cards-container">
-                {/* Uploading Card */}
-                <div className="card">
-                    <h3>📁 Document Upload</h3>
-                    <div className="upload-section">
-                        {/* Category Selection */}
-                        <div className="category-selection" style={{ marginBottom: '15px' }}>
-                            <label style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold', color: '#495057' }}>
-                                📂 Select Category:
-                            </label>
-                            <div className="dropdown" ref={categoryDropdownRef} style={{ position: 'relative' }}>
-                                <button 
-                                    className="dropdown-btn"
-                                    onClick={() => setShowCategoryDropdown(!showCategoryDropdown)}
-                                    style={{ 
-                                        width: '100%', 
-                                        padding: '10px 15px', 
-                                        backgroundColor: selectedCategory ? '#e8f5e8' : '#f8f9fa',
-                                        border: '1px solid #ddd',
-                                        borderRadius: '4px',
-                                        cursor: 'pointer'
-                                    }}
-                                >
-                                    <span>{selectedCategory || 'Choose category...'}</span>
-                                    <span style={{ float: 'right' }}>▼</span>
-                                </button>
-                                {showCategoryDropdown && (
-                                    <div className="dropdown-content" style={{
-                                        position: 'absolute',
-                                        top: '100%',
-                                        left: '0',
-                                        right: '0',
-                                        zIndex: 1000,
-                                        backgroundColor: 'white',
-                                        border: '1px solid #ddd',
-                                        borderRadius: '4px',
-                                        boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
-                                        maxHeight: '200px',
-                                        overflowY: 'auto'
-                                    }}>
-                                        {categoryOptions.map((option, index) => (
-                                            <div 
-                                                key={index}
-                                                className="dropdown-item"
-                                                onClick={() => handleCategorySelect(option)}
-                                                style={{
-                                                    padding: '10px 15px',
-                                                    cursor: 'pointer',
-                                                    borderBottom: index < categoryOptions.length - 1 ? '1px solid #f0f0f0' : 'none'
-                                                }}
-                                                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f5f5f5'}
-                                                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'white'}
-                                            >
-                                                {option}
-                                            </div>
-                                        ))}
-                                    </div>
-                                )}
-                            </div>
-                        </div>
-
-                        <div 
-                            className={`upload-area ${dragActive ? 'drag-active' : ''}`}
-                            onDragEnter={handleDrag}
-                            onDragLeave={handleDrag}
-                            onDragOver={handleDrag}
-                            onDrop={handleDrop}
-                        >
-                            <p>Drag & drop files here or click to select</p>
-                            <input
-                                type="file"
-                                multiple
-                                onChange={handleFileInput}
-                                style={{ display: 'none' }}
-                                id="fileInput"
-                            />
-                            <label htmlFor="fileInput" className="upload-btn">
-                                Select Files
-                            </label>
-                        </div>
-                        
-                        {uploadedFiles.length > 0 && (
-                            <div className="file-list">
-                                <h4 style={{color: '#495057', fontSize: '1.1em', marginBottom: '10px'}}>Selected Files:</h4>
-                                {uploadedFiles.map((file, index) => (
-                                    <div key={index} className="file-item">
-                                        {file.name} ({formatFileSize(file.size)})
-                                    </div>
-                                ))}
-                                <button onClick={uploadFiles} className="upload-button">
-                                    Upload to MongoDB ({uploadedFiles.length} file(s))
-                                    {selectedCategory && <span style={{ display: 'block', fontSize: '0.8em', opacity: 0.8 }}>Category: {selectedCategory}</span>}
-                                </button>
-                            </div>
-                        )}
-                    </div>
-                </div>
-
-                {/* Document Management Card */}
-                <div className="card">
-                    <h3>📊 Document Management</h3>
-                    <div className="document-section">
-                        <div className="document-actions">
-                            <button onClick={loadDocuments} className="doc-btn">
-                                📄 View Documents
-                            </button>
-                        </div>
-                        
-                        {showDocuments && documents.length > 0 && (
-                            <div className="documents-list">
-                                <h4>📄 Stored Documents ({documents.length})</h4>
-                                <div className="document-grid">
-                                    {documents.map((doc, index) => (
-                                        <div key={index} className="document-item">
-                                            <div className="doc-info">
-                                                <strong>{doc.filename}</strong>
-                                                <small>{formatFileSize(doc.file_size)} • {formatDate(doc.upload_date)}</small>
-                                                {doc.category && (
-                                                    <div style={{ 
-                                                        backgroundColor: '#e8f5e8', 
-                                                        color: '#2d5a2d', 
-                                                        padding: '2px 6px', 
-                                                        borderRadius: '3px', 
-                                                        fontSize: '0.75em', 
-                                                        marginTop: '4px',
-                                                        display: 'inline-block'
-                                                    }}>
-                                                        📂 {doc.category}
-                                                    </div>
-                                                )}
-                                            </div>
-                                            <div className="doc-actions">
-                                                <button 
-                                                    onClick={() => deleteDocument(doc.id, doc.filename)}
-                                                    className="doc-action-btn delete"
-                                                >
-                                                    🗑️
-                                                </button>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                </div>
-
-                {/* Training Card */}
-                <div className="card">
-                    <h3>🎯 Training</h3>
-                    <div className="training-section">
-                        <h4 style={{color: '#495057', fontSize: '1.1em', marginBottom: '15px'}}>Q&A Training Options:</h4>
-                        <div className="dropdown" ref={dropdownRef} style={{ position: 'relative' }}>
-                            <button 
-                                className="dropdown-btn"
-                                onClick={() => setShowTrainingDropdown(!showTrainingDropdown)}
-                            >
-                                <span>{selectedTraining || 'Select Training Type'}</span>
-                                <span>▼</span>
-                            </button>
-                            {showTrainingDropdown && (
-                                <div className="dropdown-content" style={{
-                                    position: 'absolute',
-                                    top: '100%',
-                                    left: '0',
-                                    right: '0',
-                                    zIndex: 1000,
-                                    backgroundColor: 'white',
-                                    border: '1px solid #ddd',
-                                    borderRadius: '4px',
-                                    boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
-                                    maxHeight: '200px',
-                                    overflowY: 'auto'
-                                }}>
-                                    {trainingOptions.map((option, index) => (
-                                        <div 
-                                            key={index}
-                                            className="dropdown-item"
-                                            onClick={() => handleTrainingSelect(option)}
-                                            style={{
-                                                padding: '10px 15px',
-                                                cursor: 'pointer',
-                                                borderBottom: index < trainingOptions.length - 1 ? '1px solid #f0f0f0' : 'none'
-                                            }}
-                                            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f5f5f5'}
-                                            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'white'}
-                                        >
-                                            {option}
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
-                        </div>
-                        {selectedTraining && (
-                            <div className="selected-training">
-                                <p>Selected: <strong>{selectedTraining}</strong></p>
-                                <button className="start-training-btn">
-                                    Start Training
-                                </button>
-                            </div>
-                        )}
-                    </div>
-                </div>
-
-                {/* Inference Card */}
-                <div className="card">
-                    <h3>🧠 Inference</h3>
-                    <div className="inference-section">
-                        <h4 style={{color: '#495057', fontSize: '1.1em', marginBottom: '15px'}}>AI Inference Engine:</h4>
-                        <div style={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            padding: '40px 20px',
-                            backgroundColor: '#f8f9fa',
-                            borderRadius: '10px',
-                            border: '2px dashed #dee2e6',
-                            minHeight: '200px'
-                        }}>
-                            <div style={{
-                                fontSize: '48px',
-                                marginBottom: '20px',
-                                opacity: '0.5'
-                            }}>
-                                🧠
-                            </div>
-                            <p style={{
-                                textAlign: 'center',
-                                color: '#6c757d',
-                                margin: '0 0 20px 0',
-                                fontSize: '1.1em',
-                                fontWeight: '500'
-                            }}>
-                                AI Inference Ready
-                            </p>
-                            <button 
-                                onClick={handleInference}
-                                style={{
-                                    backgroundColor: '#007bff',
-                                    color: 'white',
-                                    border: 'none',
-                                    padding: '12px 24px',
-                                    borderRadius: '8px',
-                                    fontSize: '1em',
-                                    fontWeight: '500',
-                                    cursor: 'pointer',
-                                    transition: 'all 0.3s ease',
-                                    boxShadow: '0 2px 4px rgba(0,123,255,0.3)'
-                                }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.backgroundColor = '#0056b3';
-                                    e.currentTarget.style.transform = 'translateY(-2px)';
-                                    e.currentTarget.style.boxShadow = '0 4px 8px rgba(0,123,255,0.4)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.backgroundColor = '#007bff';
-                                    e.currentTarget.style.transform = 'translateY(0)';
-                                    e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,123,255,0.3)';
-                                }}
-                            >
-                                Start Inference
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                <DocumentUpload
+                    categoryOptions={categoryOptions}
+                    selectedCategory={selectedCategory}
+                    showCategoryDropdown={showCategoryDropdown}
+                    setShowCategoryDropdown={setShowCategoryDropdown}
+                    handleCategorySelect={handleCategorySelect}
+                    handleDrag={handleDrag}
+                    handleDrop={handleDrop}
+                    handleFileInput={handleFileInput}
+                    uploadedFiles={uploadedFiles}
+                    uploadFiles={uploadFiles}
+                    formatFileSize={formatFileSize}
+                    categoryDropdownRef={categoryDropdownRef}
+                />
+                <DocumentManagement
+                    documents={documents}
+                    showDocuments={showDocuments}
+                    loadDocuments={loadDocuments}
+                    deleteDocument={deleteDocument}
+                    downloadDocument={downloadDocument}
+                    formatFileSize={formatFileSize}
+                    formatDate={formatDate}
+                />
+                <TrainingCard
+                    trainingOptions={trainingOptions}
+                    selectedTraining={selectedTraining}
+                    showTrainingDropdown={showTrainingDropdown}
+                    setShowTrainingDropdown={setShowTrainingDropdown}
+                    handleTrainingSelect={handleTrainingSelect}
+                />
+                <InferenceCard
+                    onInferenceClick={handleInference}
+                />
             </div>
-
-            {/* Central Action Button */}
+            <KnowledgeGraphD3 />
             <div className="central-action">
                 <button 
                     onClick={() => setShowPopup(true)}
@@ -816,73 +590,19 @@ const App: React.FC = () => {
                     🔍 Explore My Profile
                 </button>
             </div>
-
-            {/* Popup Modal */}
-            {showPopup && (
-                <div className="popup-overlay" onClick={closePopup}>
-                    <div className="popup-content" onClick={(e) => e.stopPropagation()}>
-                        <div className="popup-header">
-                            <h2>{popupTitle || 'Explore My Profile'}</h2>
-                            <button className="close-btn" onClick={closePopup}>×</button>
-                        </div>
-                        
-                        {!popupTitle ? (
-                            <div className="popup-body">
-                                <p style={{textAlign: 'center', marginBottom: '30px', color: '#666'}}>
-                                    Choose a category to explore:
-                                </p>
-                                <div className="category-grid">
-                                    {popupCategories.map((category, index) => (
-                                        <button
-                                            key={index}
-                                            onClick={() => openPopup(category)}
-                                            className="category-btn"
-                                        >
-                                            {category}
-                                        </button>
-                                    ))}
-                                </div>
-                            </div>
-                        ) : (
-                            <div className="popup-body">
-                                <button 
-                                    onClick={() => {setPopupTitle(''); setPopupContent('')}}
-                                    className="back-btn"
-                                >
-                                    ← Back to Categories
-                                </button>
-                                <div className="content-display">
-                                    <pre>{popupContent}</pre>
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                </div>
-            )}
-
+            <ProfilePopup
+                showPopup={showPopup}
+                closePopup={closePopup}
+                popupTitle={popupTitle}
+                popupContent={popupContent}
+                popupCategories={popupCategories}
+                openPopup={openPopup}
+                setPopupTitle={setPopupTitle}
+                setPopupContent={setPopupContent}
+            />
             <div className="bottom-sections">
-                {/* Original Hello World Test */}
-                
-                {response && (
-                    <div className="response">
-                        <h3>Response:</h3>
-                        <p>{response}</p>
-                    </div>
-                )}
-                
-                {error && (
-                    <div className="response error">
-                        <h3>Error:</h3>
-                        <p>{error}</p>
-                    </div>
-                )}
-                
-                <div className="logs">
-                    <h3>Console Logs:</h3>
-                    {logs.map((log, index) => (
-                        <div key={index}>{log}</div>
-                    ))}
-                </div>
+                <ResponseDisplay response={response} error={error} />
+                <Logs logs={logs} />
             </div>
         </div>
     );

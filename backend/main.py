@@ -22,6 +22,11 @@ except ImportError:
 
 from pydantic import BaseModel
 
+# Import knowledge graph from analysis module
+import sys
+sys.path.append(str(Path(__file__).parent))
+from analysis.graph import KnowledgeGraph
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
@@ -701,6 +706,55 @@ async def get_document_stats():
     except Exception as e:
         logger.error(f"Error retrieving document stats: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Error retrieving stats: {str(e)}")
+
+@app.get("/knowledge-graph")
+async def get_knowledge_graph():
+    """
+    Returns the knowledge graph as a JSON object suitable for D3.js visualization.
+    """
+    logger.info("Knowledge graph endpoint accessed")
+    
+    try:
+        kg = KnowledgeGraph()
+        
+        # Try to load existing graph, if not found create a new one with examples
+        try:
+            kg.load("knowledge_graph.pkl")
+            logger.info("Loaded existing knowledge graph")
+        except Exception as e:
+            logger.info(f"No existing graph found, creating new one: {e}")
+            # Create example data as in the original script
+            kg.add_entry("Knowledge", "What is your expertise?", "AI, coding, philosophy")
+            kg.add_entry("Feelings", "How do you feel today?", "Curious and motivated")
+            kg.add_entry("Personalities", "Which of the Big Five fits you best?", "Openness to experience")
+            kg.add_entry("ImportanceOfPeople", "Who is most important in your life?", "Family and close friends")
+            kg.add_entry("Preferences", "What is your favorite hobby?", "Reading science fiction")
+            kg.add_entry("Morals", "Is honesty always the best policy?", "Usually, but context matters")
+            kg.add_entry("AutomaticQuestions", "What would you like to learn next?", "Graph databases")
+            kg.save("knowledge_graph.pkl")
+            logger.info("Created and saved new knowledge graph with example data")
+        
+        G = kg.graph
+        nodes = []
+        for node, data in G.nodes(data=True):
+            node_data = {"id": node}
+            node_data.update(data)
+            nodes.append(node_data)
+        
+        links = []
+        for source, target, data in G.edges(data=True):
+            link = {"source": source, "target": target}
+            link.update(data)
+            links.append(link)
+        
+        result = {"nodes": nodes, "links": links}
+        logger.info(f"Returning knowledge graph with {len(nodes)} nodes and {len(links)} links")
+        
+        return JSONResponse(content=result, status_code=200)
+        
+    except Exception as e:
+        logger.error(f"Error retrieving knowledge graph: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Error retrieving knowledge graph: {str(e)}")
 
 if __name__ == "__main__":
     logger.info("Starting FastAPI server on port 8089...")

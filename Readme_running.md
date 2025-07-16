@@ -821,3 +821,19 @@ Model_Myself/
 - webpack TypeScript
 
 --- 
+
+## [Refactor] Modularize App.tsx into Components (2024-06-09)
+
+- Refactored `App.tsx` to use a modular component structure for better maintainability and clarity.
+- Created the following new components in `src/components/`:
+  - `DocumentUpload.tsx`: Handles document upload UI and logic.
+  - `DocumentManagement.tsx`: Handles document listing, deletion, and download.
+  - `TrainingCard.tsx`: Handles training options and selection.
+  - `InferenceCard.tsx`: Handles AI inference UI (already existed, now fully integrated).
+  - `ProfilePopup.tsx`: Handles the profile exploration popup modal.
+  - `Logs.tsx`: Displays frontend logs.
+  - `ResponseDisplay.tsx`: Displays backend responses and errors.
+- All state and logic remain in `App.tsx` and are passed as props to the components.
+- This structure makes the codebase more modular, readable, and easier to extend.
+
+--- 
