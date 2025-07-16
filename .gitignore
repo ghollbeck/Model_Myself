@@ -1,0 +1,90 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+build/
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.egg
+*.egg-info/
+.eggs/
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# FastAPI/Backend
+backend/*.log
+backend/.env
+backend/venv/
+backend/__pycache__/
+backend/uploads/
+backend/.mypy_cache/
+backend/.pytest_cache/
+backend/.DS_Store
+
+# Frontend
+*.log
+*.tmp
+*.swp
+*.swo
+*.swn
+*.bak
+*.orig
+
+# System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# VSCode
+.vscode/
+.history/
+
+# OS generated files
+*.~lock.*
+*.bak
+*.tmp
+
+# Test/coverage
+coverage/
+htmlcov/
+.tox/
+.nox/
+.cache/
+.pytest_cache/
+.coverage
+.coverage.*
+nosetests.xml
+test-results/
+junit-*.xml
+
+# Misc
+*.sqlite3
+*.db
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# Ignore local metadata and uploads (but keep .gitkeep if present)
+backend/uploads/metadata.json
+
+# Ignore Readme running log (if you want to keep it local only)
+Readme running
