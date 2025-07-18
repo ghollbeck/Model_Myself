@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, UploadFile, File, Query, Form
+from fastapi import FastAPI, HTTPException, UploadFile, File, Query, Form, Path as ApiPath
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, StreamingResponse
 import logging
@@ -10,6 +10,7 @@ import io
 import json
 import shutil
 from pathlib import Path
+import asyncio
 
 # MongoDB imports (optional)
 try:
@@ -29,6 +30,8 @@ from analysis.graph import KnowledgeGraph
 
 # Import training router
 from routes.training import router as training_router
+# Import document analysis router
+from routes.document_analysis import router as document_analysis_router
 
 # Configure logging
 logging.basicConfig(
@@ -53,8 +56,9 @@ database = None
 fs_bucket = None
 mongodb_connected = False
 
-# Local storage fallback
-UPLOAD_DIR = Path("uploads")
+# Local storage fallback - always relative to this backend package
+BASE_DIR = Path(__file__).resolve().parent
+UPLOAD_DIR = (BASE_DIR / "uploads").resolve()
 METADATA_FILE = UPLOAD_DIR / "metadata.json"
 
 # Pydantic models for API responses
@@ -88,6 +92,8 @@ app.add_middleware(
 
 # Include training router
 app.include_router(training_router, prefix="/training", tags=["training"])
+# Include document analysis router
+app.include_router(document_analysis_router, prefix="/document-analysis", tags=["document-analysis"])
 
 def ensure_upload_dir():
     """Ensure upload directory exists"""
@@ -308,8 +314,11 @@ def store_file_local(file: UploadFile, file_content: bytes, file_size: int, dete
     # Generate unique ID
     file_id = str(uuid.uuid4())
     
-    # Save file locally
+    # Compose final file path
     file_path = UPLOAD_DIR / f"{file_id}_{file.filename}"
+    UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
+    
+    # Save file locally
     with open(file_path, 'wb') as f:
         f.write(file_content)
     
@@ -446,6 +455,11 @@ async def get_documents(
             # Apply pagination
             total_count = len(metadata)
             document_list = metadata[skip:skip + limit]
+
+            # Ensure upload_date is serializable
+            for doc in document_list:
+                if isinstance(doc.get("upload_date"), datetime):
+                    doc["upload_date"] = doc["upload_date"].isoformat()
             
             # Ensure upload_date is a string (ISO format) for JSON serialization
             # The metadata already stores ISO strings, so no conversion needed.
@@ -467,8 +481,12 @@ async def get_documents(
         logger.error(f"Error retrieving documents: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Error retrieving documents: {str(e)}")
 
+# UUID pattern (8-4-4-4-12 hex)
+UUID_REGEX = r"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+
+
 @app.get("/documents/{document_id}")
-async def get_document(document_id: str):
+async def get_document(document_id: str = ApiPath(..., regex=UUID_REGEX)):
     """Get a specific document by ID"""
     logger.info(f"Document download endpoint accessed for ID: {document_id}")
     
@@ -491,12 +509,22 @@ async def get_document(document_id: str):
         else:
             # Get file from local storage
             file_path = Path(document["local_path"])
+            # If the stored path is relative and doesn't exist from CWD, resolve relative to backend directory
+            if not file_path.exists():
+                file_path = (Path(__file__).resolve().parent / file_path).resolve()
             if not file_path.exists():
                 raise HTTPException(status_code=404, detail="Document not found locally")
-            grid_out = open(file_path, 'rb')
+            # Open file synchronously
+            grid_out = file_path.open('rb')
         
-        # Read file content
-        file_content = await grid_out.read()
+        # Read file content (await only if coroutine)
+        if hasattr(grid_out, "read") and callable(grid_out.read):
+            if asyncio.iscoroutinefunction(grid_out.read):
+                file_content = await grid_out.read()
+            else:
+                file_content = grid_out.read()
+        else:
+            file_content = b""
         
         logger.info(f"Document retrieved successfully: {document['filename']}")
         
@@ -505,7 +533,8 @@ async def get_document(document_id: str):
             media_type=document["content_type"],
             headers={
                 "Content-Disposition": f"attachment; filename={document['filename']}",
-                "Content-Length": str(document["file_size"])
+                "Content-Length": str(document["file_size"]),
+                "Upload-Date": document["upload_date"]
             }
         )
         
@@ -516,7 +545,7 @@ async def get_document(document_id: str):
         raise HTTPException(status_code=500, detail=f"Error retrieving document: {str(e)}")
 
 @app.delete("/documents/{document_id}")
-async def delete_document(document_id: str):
+async def delete_document(document_id: str = ApiPath(..., regex=UUID_REGEX)):
     """Delete a specific document by ID"""
     logger.info(f"Document deletion endpoint accessed for ID: {document_id}")
     
@@ -539,6 +568,8 @@ async def delete_document(document_id: str):
         else:
             # Delete file from local storage
             file_path = Path(document["local_path"])
+            if not file_path.exists():
+                file_path = (Path(__file__).resolve().parent / file_path).resolve()
             if file_path.exists():
                 file_path.unlink()
                 logger.info(f"Deleted local file: {file_path}")

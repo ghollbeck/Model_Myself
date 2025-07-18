@@ -1,0 +1,2797 @@
+{
+  "category": "Questions about my feelings and 5 personalities",
+  "category_key": "personality",
+  "existing_answers": [
+    {
+      "question_id": "personality_1",
+      "question": "How do you typically handle stress?",
+      "answer": [
+        "Take breaks and recharge"
+      ],
+      "answer_type": "multiple_choice",
+      "category": "Questions about my feelings and 5 personalities",
+      "timestamp": "2025-07-16T10:47:48.345989"
+    }
+  ],
+  "predefined_questions": [
+    {
+      "id": "personality_1",
+      "question": "How do you typically handle stress?",
+      "type": "multiple_choice",
+      "options": [
+        "Stay calm and analytical",
+        "Seek support from others",
+        "Take breaks and recharge",
+        "Push through with determination",
+        "Avoid stressful situations"
+      ]
+    },
+    {
+      "id": "personality_2",
+      "question": "In social situations, you tend to be:",
+      "type": "multiple_choice",
+      "options": [
+        "Outgoing and talkative",
+        "Quiet but engaged",
+        "Reserved until comfortable",
+        "The life of the party",
+        "Prefer small groups"
+      ]
+    },
+    {
+      "id": "personality_3",
+      "question": "How do you make important decisions?",
+      "type": "multiple_choice",
+      "options": [
+        "Logical analysis",
+        "Follow intuition",
+        "Seek others' opinions",
+        "Consider all possibilities",
+        "Go with past experience"
+      ]
+    },
+    {
+      "id": "personality_4",
+      "question": "What motivates you most?",
+      "type": "text"
+    },
+    {
+      "id": "personality_5",
+      "question": "How do you handle change?",
+      "type": "multiple_choice",
+      "options": [
+        "Embrace it eagerly",
+        "Adapt gradually",
+        "Need time to adjust",
+        "Prefer stability",
+        "Depends on the situation"
+      ]
+    }
+  ],
+  "additional_questions": [
+    {
+      "id": "personality_6",
+      "question": "How would your closest friends describe your personality?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_7",
+      "question": "What personality traits do you most admire in others?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_8",
+      "question": "Describe a time when your personality helped you succeed.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_9",
+      "question": "What aspects of your personality would you like to change?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_10",
+      "question": "How has your personality evolved over the years?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_11",
+      "question": "What personality traits do you think you inherited vs developed?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_12",
+      "question": "How do you express your emotions differently in various situations?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_13",
+      "question": "What triggers your strongest emotional responses?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_14",
+      "question": "How do you handle criticism of your personality?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_15",
+      "question": "What personality traits help you in relationships?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_16",
+      "question": "How do you adapt your personality in professional settings?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_17",
+      "question": "What aspects of your personality do you find most challenging?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_18",
+      "question": "How do you maintain authenticity while adapting to social situations?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_19",
+      "question": "What personality traits do you value most in a partner?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_20",
+      "question": "How do you handle conflicts between different aspects of your personality?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_21",
+      "question": "What role does your personality play in your career choices?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_22",
+      "question": "How do you express creativity through your personality?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_23",
+      "question": "What personality traits help you handle stress?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_24",
+      "question": "How do you balance being true to yourself with social expectations?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_25",
+      "question": "What aspects of your personality are you most proud of?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_26",
+      "question": "How do you handle situations that challenge your personality?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_27",
+      "question": "What personality traits do you find most attractive in others?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_28",
+      "question": "How do you express your personality through your interests?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_29",
+      "question": "What role does your personality play in your decision-making?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_30",
+      "question": "How do you handle feedback about your personality?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_31",
+      "question": "What personality traits help you connect with others?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_32",
+      "question": "How do you maintain your personality under pressure?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_33",
+      "question": "What aspects of your personality do you find most unique?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_34",
+      "question": "How do you express your personality in creative work?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_35",
+      "question": "What personality traits help you achieve your goals?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_36",
+      "question": "How do you handle conflicts between your personality and others'?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_37",
+      "question": "What role does your personality play in your communication style?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_38",
+      "question": "How do you express your personality through your lifestyle?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_39",
+      "question": "What personality traits do you find most essential to who you are?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_40",
+      "question": "How do you handle situations where your personality feels misunderstood?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_41",
+      "question": "What aspects of your personality do you find most adaptable?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_42",
+      "question": "How do you express your personality through your values?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_43",
+      "question": "What personality traits help you in leadership roles?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_44",
+      "question": "How do you maintain personality balance in different life areas?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_45",
+      "question": "What role does your personality play in your learning style?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_46",
+      "question": "How do you express your personality through your hobbies?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_47",
+      "question": "What personality traits do you find most challenging to manage?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_48",
+      "question": "How do you handle situations where your personality conflicts with your goals?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_49",
+      "question": "What aspects of your personality do you find most stable?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_50",
+      "question": "How do you express your personality through your relationships?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_51",
+      "question": "What personality traits help you handle change?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_52",
+      "question": "How do you maintain your personality authenticity in groups?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_53",
+      "question": "What role does your personality play in your problem-solving approach?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_54",
+      "question": "How do you express your personality through your communication?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_55",
+      "question": "What personality traits do you find most influential in your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_56",
+      "question": "How do you handle situations where your personality needs to adapt?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_57",
+      "question": "What aspects of your personality do you find most consistent?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_58",
+      "question": "How do you express your personality through your work?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_59",
+      "question": "What personality traits help you maintain relationships?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_60",
+      "question": "How do you handle conflicts between your personality and your environment?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_61",
+      "question": "What role does your personality play in your emotional regulation?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_62",
+      "question": "How do you express your personality through your choices?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_63",
+      "question": "What personality traits do you find most important for personal growth?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_64",
+      "question": "How do you maintain your personality integrity in challenging situations?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_65",
+      "question": "What aspects of your personality do you find most dynamic?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_66",
+      "question": "How do you express your personality through your reactions?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_67",
+      "question": "What personality traits help you navigate social situations?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_68",
+      "question": "How do you handle situations where your personality is challenged?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_69",
+      "question": "What role does your personality play in your coping strategies?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_70",
+      "question": "How do you express your personality through your preferences?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_71",
+      "question": "What personality traits do you find most central to your identity?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_72",
+      "question": "How do you maintain your personality balance in relationships?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_73",
+      "question": "What aspects of your personality do you find most expressive?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_74",
+      "question": "How do you express your personality through your behavior?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_75",
+      "question": "What personality traits help you handle uncertainty?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_76",
+      "question": "How do you handle situations where your personality feels constrained?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_77",
+      "question": "What role does your personality play in your motivation?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_78",
+      "question": "How do you express your personality through your interactions?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_79",
+      "question": "What personality traits do you find most influential in your decisions?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_80",
+      "question": "How do you maintain your personality authenticity in professional settings?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_81",
+      "question": "What aspects of your personality do you find most responsive to environment?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_82",
+      "question": "How do you express your personality through your responses to others?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_83",
+      "question": "What personality traits help you maintain mental health?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_84",
+      "question": "How do you handle situations where your personality conflicts with expectations?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_85",
+      "question": "What role does your personality play in your relationship patterns?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_86",
+      "question": "How do you express your personality through your life choices?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_87",
+      "question": "What personality traits do you find most important for happiness?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_88",
+      "question": "How do you maintain your personality balance under stress?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_89",
+      "question": "What aspects of your personality do you find most adaptable to change?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_90",
+      "question": "How do you express your personality through your problem-solving?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_91",
+      "question": "What personality traits help you connect with different types of people?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_92",
+      "question": "How do you handle situations where your personality feels limited?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_93",
+      "question": "What role does your personality play in your creativity?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_94",
+      "question": "How do you express your personality through your leadership style?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_95",
+      "question": "What personality traits do you find most essential for success?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_96",
+      "question": "How do you maintain your personality integrity in group settings?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_97",
+      "question": "What aspects of your personality do you find most influential in your worldview?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_98",
+      "question": "How do you express your personality through your conflict resolution?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_99",
+      "question": "What personality traits help you handle failure?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_100",
+      "question": "How do you handle situations where your personality needs growth?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_101",
+      "question": "What role does your personality play in your learning preferences?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_102",
+      "question": "How do you express your personality through your time management?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_103",
+      "question": "What personality traits do you find most important for resilience?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_104",
+      "question": "How do you maintain your personality authenticity in intimate relationships?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_105",
+      "question": "What aspects of your personality do you find most consistent across situations?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_106",
+      "question": "How do you express your personality through your goal-setting?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_107",
+      "question": "What personality traits help you maintain work-life balance?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_108",
+      "question": "How do you handle situations where your personality feels mismatched?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_109",
+      "question": "What role does your personality play in your communication patterns?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_110",
+      "question": "How do you express your personality through your decision-making process?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_111",
+      "question": "What personality traits do you find most important for personal fulfillment?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_112",
+      "question": "How do you maintain your personality balance in family relationships?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_113",
+      "question": "What aspects of your personality do you find most responsive to feedback?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_114",
+      "question": "How do you express your personality through your conflict management?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_115",
+      "question": "What personality traits help you handle responsibility?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_116",
+      "question": "How do you handle situations where your personality conflicts with your values?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_117",
+      "question": "What role does your personality play in your stress management?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_118",
+      "question": "How do you express your personality through your social interactions?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_119",
+      "question": "What personality traits do you find most important for emotional intelligence?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_120",
+      "question": "How do you maintain your personality authenticity in challenging relationships?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_121",
+      "question": "What aspects of your personality do you find most stable over time?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_122",
+      "question": "How do you express your personality through your lifestyle choices?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_123",
+      "question": "What personality traits help you maintain optimism?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_124",
+      "question": "How do you handle situations where your personality needs adjustment?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_125",
+      "question": "What role does your personality play in your career development?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_126",
+      "question": "How do you express your personality through your personal growth?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_127",
+      "question": "What personality traits do you find most important for leadership?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_128",
+      "question": "How do you maintain your personality balance in competitive situations?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_129",
+      "question": "What aspects of your personality do you find most flexible?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_130",
+      "question": "How do you express your personality through your innovation?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_131",
+      "question": "What personality traits help you handle ambiguity?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_132",
+      "question": "How do you handle situations where your personality feels misunderstood by others?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_133",
+      "question": "What role does your personality play in your relationship satisfaction?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_134",
+      "question": "How do you express your personality through your contribution to others?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_135",
+      "question": "What personality traits do you find most important for mental resilience?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_136",
+      "question": "How do you maintain your personality authenticity in public settings?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_137",
+      "question": "What aspects of your personality do you find most predictive of your behavior?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_138",
+      "question": "How do you express your personality through your approach to challenges?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_139",
+      "question": "What personality traits help you maintain perspective?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_140",
+      "question": "How do you handle situations where your personality conflicts with your roles?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_141",
+      "question": "What role does your personality play in your happiness levels?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_142",
+      "question": "How do you express your personality through your interactions with authority?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_143",
+      "question": "What personality traits do you find most important for personal integrity?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_144",
+      "question": "How do you maintain your personality balance in high-pressure situations?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_145",
+      "question": "What aspects of your personality do you find most influential in your choices?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_146",
+      "question": "How do you express your personality through your approach to risk?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_147",
+      "question": "What personality traits help you maintain healthy boundaries?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_148",
+      "question": "How do you handle situations where your personality needs to be more assertive?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_149",
+      "question": "What role does your personality play in your ability to influence others?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_150",
+      "question": "How do you express your personality through your approach to cooperation?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_151",
+      "question": "What personality traits do you find most important for life satisfaction?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_152",
+      "question": "How do you maintain your personality authenticity in diverse cultural settings?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_153",
+      "question": "What aspects of your personality do you find most consistent with your values?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_154",
+      "question": "How do you express your personality through your approach to learning?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_155",
+      "question": "What personality traits help you maintain emotional balance?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_156",
+      "question": "How do you handle situations where your personality conflicts with your environment?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_157",
+      "question": "What role does your personality play in your social connections?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_158",
+      "question": "How do you express your personality through your approach to change?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_159",
+      "question": "What personality traits do you find most important for personal effectiveness?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_160",
+      "question": "How do you maintain your personality balance in intimate partnerships?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_161",
+      "question": "What aspects of your personality do you find most adaptive to new situations?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_162",
+      "question": "How do you express your personality through your approach to conflict?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_163",
+      "question": "What personality traits help you maintain hope?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_164",
+      "question": "How do you handle situations where your personality needs to be more flexible?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_165",
+      "question": "What role does your personality play in your ability to inspire others?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_166",
+      "question": "How do you express your personality through your approach to collaboration?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_167",
+      "question": "What personality traits do you find most important for overall well-being?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_168",
+      "question": "How do you maintain your personality authenticity across different life stages?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_169",
+      "question": "What aspects of your personality do you find most essential to your core identity?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_170",
+      "question": "How do you express your personality through your approach to personal development?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_171",
+      "question": "What personality traits help you maintain inner peace?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_172",
+      "question": "How do you handle situations where your personality needs to evolve?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_173",
+      "question": "What role does your personality play in your capacity for love?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_174",
+      "question": "How do you express your personality through your approach to service to others?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_175",
+      "question": "What personality traits do you find most important for spiritual growth?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_176",
+      "question": "How do you maintain your personality balance in all aspects of life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_177",
+      "question": "What aspects of your personality do you find most representative of your true self?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_178",
+      "question": "How do you express your personality through your approach to life purpose?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_179",
+      "question": "What personality traits help you maintain authenticity in all relationships?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_180",
+      "question": "How do you handle situations where your personality needs complete integration?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_181",
+      "question": "What role does your personality play in your overall life satisfaction?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_182",
+      "question": "How do you express your personality through your approach to meaningful contribution?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_183",
+      "question": "What personality traits do you find most important for complete self-actualization?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_184",
+      "question": "How do you maintain your personality authenticity in your journey toward wholeness?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_185",
+      "question": "What aspects of your personality do you find most aligned with your highest potential?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_186",
+      "question": "How do you express your personality through your approach to living your best life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_187",
+      "question": "What personality traits help you maintain balance between all aspects of your being?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_188",
+      "question": "How do you handle situations where your personality needs to integrate all its facets?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_189",
+      "question": "What role does your personality play in your ability to love yourself completely?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_190",
+      "question": "How do you express your personality through your approach to serving your highest good?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_191",
+      "question": "What personality traits do you find most important for complete personal fulfillment?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_192",
+      "question": "How do you maintain your personality authenticity in your journey toward complete self-realization?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_193",
+      "question": "What aspects of your personality do you find most essential to your complete self-expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_194",
+      "question": "How do you express your personality through your approach to living with complete integrity?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_195",
+      "question": "What personality traits help you maintain harmony between all aspects of your personality?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_196",
+      "question": "How do you handle situations where your personality needs to express its full potential?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_197",
+      "question": "What role does your personality play in your ability to live authentically in all areas?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_198",
+      "question": "How do you express your personality through your approach to complete personal mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_199",
+      "question": "What personality traits do you find most important for achieving complete self-acceptance?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_200",
+      "question": "How do you maintain your personality authenticity in your journey toward complete wholeness?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_201",
+      "question": "What aspects of your personality do you find most representative of your authentic self?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_202",
+      "question": "How do you express your personality through your approach to complete life integration?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_203",
+      "question": "What personality traits help you maintain balance in your complete self-expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_204",
+      "question": "How do you handle situations where your personality needs to fully manifest its potential?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_205",
+      "question": "What role does your personality play in your capacity for complete self-love?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_206",
+      "question": "How do you express your personality through your approach to complete authenticity?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_207",
+      "question": "What personality traits do you find most important for complete personal harmony?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_208",
+      "question": "How do you maintain your personality balance in your journey toward complete self-realization?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_209",
+      "question": "What aspects of your personality do you find most aligned with your complete potential?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_210",
+      "question": "How do you express your personality through your approach to complete life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_211",
+      "question": "What personality traits help you maintain complete authenticity in all expressions?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_212",
+      "question": "How do you handle situations where your personality needs to achieve complete integration?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_213",
+      "question": "What role does your personality play in your ability to live with complete authenticity?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_214",
+      "question": "How do you express your personality through your approach to complete self-actualization?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_215",
+      "question": "What personality traits do you find most important for complete personal fulfillment?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_216",
+      "question": "How do you maintain your personality authenticity in your complete self-expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_217",
+      "question": "What aspects of your personality do you find most essential to your complete identity?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_218",
+      "question": "How do you express your personality through your approach to complete life fulfillment?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_219",
+      "question": "What personality traits help you maintain complete harmony in all aspects of life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_220",
+      "question": "How do you handle situations where your personality needs to express complete authenticity?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_221",
+      "question": "What role does your personality play in your journey toward complete self-mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_222",
+      "question": "How do you express your personality through your approach to complete personal growth?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_223",
+      "question": "What personality traits do you find most important for complete life satisfaction?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_224",
+      "question": "How do you maintain your personality balance in your complete life integration?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_225",
+      "question": "What aspects of your personality do you find most representative of your complete self?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_226",
+      "question": "How do you express your personality through your approach to complete authenticity?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_227",
+      "question": "What personality traits help you maintain complete balance in your self-expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_228",
+      "question": "How do you handle situations where your personality achieves complete self-realization?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_229",
+      "question": "What role does your personality play in your complete life fulfillment?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_230",
+      "question": "How do you express your personality through complete authentic living?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_231",
+      "question": "What personality traits do you find most important for complete self-mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_232",
+      "question": "How do you maintain complete personality authenticity in all life expressions?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_233",
+      "question": "What aspects of your personality represent your complete authentic self?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_234",
+      "question": "How do you express your complete personality through integrated living?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_235",
+      "question": "What personality traits help you achieve complete self-actualization?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_236",
+      "question": "How do you handle complete personality integration in all life areas?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_237",
+      "question": "What role does your complete personality play in authentic self-expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_238",
+      "question": "How do you express your personality through complete life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_239",
+      "question": "What personality traits are most important for complete authentic living?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_240",
+      "question": "How do you maintain complete personality balance in integrated life expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_241",
+      "question": "What aspects of your personality represent your complete integrated self?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_242",
+      "question": "How do you express your complete personality through authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_243",
+      "question": "What personality traits help you achieve complete integrated self-expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_244",
+      "question": "How do you handle complete personality authenticity in all life expressions?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_245",
+      "question": "What role does your complete personality play in integrated life fulfillment?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_246",
+      "question": "How do you express your personality through complete authentic self-mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_247",
+      "question": "What personality traits are most important for complete life integration?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_248",
+      "question": "How do you maintain complete personality authenticity in integrated living?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_249",
+      "question": "What aspects of your personality represent your complete life expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_250",
+      "question": "How do you express your complete personality through integrated authenticity?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_251",
+      "question": "What personality traits help you achieve complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_252",
+      "question": "How do you handle complete personality integration in authentic self-expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_253",
+      "question": "What role does your complete personality play in authentic life fulfillment?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_254",
+      "question": "How do you express your personality through complete integrated authenticity?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_255",
+      "question": "What personality traits are most important for complete authentic self-expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_256",
+      "question": "How do you maintain complete personality balance in authentic life integration?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_257",
+      "question": "What aspects of your personality represent your complete authentic expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_258",
+      "question": "How do you express your complete personality through authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_259",
+      "question": "What personality traits help you achieve complete authentic integration?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_260",
+      "question": "How do you handle complete personality authenticity in integrated life expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_261",
+      "question": "What role does your complete personality play in authentic self-mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_262",
+      "question": "How do you express your personality through complete authentic life integration?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_263",
+      "question": "What personality traits are most important for complete integrated authenticity?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_264",
+      "question": "How do you maintain complete personality authenticity in all integrated expressions?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_265",
+      "question": "What aspects of your personality represent your complete integrated authenticity?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_266",
+      "question": "How do you express your complete personality through authentic integrated living?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_267",
+      "question": "What personality traits help you achieve complete authentic self-mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_268",
+      "question": "How do you handle complete personality integration in authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_269",
+      "question": "What role does your complete personality play in integrated authentic expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_270",
+      "question": "How do you express your personality through complete authentic integrated mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_271",
+      "question": "What personality traits are most important for complete authentic life integration?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_272",
+      "question": "How do you maintain complete personality authenticity in integrated self-mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_273",
+      "question": "What aspects of your personality represent your complete authentic integration?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_274",
+      "question": "How do you express your complete personality through integrated authentic mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_275",
+      "question": "What personality traits help you achieve complete integrated authentic expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_276",
+      "question": "How do you handle complete personality authenticity in integrated authentic living?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_277",
+      "question": "What role does your complete personality play in authentic integrated mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_278",
+      "question": "How do you express your personality through complete authentic integrated expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_279",
+      "question": "What personality traits are most important for complete authentic integrated mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_280",
+      "question": "How do you maintain complete personality authenticity in all integrated authentic expressions?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_281",
+      "question": "What aspects of your personality represent your complete authentic integrated self?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_282",
+      "question": "How do you express your complete personality through authentic integrated self-mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_283",
+      "question": "What personality traits help you achieve complete authentic integrated living?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_284",
+      "question": "How do you handle complete personality integration in authentic integrated expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_285",
+      "question": "What role does your complete personality play in authentic integrated life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_286",
+      "question": "How do you express your personality through complete authentic integrated fulfillment?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_287",
+      "question": "What personality traits are most important for complete authentic integrated expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_288",
+      "question": "How do you maintain complete personality authenticity in integrated authentic mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_289",
+      "question": "What aspects of your personality represent your complete integrated authentic expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_290",
+      "question": "How do you express your complete personality through integrated authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_291",
+      "question": "What personality traits help you achieve complete integrated authentic self-expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_292",
+      "question": "How do you handle complete personality authenticity in integrated authentic self-mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_293",
+      "question": "What role does your complete personality play in integrated authentic life fulfillment?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_294",
+      "question": "How do you express your personality through complete integrated authentic mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_295",
+      "question": "What personality traits are most important for complete integrated authentic expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_296",
+      "question": "How do you maintain complete personality authenticity in all integrated authentic mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_297",
+      "question": "What aspects of your personality represent your complete integrated authentic mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_298",
+      "question": "How do you express your complete personality through integrated authentic self-mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_299",
+      "question": "What personality traits help you achieve complete integrated authentic life expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_300",
+      "question": "How do you handle complete personality integration in authentic integrated self-mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_301",
+      "question": "What role does your complete personality play in integrated authentic self-expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_302",
+      "question": "How do you express your personality through complete integrated authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_303",
+      "question": "What personality traits are most important for complete integrated authentic self-mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_304",
+      "question": "How do you maintain complete personality authenticity in integrated authentic life expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_305",
+      "question": "What aspects of your personality represent your complete integrated authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_306",
+      "question": "How do you express your complete personality through integrated authentic self-expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_307",
+      "question": "What personality traits help you achieve complete integrated authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_308",
+      "question": "How do you handle complete personality authenticity in integrated authentic life expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_309",
+      "question": "What role does your complete personality play in integrated authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_310",
+      "question": "How do you express your personality through complete integrated authentic life expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_311",
+      "question": "What personality traits are most important for complete integrated authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_312",
+      "question": "How do you maintain complete personality authenticity in all integrated authentic life expressions?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_313",
+      "question": "What aspects of your personality represent your complete integrated authentic life expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_314",
+      "question": "How do you express your complete personality through integrated authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_315",
+      "question": "What personality traits help you achieve complete integrated authentic life expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_316",
+      "question": "How do you handle complete personality integration in authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_317",
+      "question": "What role does your complete personality play in authentic life expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_318",
+      "question": "How do you express your personality through integrated authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_319",
+      "question": "What personality traits are most important for integrated authentic life expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_320",
+      "question": "How do you maintain complete personality authenticity in integrated authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_321",
+      "question": "What aspects of your personality represent integrated authentic life expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_322",
+      "question": "How do you express your complete personality through authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_323",
+      "question": "What personality traits help you achieve integrated authentic life expression?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_324",
+      "question": "How do you handle complete personality authenticity in authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_325",
+      "question": "What role does your complete personality play in authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_326",
+      "question": "How do you express your personality through complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_327",
+      "question": "What personality traits are most important for complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_328",
+      "question": "How do you maintain complete personality authenticity in authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_329",
+      "question": "What aspects of your personality represent complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_330",
+      "question": "How do you express your complete personality through authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_331",
+      "question": "What personality traits help you achieve complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_332",
+      "question": "How do you handle complete personality integration in authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_333",
+      "question": "What role does your complete personality play in complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_334",
+      "question": "How do you express your personality through complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_335",
+      "question": "What personality traits are most important for complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_336",
+      "question": "How do you maintain complete personality authenticity in complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_337",
+      "question": "What aspects of your personality represent complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_338",
+      "question": "How do you express your complete personality through complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_339",
+      "question": "What personality traits help you achieve complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_340",
+      "question": "How do you handle complete personality authenticity in complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_341",
+      "question": "What role does your complete personality play in complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_342",
+      "question": "How do you express your personality through complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_343",
+      "question": "What personality traits are most important for complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_344",
+      "question": "How do you maintain complete personality authenticity in complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_345",
+      "question": "What aspects of your personality represent complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_346",
+      "question": "How do you express your complete personality in complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_347",
+      "question": "What personality traits help you achieve complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_348",
+      "question": "How do you handle complete personality integration in complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_349",
+      "question": "What role does your complete personality play in complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_350",
+      "question": "How do you express your personality through complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_351",
+      "question": "What personality traits are most important for complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_352",
+      "question": "How do you maintain complete personality authenticity in complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_353",
+      "question": "What aspects of your personality represent complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_354",
+      "question": "How do you express your complete personality through complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_355",
+      "question": "What personality traits help you achieve complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_356",
+      "question": "How do you handle complete personality authenticity in complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_357",
+      "question": "What role does your complete personality play in complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_358",
+      "question": "How do you express your personality through complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_359",
+      "question": "What personality traits are most important for complete authentic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "personality_360",
+      "question": "In social situations, you typically feel:",
+      "type": "multiple_choice",
+      "options": [
+        "Energized and excited",
+        "Comfortable but cautious",
+        "Nervous but engaged",
+        "Overwhelmed",
+        "Depends on the people"
+      ]
+    },
+    {
+      "id": "personality_361",
+      "question": "When making decisions, you prioritize:",
+      "type": "multiple_choice",
+      "options": [
+        "Logic and facts",
+        "Emotions and values",
+        "Others' opinions",
+        "Past experience",
+        "Balanced approach"
+      ]
+    },
+    {
+      "id": "personality_362",
+      "question": "Your approach to new experiences is:",
+      "type": "multiple_choice",
+      "options": [
+        "Seek them actively",
+        "Open but cautious",
+        "Prefer familiar",
+        "Avoid when possible",
+        "Depends on the experience"
+      ]
+    },
+    {
+      "id": "personality_363",
+      "question": "In conflict situations, you tend to:",
+      "type": "multiple_choice",
+      "options": [
+        "Address directly",
+        "Seek compromise",
+        "Avoid confrontation",
+        "Analyze thoroughly",
+        "Depends on the stakes"
+      ]
+    },
+    {
+      "id": "personality_364",
+      "question": "Your energy levels are typically:",
+      "type": "multiple_choice",
+      "options": [
+        "High and consistent",
+        "Variable throughout day",
+        "Low but steady",
+        "Depends on activity",
+        "Seasonal patterns"
+      ]
+    },
+    {
+      "id": "personality_365",
+      "question": "When working on projects, you prefer:",
+      "type": "multiple_choice",
+      "options": [
+        "Detailed planning first",
+        "Jump in and adapt",
+        "Collaborative approach",
+        "Independent work",
+        "Structured guidance"
+      ]
+    },
+    {
+      "id": "personality_366",
+      "question": "Your emotional expression is usually:",
+      "type": "multiple_choice",
+      "options": [
+        "Open and direct",
+        "Controlled and measured",
+        "Depends on situation",
+        "Reserved",
+        "Expressive with trusted people"
+      ]
+    },
+    {
+      "id": "personality_367",
+      "question": "In learning situations, you're most comfortable:",
+      "type": "multiple_choice",
+      "options": [
+        "Taking initiative",
+        "Following guidance",
+        "Collaborative learning",
+        "Self-directed study",
+        "Structured environment"
+      ]
+    },
+    {
+      "id": "personality_368",
+      "question": "Your approach to routine is:",
+      "type": "multiple_choice",
+      "options": [
+        "Thrive on structure",
+        "Prefer flexibility",
+        "Need some routine",
+        "Dislike routine",
+        "Depends on life phase"
+      ]
+    },
+    {
+      "id": "personality_369",
+      "question": "When facing challenges, you typically:",
+      "type": "multiple_choice",
+      "options": [
+        "Tackle head-on",
+        "Seek help first",
+        "Plan carefully",
+        "Avoid if possible",
+        "Depends on the challenge"
+      ]
+    },
+    {
+      "id": "personality_370",
+      "question": "Your communication style is generally:",
+      "type": "multiple_choice",
+      "options": [
+        "Direct and clear",
+        "Diplomatic and careful",
+        "Expressive and animated",
+        "Quiet and thoughtful",
+        "Adapts to audience"
+      ]
+    },
+    {
+      "id": "personality_371",
+      "question": "In group settings, you usually:",
+      "type": "multiple_choice",
+      "options": [
+        "Take leadership",
+        "Contribute actively",
+        "Observe and listen",
+        "Prefer one-on-one",
+        "Depends on group dynamics"
+      ]
+    },
+    {
+      "id": "personality_372",
+      "question": "Your approach to risk is:",
+      "type": "multiple_choice",
+      "options": [
+        "Calculated risk-taker",
+        "Risk-averse",
+        "Impulsive",
+        "Depends on potential gain",
+        "Avoid all risks"
+      ]
+    },
+    {
+      "id": "personality_373",
+      "question": "When processing information, you prefer:",
+      "type": "multiple_choice",
+      "options": [
+        "Visual representations",
+        "Detailed explanations",
+        "Hands-on experience",
+        "Discussion with others",
+        "Written materials"
+      ]
+    },
+    {
+      "id": "personality_374",
+      "question": "Your motivation comes primarily from:",
+      "type": "multiple_choice",
+      "options": [
+        "Internal drive",
+        "External recognition",
+        "Helping others",
+        "Personal growth",
+        "Achievement of goals"
+      ]
+    },
+    {
+      "id": "personality_375",
+      "question": "In stressful situations, you typically:",
+      "type": "multiple_choice",
+      "options": [
+        "Stay calm and focused",
+        "Seek emotional support",
+        "Analyze the situation",
+        "Take immediate action",
+        "Need time alone"
+      ]
+    },
+    {
+      "id": "personality_376",
+      "question": "Your relationship with authority is:",
+      "type": "multiple_choice",
+      "options": [
+        "Respectful and compliant",
+        "Questioning but respectful",
+        "Challenge when necessary",
+        "Prefer peer relationships",
+        "Depends on the authority"
+      ]
+    },
+    {
+      "id": "personality_377",
+      "question": "When giving feedback, you tend to:",
+      "type": "multiple_choice",
+      "options": [
+        "Be direct and honest",
+        "Focus on positives",
+        "Provide detailed analysis",
+        "Consider feelings first",
+        "Depends on the person"
+      ]
+    },
+    {
+      "id": "personality_378",
+      "question": "Your approach to time management is:",
+      "type": "multiple_choice",
+      "options": [
+        "Highly organized",
+        "Flexible and adaptive",
+        "Procrastinate then rush",
+        "Depends on task importance",
+        "Struggle with time"
+      ]
+    },
+    {
+      "id": "personality_379",
+      "question": "In creative tasks, you typically:",
+      "type": "multiple_choice",
+      "options": [
+        "Generate many ideas",
+        "Perfect one concept",
+        "Seek inspiration first",
+        "Collaborate with others",
+        "Follow proven methods"
+      ]
+    },
+    {
+      "id": "personality_380",
+      "question": "Your response to criticism is usually:",
+      "type": "multiple_choice",
+      "options": [
+        "Accept and learn",
+        "Defend yourself",
+        "Analyze validity",
+        "Feel hurt but reflect",
+        "Depends on the critic"
+      ]
+    },
+    {
+      "id": "personality_381",
+      "question": "When helping others, you prefer to:",
+      "type": "multiple_choice",
+      "options": [
+        "Provide practical help",
+        "Offer emotional support",
+        "Give advice",
+        "Listen without judgment",
+        "Depends on their needs"
+      ]
+    },
+    {
+      "id": "personality_382",
+      "question": "Your approach to personal growth is:",
+      "type": "multiple_choice",
+      "options": [
+        "Continuous improvement",
+        "Focused on specific areas",
+        "Happens naturally",
+        "Requires external motivation",
+        "Depends on life circumstances"
+      ]
+    },
+    {
+      "id": "personality_383",
+      "question": "In competitive situations, you:",
+      "type": "multiple_choice",
+      "options": [
+        "Thrive on competition",
+        "Prefer collaboration",
+        "Compete with yourself",
+        "Avoid competition",
+        "Depends on stakes"
+      ]
+    },
+    {
+      "id": "personality_384",
+      "question": "Your relationship with change is:",
+      "type": "multiple_choice",
+      "options": [
+        "Embrace eagerly",
+        "Adapt gradually",
+        "Resist initially",
+        "Depends on type of change",
+        "Prefer stability"
+      ]
+    },
+    {
+      "id": "personality_385",
+      "question": "When making long-term plans, you:",
+      "type": "multiple_choice",
+      "options": [
+        "Plan meticulously",
+        "Set general direction",
+        "Prefer short-term focus",
+        "Depends on area of life",
+        "Avoid long-term planning"
+      ]
+    },
+    {
+      "id": "personality_386",
+      "question": "Your approach to work-life balance is:",
+      "type": "multiple_choice",
+      "options": [
+        "Strict separation",
+        "Integrated approach",
+        "Work takes priority",
+        "Life takes priority",
+        "Depends on circumstances"
+      ]
+    },
+    {
+      "id": "personality_387",
+      "question": "In problem-solving, you typically:",
+      "type": "multiple_choice",
+      "options": [
+        "Systematic approach",
+        "Creative brainstorming",
+        "Seek multiple perspectives",
+        "Trial and error",
+        "Depends on problem type"
+      ]
+    },
+    {
+      "id": "personality_388",
+      "question": "Your relationship with technology is:",
+      "type": "multiple_choice",
+      "options": [
+        "Early adopter",
+        "Practical user",
+        "Cautious adopter",
+        "Minimal use",
+        "Depends on usefulness"
+      ]
+    },
+    {
+      "id": "personality_389",
+      "question": "When expressing disagreement, you:",
+      "type": "multiple_choice",
+      "options": [
+        "State position clearly",
+        "Seek common ground",
+        "Avoid confrontation",
+        "Present evidence",
+        "Depends on relationship"
+      ]
+    },
+    {
+      "id": "personality_390",
+      "question": "Your approach to personal space is:",
+      "type": "multiple_choice",
+      "options": [
+        "Need lots of space",
+        "Moderate space needs",
+        "Comfortable with closeness",
+        "Depends on relationship",
+        "Varies with mood"
+      ]
+    },
+    {
+      "id": "personality_391",
+      "question": "In decision-making groups, you:",
+      "type": "multiple_choice",
+      "options": [
+        "Advocate for your position",
+        "Seek consensus",
+        "Analyze all options",
+        "Support the group",
+        "Depends on the decision"
+      ]
+    },
+    {
+      "id": "personality_392",
+      "question": "Your response to unexpected events is:",
+      "type": "multiple_choice",
+      "options": [
+        "Adapt quickly",
+        "Need time to process",
+        "Seek more information",
+        "Depends on the event",
+        "Prefer advance notice"
+      ]
+    },
+    {
+      "id": "personality_393",
+      "question": "When learning new skills, you:",
+      "type": "multiple_choice",
+      "options": [
+        "Practice intensively",
+        "Learn gradually",
+        "Seek expert guidance",
+        "Learn with others",
+        "Depends on the skill"
+      ]
+    },
+    {
+      "id": "personality_394",
+      "question": "Your approach to goal-setting is:",
+      "type": "multiple_choice",
+      "options": [
+        "Specific and measurable",
+        "Flexible and adaptive",
+        "Focus on process",
+        "Depends on the goal",
+        "Prefer spontaneity"
+      ]
+    },
+    {
+      "id": "personality_395",
+      "question": "In social conversations, you typically:",
+      "type": "multiple_choice",
+      "options": [
+        "Lead the conversation",
+        "Contribute actively",
+        "Listen more than speak",
+        "Depends on the topic",
+        "Prefer meaningful topics"
+      ]
+    },
+    {
+      "id": "personality_396",
+      "question": "Your relationship with rules is:",
+      "type": "multiple_choice",
+      "options": [
+        "Follow carefully",
+        "Understand reasoning first",
+        "Bend when necessary",
+        "Question authority",
+        "Depends on the rule"
+      ]
+    },
+    {
+      "id": "personality_397",
+      "question": "When facing uncertainty, you:",
+      "type": "multiple_choice",
+      "options": [
+        "Seek more information",
+        "Make decision quickly",
+        "Consult with others",
+        "Wait and see",
+        "Depends on importance"
+      ]
+    },
+    {
+      "id": "personality_398",
+      "question": "Your approach to personal reflection is:",
+      "type": "multiple_choice",
+      "options": [
+        "Regular structured time",
+        "Spontaneous reflection",
+        "Through discussion",
+        "Prefer action to reflection",
+        "Depends on life events"
+      ]
+    },
+    {
+      "id": "personality_399",
+      "question": "In team projects, you typically:",
+      "type": "multiple_choice",
+      "options": [
+        "Take charge",
+        "Contribute expertise",
+        "Support team harmony",
+        "Focus on quality",
+        "Depends on team dynamics"
+      ]
+    },
+    {
+      "id": "personality_400",
+      "question": "Your response to praise is:",
+      "type": "multiple_choice",
+      "options": [
+        "Accept graciously",
+        "Deflect attention",
+        "Analyze if deserved",
+        "Share credit",
+        "Depends on the source"
+      ]
+    },
+    {
+      "id": "personality_401",
+      "question": "When planning events, you:",
+      "type": "multiple_choice",
+      "options": [
+        "Plan every detail",
+        "Plan key elements",
+        "Prefer spontaneity",
+        "Delegate planning",
+        "Depends on event importance"
+      ]
+    },
+    {
+      "id": "personality_402",
+      "question": "Your approach to personal boundaries is:",
+      "type": "multiple_choice",
+      "options": [
+        "Clear and firm",
+        "Flexible and adaptable",
+        "Depends on relationship",
+        "Struggle with boundaries",
+        "Prefer few boundaries"
+      ]
+    },
+    {
+      "id": "personality_403",
+      "question": "In learning from mistakes, you:",
+      "type": "multiple_choice",
+      "options": [
+        "Analyze thoroughly",
+        "Learn and move on",
+        "Seek feedback",
+        "Prefer to forget",
+        "Depends on mistake severity"
+      ]
+    },
+    {
+      "id": "personality_404",
+      "question": "Your relationship with tradition is:",
+      "type": "multiple_choice",
+      "options": [
+        "Respect and maintain",
+        "Adapt to modern context",
+        "Question relevance",
+        "Create new traditions",
+        "Depends on the tradition"
+      ]
+    },
+    {
+      "id": "personality_405",
+      "question": "When giving presentations, you:",
+      "type": "multiple_choice",
+      "options": [
+        "Prepare extensively",
+        "Speak spontaneously",
+        "Focus on interaction",
+        "Prefer written communication",
+        "Depends on audience"
+      ]
+    },
+    {
+      "id": "personality_406",
+      "question": "Your approach to personal finance is:",
+      "type": "multiple_choice",
+      "options": [
+        "Careful and conservative",
+        "Balanced approach",
+        "Focused on experiences",
+        "Minimal attention",
+        "Depends on income level"
+      ]
+    },
+    {
+      "id": "personality_407",
+      "question": "In conflict resolution, you:",
+      "type": "multiple_choice",
+      "options": [
+        "Address root causes",
+        "Find practical solutions",
+        "Focus on relationships",
+        "Avoid escalation",
+        "Depends on the conflict"
+      ]
+    },
+    {
+      "id": "personality_408",
+      "question": "Your response to compliments is:",
+      "type": "multiple_choice",
+      "options": [
+        "Accept with thanks",
+        "Minimize achievement",
+        "Redirect to others",
+        "Analyze sincerity",
+        "Depends on the compliment"
+      ]
+    },
+    {
+      "id": "personality_409",
+      "question": "When choosing entertainment, you prefer:",
+      "type": "multiple_choice",
+      "options": [
+        "Intellectually stimulating",
+        "Emotionally engaging",
+        "Socially interactive",
+        "Relaxing and peaceful",
+        "Depends on mood"
+      ]
+    }
+  ]
+}

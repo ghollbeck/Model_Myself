@@ -1,0 +1,2523 @@
+{
+  "category": "Questions about my knowledge",
+  "category_key": "knowledge",
+  "existing_answers": [
+    {
+      "question_id": "knowledge_1",
+      "question": "What are your main areas of expertise?",
+      "answer": "good2",
+      "answer_type": "text",
+      "category": "Questions about my knowledge",
+      "timestamp": "2025-07-16T10:54:15.577939"
+    },
+    {
+      "question_id": "knowledge_2",
+      "question": "Which subjects do you find most challenging?",
+      "answer": "good2",
+      "answer_type": "text",
+      "category": "Questions about my knowledge",
+      "timestamp": "2025-07-16T10:54:17.124589"
+    },
+    {
+      "question_id": "knowledge_3",
+      "question": "What's your preferred learning style?",
+      "answer": [
+        "Kinesthetic"
+      ],
+      "answer_type": "multiple_choice",
+      "category": "Questions about my knowledge",
+      "timestamp": "2025-07-16T10:54:18.322754"
+    },
+    {
+      "question_id": "knowledge_4",
+      "question": "How do you typically approach learning new topics?",
+      "answer": [
+        "Find a mentor/teacher"
+      ],
+      "answer_type": "multiple_choice",
+      "category": "Questions about my knowledge",
+      "timestamp": "2025-07-16T10:54:19.760017"
+    },
+    {
+      "question_id": "knowledge_5",
+      "question": "What knowledge would you like to develop further?",
+      "answer": "good2",
+      "answer_type": "text",
+      "category": "Questions about my knowledge",
+      "timestamp": "2025-07-16T10:54:21.186653"
+    }
+  ],
+  "predefined_questions": [
+    {
+      "id": "knowledge_1",
+      "question": "What are your main areas of expertise?",
+      "type": "text"
+    },
+    {
+      "id": "knowledge_2",
+      "question": "Which subjects do you find most challenging?",
+      "type": "text"
+    },
+    {
+      "id": "knowledge_3",
+      "question": "What's your preferred learning style?",
+      "type": "multiple_choice",
+      "options": [
+        "Visual",
+        "Auditory",
+        "Kinesthetic",
+        "Reading/Writing",
+        "Mixed"
+      ]
+    },
+    {
+      "id": "knowledge_4",
+      "question": "How do you typically approach learning new topics?",
+      "type": "multiple_choice",
+      "options": [
+        "Research extensively first",
+        "Jump in and learn by doing",
+        "Find a mentor/teacher",
+        "Take structured courses",
+        "Mix of approaches"
+      ]
+    },
+    {
+      "id": "knowledge_5",
+      "question": "What knowledge would you like to develop further?",
+      "type": "text"
+    }
+  ],
+  "additional_questions": [
+    {
+      "id": "knowledge_6",
+      "question": "What specific programming languages do you know best?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_7",
+      "question": "Describe your experience with different learning methodologies.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_8",
+      "question": "What technical skills would you like to improve?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_9",
+      "question": "How do you stay updated with new information in your field?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_10",
+      "question": "What was the most challenging concept you've learned recently?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_11",
+      "question": "Describe a time when you had to learn something completely new.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_12",
+      "question": "What resources do you use most for learning?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_13",
+      "question": "How do you organize and retain new information?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_14",
+      "question": "What subjects do you find easiest to understand?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_15",
+      "question": "Describe your experience with collaborative learning.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_16",
+      "question": "What topics can you teach others about?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_17",
+      "question": "How do you approach complex problem-solving?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_18",
+      "question": "What areas of knowledge do you feel most confident in?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_19",
+      "question": "Describe your experience with different educational systems.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_20",
+      "question": "What motivates you to learn new things?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_21",
+      "question": "How do you measure your learning progress?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_22",
+      "question": "What knowledge gaps do you want to fill?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_23",
+      "question": "Describe your experience with self-directed learning.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_24",
+      "question": "What tools or methods help you learn best?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_25",
+      "question": "How do you apply theoretical knowledge to practical situations?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_26",
+      "question": "What subjects have you studied formally?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_27",
+      "question": "Describe your experience with online learning.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_28",
+      "question": "What knowledge do you consider most valuable?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_29",
+      "question": "How do you handle information overload?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_30",
+      "question": "What learning experiences have been most impactful?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_31",
+      "question": "Describe your approach to research and fact-checking.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_32",
+      "question": "What knowledge would you like to share with others?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_33",
+      "question": "How do you adapt your learning style to different subjects?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_34",
+      "question": "What role does curiosity play in your learning?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_35",
+      "question": "Describe your experience with different types of media for learning.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_36",
+      "question": "What knowledge do you wish you had learned earlier?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_37",
+      "question": "How do you balance breadth vs depth in learning?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_38",
+      "question": "What subjects do you find most intellectually stimulating?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_39",
+      "question": "Describe your experience with learning from mistakes.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_40",
+      "question": "What knowledge skills transfer well between different areas?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_41",
+      "question": "How do you evaluate the credibility of information sources?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_42",
+      "question": "What role does practice play in your learning process?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_43",
+      "question": "Describe your experience with learning under pressure.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_44",
+      "question": "What knowledge areas are you most passionate about?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_45",
+      "question": "How do you maintain long-term retention of information?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_46",
+      "question": "What subjects would you like to explore in more depth?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_47",
+      "question": "Describe your experience with different note-taking methods.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_48",
+      "question": "What knowledge do you consider fundamental to your worldview?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_49",
+      "question": "How do you approach learning abstract concepts?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_50",
+      "question": "What role does discussion play in your learning?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_51",
+      "question": "Describe your experience with learning from different cultures.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_52",
+      "question": "What knowledge areas challenge your existing beliefs?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_53",
+      "question": "How do you integrate new knowledge with what you already know?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_54",
+      "question": "What subjects do you find most relevant to your daily life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_55",
+      "question": "Describe your experience with learning through experimentation.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_56",
+      "question": "What knowledge would you like to develop for career growth?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_57",
+      "question": "How do you approach learning when you're not naturally talented?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_58",
+      "question": "What subjects have you learned purely for personal interest?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_59",
+      "question": "Describe your experience with learning in group settings.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_60",
+      "question": "What knowledge areas require the most discipline for you?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_61",
+      "question": "How do you approach learning controversial or sensitive topics?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_62",
+      "question": "What role does repetition play in your learning process?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_63",
+      "question": "Describe your experience with learning from books vs other media.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_64",
+      "question": "What knowledge areas do you find most practical?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_65",
+      "question": "How do you approach learning when you disagree with the content?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_66",
+      "question": "What subjects have you learned through travel or experience?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_67",
+      "question": "Describe your experience with learning different languages.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_68",
+      "question": "What knowledge areas connect most strongly to your values?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_69",
+      "question": "How do you approach learning when resources are limited?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_70",
+      "question": "What subjects do you find most challenging to explain to others?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_71",
+      "question": "Describe your experience with learning through teaching.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_72",
+      "question": "What knowledge areas have changed your perspective most?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_73",
+      "question": "How do you approach learning when you're already an expert?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_74",
+      "question": "What subjects do you learn best through hands-on experience?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_75",
+      "question": "Describe your experience with learning from failure.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_76",
+      "question": "What knowledge areas are you most curious about?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_77",
+      "question": "How do you approach learning when you're pressed for time?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_78",
+      "question": "What subjects have you learned through mentorship?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_79",
+      "question": "Describe your experience with learning creative skills.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_80",
+      "question": "What knowledge areas do you find most transferable?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_81",
+      "question": "How do you approach learning when you lack foundation knowledge?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_82",
+      "question": "What subjects do you learn best through storytelling?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_83",
+      "question": "Describe your experience with learning analytical skills.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_84",
+      "question": "What knowledge areas do you find most personally meaningful?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_85",
+      "question": "How do you approach learning when you're intimidated by the subject?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_86",
+      "question": "What subjects have you learned through observation?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_87",
+      "question": "Describe your experience with learning interpersonal skills.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_88",
+      "question": "What knowledge areas do you find most universally applicable?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_89",
+      "question": "How do you approach learning when you're highly motivated?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_90",
+      "question": "What subjects do you learn best through comparison and contrast?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_91",
+      "question": "Describe your experience with learning through simulation.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_92",
+      "question": "What knowledge areas have been most useful in your career?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_93",
+      "question": "How do you approach learning when you're skeptical of the content?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_94",
+      "question": "What subjects have you learned through trial and error?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_95",
+      "question": "Describe your experience with learning through visualization.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_96",
+      "question": "What knowledge areas do you find most challenging to measure?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_97",
+      "question": "How do you approach learning when you're learning alongside others?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_98",
+      "question": "What subjects do you learn best through case studies?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_99",
+      "question": "Describe your experience with learning through immersion.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_100",
+      "question": "What knowledge areas have surprised you with their complexity?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_101",
+      "question": "How do you approach learning when you need immediate application?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_102",
+      "question": "What subjects have you learned through debate and discussion?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_103",
+      "question": "Describe your experience with learning through reflection.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_104",
+      "question": "What knowledge areas do you find most emotionally engaging?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_105",
+      "question": "How do you approach learning when you're learning for others?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_106",
+      "question": "What subjects do you learn best through structured curricula?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_107",
+      "question": "Describe your experience with learning through collaboration.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_108",
+      "question": "What knowledge areas have been most personally transformative?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_109",
+      "question": "How do you approach learning when you're re-learning something?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_110",
+      "question": "What subjects have you learned through documentation and manuals?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_111",
+      "question": "Describe your experience with learning through questions.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_112",
+      "question": "What knowledge areas do you find most intellectually rewarding?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_113",
+      "question": "How do you approach learning when you're learning independently?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_114",
+      "question": "What subjects do you learn best through examples and analogies?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_115",
+      "question": "Describe your experience with learning through feedback.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_116",
+      "question": "What knowledge areas have been most practically useful?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_117",
+      "question": "How do you approach learning when you're learning competitively?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_118",
+      "question": "What subjects have you learned through projects and assignments?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_119",
+      "question": "Describe your experience with learning through exploration.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_120",
+      "question": "What knowledge areas do you find most socially relevant?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_121",
+      "question": "How do you approach learning when you're learning recreationally?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_122",
+      "question": "What subjects do you learn best through patterns and systems?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_123",
+      "question": "Describe your experience with learning through mentoring others.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_124",
+      "question": "What knowledge areas have been most personally challenging?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_125",
+      "question": "How do you approach learning when you're learning under guidance?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_126",
+      "question": "What subjects have you learned through workshops and seminars?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_127",
+      "question": "Describe your experience with learning through problem-solving.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_128",
+      "question": "What knowledge areas do you find most culturally important?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_129",
+      "question": "How do you approach learning when you're learning for mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_130",
+      "question": "What subjects do you learn best through games and simulations?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_131",
+      "question": "Describe your experience with learning through research.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_132",
+      "question": "What knowledge areas have been most professionally relevant?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_133",
+      "question": "How do you approach learning when you're learning for understanding?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_134",
+      "question": "What subjects have you learned through conferences and events?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_135",
+      "question": "Describe your experience with learning through synthesis.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_136",
+      "question": "What knowledge areas do you find most personally satisfying?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_137",
+      "question": "How do you approach learning when you're learning for application?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_138",
+      "question": "What subjects do you learn best through multimedia approaches?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_139",
+      "question": "Describe your experience with learning through critical thinking.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_140",
+      "question": "What knowledge areas have been most globally relevant?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_141",
+      "question": "How do you approach learning when you're learning for innovation?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_142",
+      "question": "What subjects have you learned through peer learning?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_143",
+      "question": "Describe your experience with learning through systematic study.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_144",
+      "question": "What knowledge areas do you find most ethically important?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_145",
+      "question": "How do you approach learning when you're learning for leadership?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_146",
+      "question": "What subjects do you learn best through active participation?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_147",
+      "question": "Describe your experience with learning through cross-training.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_148",
+      "question": "What knowledge areas have been most personally enriching?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_149",
+      "question": "How do you approach learning when you're learning for service?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_150",
+      "question": "What subjects have you learned through formal education?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_151",
+      "question": "Describe your experience with learning through continuous improvement.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_152",
+      "question": "What knowledge areas do you find most strategically important?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_153",
+      "question": "How do you approach learning when you're learning for creativity?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_154",
+      "question": "What subjects do you learn best through interdisciplinary approaches?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_155",
+      "question": "Describe your experience with learning through adaptation.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_156",
+      "question": "What knowledge areas have been most personally meaningful?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_157",
+      "question": "How do you approach learning when you're learning for problem-solving?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_158",
+      "question": "What subjects have you learned through apprenticeship?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_159",
+      "question": "Describe your experience with learning through innovation.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_160",
+      "question": "What knowledge areas do you find most personally relevant?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_161",
+      "question": "How do you approach learning when you're learning for growth?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_162",
+      "question": "What subjects do you learn best through experiential learning?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_163",
+      "question": "Describe your experience with learning through mentorship.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_164",
+      "question": "What knowledge areas have been most transformative?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_165",
+      "question": "How do you approach learning when you're learning for understanding others?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_166",
+      "question": "What subjects have you learned through self-discovery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_167",
+      "question": "Describe your experience with learning through reflection and analysis.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_168",
+      "question": "What knowledge areas do you find most personally challenging?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_169",
+      "question": "How do you approach learning when you're learning for personal development?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_170",
+      "question": "What subjects do you learn best through integrated approaches?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_171",
+      "question": "Describe your experience with learning through exploration and discovery.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_172",
+      "question": "What knowledge areas have been most intellectually stimulating?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_173",
+      "question": "How do you approach learning when you're learning for mastery of fundamentals?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_174",
+      "question": "What subjects have you learned through community involvement?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_175",
+      "question": "Describe your experience with learning through synthesis and integration.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_176",
+      "question": "What knowledge areas do you find most personally fulfilling?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_177",
+      "question": "How do you approach learning when you're learning for broad understanding?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_178",
+      "question": "What subjects do you learn best through personalized approaches?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_179",
+      "question": "Describe your experience with learning through continuous exploration.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_180",
+      "question": "What knowledge areas have been most personally impactful?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_181",
+      "question": "How do you approach learning when you're learning for deep expertise?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_182",
+      "question": "What subjects have you learned through life experience?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_183",
+      "question": "Describe your experience with learning through holistic approaches.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_184",
+      "question": "What knowledge areas do you find most personally valuable?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_185",
+      "question": "How do you approach learning when you're learning for comprehensive understanding?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_186",
+      "question": "What subjects do you learn best through adaptive methods?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_187",
+      "question": "Describe your experience with learning through lifelong learning.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_188",
+      "question": "What knowledge areas have been most personally significant?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_189",
+      "question": "How do you approach learning when you're learning for wisdom?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_190",
+      "question": "What subjects have you learned through integrated life experiences?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_191",
+      "question": "Describe your experience with learning through continuous development.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_192",
+      "question": "What knowledge areas do you find most personally inspiring?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_193",
+      "question": "How do you approach learning when you're learning for personal growth?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_194",
+      "question": "What subjects do you learn best through comprehensive approaches?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_195",
+      "question": "Describe your experience with learning through transformative education.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_196",
+      "question": "What knowledge areas have been most personally enriching?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_197",
+      "question": "How do you approach learning when you're learning for life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_198",
+      "question": "What subjects have you learned through holistic life integration?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_199",
+      "question": "Describe your experience with learning through continuous personal development.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_200",
+      "question": "What knowledge areas do you find most personally transformative?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_201",
+      "question": "How do you approach learning when you're learning for optimal living?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_202",
+      "question": "What subjects do you learn best through integrated personal growth?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_203",
+      "question": "Describe your experience with learning through comprehensive life education.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_204",
+      "question": "What knowledge areas have been most personally meaningful and impactful?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_205",
+      "question": "How do you approach learning when you're learning for complete understanding?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_206",
+      "question": "What subjects have you learned through total life integration?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_207",
+      "question": "Describe your experience with learning through holistic personal development.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_208",
+      "question": "What knowledge areas do you find most personally significant and valuable?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_209",
+      "question": "How do you approach learning when you're learning for ultimate mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_210",
+      "question": "What subjects do you learn best through complete life integration?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_211",
+      "question": "Describe your experience with learning through comprehensive personal growth.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_212",
+      "question": "What knowledge areas have been most personally transformative and enriching?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_213",
+      "question": "How do you approach learning when you're learning for complete life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_214",
+      "question": "What subjects have you learned through total personal development?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_215",
+      "question": "Describe your experience with learning through complete life integration.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_216",
+      "question": "What knowledge areas do you find most personally fulfilling and meaningful?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_217",
+      "question": "How do you approach learning when you're learning for comprehensive life understanding?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_218",
+      "question": "What subjects do you learn best through total life education?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_219",
+      "question": "Describe your experience with learning through complete personal transformation.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_220",
+      "question": "What knowledge areas have been most personally significant and impactful?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_221",
+      "question": "How do you approach learning when you're learning for ultimate life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_222",
+      "question": "What subjects have you learned through comprehensive life integration?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_223",
+      "question": "Describe your experience with learning through total personal development.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_224",
+      "question": "What knowledge areas do you find most personally valuable and transformative?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_225",
+      "question": "How do you approach learning when you're learning for complete life optimization?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_226",
+      "question": "What subjects do you learn best through holistic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_227",
+      "question": "Describe your experience with learning through comprehensive personal growth.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_228",
+      "question": "What knowledge areas have been most personally meaningful and significant?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_229",
+      "question": "How do you approach learning when you're learning for total life understanding?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_230",
+      "question": "What subjects have you learned through complete personal integration?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_231",
+      "question": "Describe your experience with learning through holistic life development.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_232",
+      "question": "What knowledge areas do you find most personally enriching and valuable?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_233",
+      "question": "How do you approach learning when you're learning for comprehensive life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_234",
+      "question": "What subjects do you learn best through total personal transformation?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_235",
+      "question": "Describe your experience with learning through complete life education.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_236",
+      "question": "What knowledge areas have been most personally fulfilling and impactful?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_237",
+      "question": "How do you approach learning when you're learning for ultimate personal growth?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_238",
+      "question": "What subjects have you learned through comprehensive life development?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_239",
+      "question": "Describe your experience with learning through total life integration.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_240",
+      "question": "What knowledge areas do you find most personally transformative and significant?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_241",
+      "question": "How do you approach learning when you're learning for complete personal mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_242",
+      "question": "What subjects do you learn best through holistic life optimization?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_243",
+      "question": "Describe your experience with learning through comprehensive personal development.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_244",
+      "question": "What knowledge areas have been most personally valuable and meaningful?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_245",
+      "question": "How do you approach learning when you're learning for total personal understanding?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_246",
+      "question": "What subjects have you learned through complete life transformation?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_247",
+      "question": "Describe your experience with learning through holistic personal growth.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_248",
+      "question": "What knowledge areas do you find most personally significant and enriching?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_249",
+      "question": "How do you approach learning when you're learning for comprehensive personal mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_250",
+      "question": "What subjects do you learn best through total life development?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_251",
+      "question": "Describe your experience with learning through complete personal integration.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_252",
+      "question": "What knowledge areas have been most personally impactful and transformative?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_253",
+      "question": "How do you approach learning when you're learning for ultimate life understanding?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_254",
+      "question": "What subjects have you learned through comprehensive personal growth?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_255",
+      "question": "Describe your experience with learning through total personal optimization.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_256",
+      "question": "What knowledge areas do you find most personally meaningful and valuable?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_257",
+      "question": "How do you approach learning when you're learning for complete life development?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_258",
+      "question": "What subjects do you learn best through holistic personal mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_259",
+      "question": "Describe your experience with learning through comprehensive life growth.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_260",
+      "question": "What knowledge areas have been most personally enriching and significant?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_261",
+      "question": "How do you approach learning when you're learning for total life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_262",
+      "question": "What subjects have you learned through complete personal development?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_263",
+      "question": "Describe your experience with learning through holistic life integration.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_264",
+      "question": "What knowledge areas do you find most personally valuable and impactful?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_265",
+      "question": "How do you approach learning when you're learning for comprehensive life understanding?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_266",
+      "question": "What subjects do you learn best through total personal growth?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_267",
+      "question": "Describe your experience with learning through complete life mastery.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_268",
+      "question": "What knowledge areas have been most personally transformative and meaningful?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_269",
+      "question": "How do you approach learning when you're learning for ultimate personal development?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_270",
+      "question": "What subjects have you learned through comprehensive life optimization?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_271",
+      "question": "Describe your experience with learning through total life growth.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_272",
+      "question": "What knowledge areas do you find most personally significant and valuable?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_273",
+      "question": "How do you approach learning when you're learning for complete personal understanding?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_274",
+      "question": "What subjects do you learn best through holistic life development?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_275",
+      "question": "Describe your experience with learning through comprehensive personal integration.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_276",
+      "question": "What knowledge areas have been most personally fulfilling and transformative?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_277",
+      "question": "How do you approach learning when you're learning for total personal mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_278",
+      "question": "What subjects have you learned through complete life development?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_279",
+      "question": "Describe your experience with learning through holistic personal optimization.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_280",
+      "question": "What knowledge areas do you find most personally enriching and meaningful?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_281",
+      "question": "How do you approach learning when you're learning for comprehensive personal growth?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_282",
+      "question": "What subjects do you learn best through total life integration?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_283",
+      "question": "Describe your experience with learning through complete personal development.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_284",
+      "question": "What knowledge areas have been most personally impactful and significant?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_285",
+      "question": "How do you approach learning when you're learning for ultimate life development?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_286",
+      "question": "What subjects have you learned through comprehensive personal mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_287",
+      "question": "Describe your experience with learning through total personal integration.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_288",
+      "question": "What knowledge areas do you find most personally transformative and valuable?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_289",
+      "question": "How do you approach learning when you're learning for complete life growth?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_290",
+      "question": "What subjects do you learn best through holistic personal development?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_291",
+      "question": "Describe your experience with learning through comprehensive life mastery.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_292",
+      "question": "What knowledge areas have been most personally meaningful and enriching?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_293",
+      "question": "How do you approach learning when you're learning for total life optimization?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_294",
+      "question": "What subjects have you learned through complete personal growth?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_295",
+      "question": "Describe your experience with learning through holistic life development.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_296",
+      "question": "What knowledge areas do you find most personally significant and transformative?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_297",
+      "question": "How do you approach learning when you're learning for comprehensive life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_298",
+      "question": "What subjects do you learn best through total personal development?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_299",
+      "question": "Describe your experience with learning through complete life integration.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_300",
+      "question": "What knowledge areas have been most personally valuable and impactful?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_301",
+      "question": "How do you approach learning when you're learning for ultimate personal mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_302",
+      "question": "What subjects have you learned through comprehensive life development?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_303",
+      "question": "Describe your experience with learning through total life optimization.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_304",
+      "question": "What knowledge areas do you find most personally fulfilling and significant?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_305",
+      "question": "How do you approach learning when you're learning for complete personal growth?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_306",
+      "question": "What subjects do you learn best through holistic life mastery?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_307",
+      "question": "Describe your experience with learning through comprehensive personal optimization.",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_308",
+      "question": "What knowledge areas have been most personally enriching and transformative?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_309",
+      "question": "How do you approach learning when you're learning for total personal understanding?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_310",
+      "question": "What subjects have you learned through complete life development?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "knowledge_311",
+      "question": "Which learning environment do you prefer?",
+      "type": "multiple_choice",
+      "options": [
+        "Classroom setting",
+        "Online learning",
+        "Hands-on workshops",
+        "Self-study",
+        "Mixed environments"
+      ]
+    },
+    {
+      "id": "knowledge_312",
+      "question": "What type of knowledge do you value most?",
+      "type": "multiple_choice",
+      "options": [
+        "Practical skills",
+        "Theoretical understanding",
+        "Creative knowledge",
+        "Social intelligence",
+        "All equally"
+      ]
+    },
+    {
+      "id": "knowledge_313",
+      "question": "How do you prefer to receive feedback?",
+      "type": "multiple_choice",
+      "options": [
+        "Immediate feedback",
+        "Detailed written feedback",
+        "Verbal discussion",
+        "Peer feedback",
+        "Self-assessment"
+      ]
+    },
+    {
+      "id": "knowledge_314",
+      "question": "What motivates you to learn new things?",
+      "type": "multiple_choice",
+      "options": [
+        "Career advancement",
+        "Personal interest",
+        "Problem-solving needs",
+        "Social expectations",
+        "Intellectual challenge"
+      ]
+    },
+    {
+      "id": "knowledge_315",
+      "question": "How do you handle knowledge gaps?",
+      "type": "multiple_choice",
+      "options": [
+        "Research immediately",
+        "Ask experts",
+        "Learn gradually",
+        "Ignore until needed",
+        "Seek formal training"
+      ]
+    },
+    {
+      "id": "knowledge_316",
+      "question": "What's your preferred pace of learning?",
+      "type": "multiple_choice",
+      "options": [
+        "Fast and intensive",
+        "Steady and consistent",
+        "Slow and thorough",
+        "Varies by subject",
+        "Self-paced"
+      ]
+    },
+    {
+      "id": "knowledge_317",
+      "question": "How do you validate new information?",
+      "type": "multiple_choice",
+      "options": [
+        "Cross-reference sources",
+        "Test practically",
+        "Consult experts",
+        "Trust reputable sources",
+        "Critical analysis"
+      ]
+    },
+    {
+      "id": "knowledge_318",
+      "question": "What role does technology play in your learning?",
+      "type": "multiple_choice",
+      "options": [
+        "Essential tool",
+        "Helpful supplement",
+        "Minimal use",
+        "Depends on subject",
+        "Avoid when possible"
+      ]
+    },
+    {
+      "id": "knowledge_319",
+      "question": "How do you approach complex topics?",
+      "type": "multiple_choice",
+      "options": [
+        "Break into smaller parts",
+        "Tackle holistically",
+        "Find analogies",
+        "Use visual aids",
+        "Seek guidance"
+      ]
+    },
+    {
+      "id": "knowledge_320",
+      "question": "What's your biggest learning challenge?",
+      "type": "multiple_choice",
+      "options": [
+        "Time constraints",
+        "Information overload",
+        "Lack of motivation",
+        "Difficulty concentrating",
+        "Finding resources"
+      ]
+    },
+    {
+      "id": "knowledge_321",
+      "question": "How do you measure learning success?",
+      "type": "multiple_choice",
+      "options": [
+        "Practical application",
+        "Test performance",
+        "Peer recognition",
+        "Personal satisfaction",
+        "Achievement of goals"
+      ]
+    },
+    {
+      "id": "knowledge_322",
+      "question": "What type of learning content engages you most?",
+      "type": "multiple_choice",
+      "options": [
+        "Text-based",
+        "Visual/infographic",
+        "Video content",
+        "Interactive simulations",
+        "Audio/podcasts"
+      ]
+    },
+    {
+      "id": "knowledge_323",
+      "question": "How do you prefer to organize knowledge?",
+      "type": "multiple_choice",
+      "options": [
+        "Hierarchical structure",
+        "Mind maps",
+        "Linear notes",
+        "Digital systems",
+        "Physical files"
+      ]
+    },
+    {
+      "id": "knowledge_324",
+      "question": "What's your approach to learning from mistakes?",
+      "type": "multiple_choice",
+      "options": [
+        "Analyze thoroughly",
+        "Move on quickly",
+        "Seek feedback",
+        "Document lessons",
+        "Practice corrections"
+      ]
+    },
+    {
+      "id": "knowledge_325",
+      "question": "How do you stay motivated during difficult learning?",
+      "type": "multiple_choice",
+      "options": [
+        "Set small goals",
+        "Find relevance",
+        "Seek support",
+        "Take breaks",
+        "Reward progress"
+      ]
+    },
+    {
+      "id": "knowledge_326",
+      "question": "What's your preferred group learning size?",
+      "type": "multiple_choice",
+      "options": [
+        "Individual only",
+        "Small groups (2-5)",
+        "Medium groups (6-15)",
+        "Large groups (16+)",
+        "Varies by topic"
+      ]
+    },
+    {
+      "id": "knowledge_327",
+      "question": "How do you approach learning new skills?",
+      "type": "multiple_choice",
+      "options": [
+        "Theory first",
+        "Practice first",
+        "Balanced approach",
+        "Guided instruction",
+        "Trial and error"
+      ]
+    },
+    {
+      "id": "knowledge_328",
+      "question": "What's your attitude toward learning challenges?",
+      "type": "multiple_choice",
+      "options": [
+        "Embrace eagerly",
+        "Approach cautiously",
+        "Seek help immediately",
+        "Avoid if possible",
+        "Depends on stakes"
+      ]
+    },
+    {
+      "id": "knowledge_329",
+      "question": "How do you integrate new knowledge?",
+      "type": "multiple_choice",
+      "options": [
+        "Connect to existing knowledge",
+        "Create new categories",
+        "Practice application",
+        "Teach others",
+        "Reflect deeply"
+      ]
+    },
+    {
+      "id": "knowledge_330",
+      "question": "What's your preferred learning schedule?",
+      "type": "multiple_choice",
+      "options": [
+        "Regular daily sessions",
+        "Intensive periods",
+        "Flexible timing",
+        "Structured timetable",
+        "Spontaneous learning"
+      ]
+    },
+    {
+      "id": "knowledge_331",
+      "question": "How do you handle information retention?",
+      "type": "multiple_choice",
+      "options": [
+        "Spaced repetition",
+        "Active recall",
+        "Note-taking",
+        "Practical application",
+        "Teaching others"
+      ]
+    },
+    {
+      "id": "knowledge_332",
+      "question": "What's your approach to learning prerequisites?",
+      "type": "multiple_choice",
+      "options": [
+        "Master completely first",
+        "Learn as needed",
+        "Parallel learning",
+        "Skip if possible",
+        "Seek shortcuts"
+      ]
+    },
+    {
+      "id": "knowledge_333",
+      "question": "How do you prefer to learn abstract concepts?",
+      "type": "multiple_choice",
+      "options": [
+        "Concrete examples",
+        "Visual representations",
+        "Analogies",
+        "Mathematical models",
+        "Philosophical discussion"
+      ]
+    },
+    {
+      "id": "knowledge_334",
+      "question": "What's your attitude toward learning failure?",
+      "type": "multiple_choice",
+      "options": [
+        "Learning opportunity",
+        "Motivation to improve",
+        "Cause for concern",
+        "Normal process",
+        "Reason to quit"
+      ]
+    },
+    {
+      "id": "knowledge_335",
+      "question": "How do you approach interdisciplinary learning?",
+      "type": "multiple_choice",
+      "options": [
+        "Embrace connections",
+        "Focus on one area",
+        "Seek bridges",
+        "Avoid confusion",
+        "Systematic approach"
+      ]
+    },
+    {
+      "id": "knowledge_336",
+      "question": "What's your preferred learning assessment?",
+      "type": "multiple_choice",
+      "options": [
+        "Practical projects",
+        "Written exams",
+        "Oral presentations",
+        "Peer evaluation",
+        "Self-reflection"
+      ]
+    },
+    {
+      "id": "knowledge_337",
+      "question": "How do you handle learning plateau periods?",
+      "type": "multiple_choice",
+      "options": [
+        "Push through",
+        "Change approach",
+        "Take a break",
+        "Seek help",
+        "Find new challenges"
+      ]
+    },
+    {
+      "id": "knowledge_338",
+      "question": "What's your approach to learning from others?",
+      "type": "multiple_choice",
+      "options": [
+        "Active questioning",
+        "Observation",
+        "Collaboration",
+        "Mentorship",
+        "Peer learning"
+      ]
+    },
+    {
+      "id": "knowledge_339",
+      "question": "How do you prefer to learn practical skills?",
+      "type": "multiple_choice",
+      "options": [
+        "Hands-on practice",
+        "Watch demonstrations",
+        "Read instructions",
+        "Trial and error",
+        "Guided practice"
+      ]
+    },
+    {
+      "id": "knowledge_340",
+      "question": "What's your attitude toward learning technology?",
+      "type": "multiple_choice",
+      "options": [
+        "Early adopter",
+        "Cautious evaluator",
+        "Practical user",
+        "Minimal adopter",
+        "Resistant to change"
+      ]
+    },
+    {
+      "id": "knowledge_341",
+      "question": "How do you approach learning cultural knowledge?",
+      "type": "multiple_choice",
+      "options": [
+        "Immersive experience",
+        "Academic study",
+        "Cultural exchange",
+        "Media consumption",
+        "Travel and exploration"
+      ]
+    },
+    {
+      "id": "knowledge_342",
+      "question": "What's your preferred learning resource type?",
+      "type": "multiple_choice",
+      "options": [
+        "Books and articles",
+        "Online courses",
+        "Workshops",
+        "Mentorship",
+        "Experiential learning"
+      ]
+    },
+    {
+      "id": "knowledge_343",
+      "question": "How do you handle learning pressure?",
+      "type": "multiple_choice",
+      "options": [
+        "Thrive under pressure",
+        "Manage stress actively",
+        "Seek support",
+        "Avoid pressure",
+        "Prepare thoroughly"
+      ]
+    },
+    {
+      "id": "knowledge_344",
+      "question": "What's your approach to learning creativity?",
+      "type": "multiple_choice",
+      "options": [
+        "Structured exercises",
+        "Free exploration",
+        "Inspiration seeking",
+        "Skill building",
+        "Collaborative creation"
+      ]
+    },
+    {
+      "id": "knowledge_345",
+      "question": "How do you prefer to learn emotional intelligence?",
+      "type": "multiple_choice",
+      "options": [
+        "Self-reflection",
+        "Feedback from others",
+        "Formal training",
+        "Life experience",
+        "Reading psychology"
+      ]
+    },
+    {
+      "id": "knowledge_346",
+      "question": "What's your attitude toward learning investments?",
+      "type": "multiple_choice",
+      "options": [
+        "Worth any cost",
+        "Cost-benefit analysis",
+        "Free resources only",
+        "Minimal investment",
+        "Depends on value"
+      ]
+    },
+    {
+      "id": "knowledge_347",
+      "question": "How do you approach learning leadership?",
+      "type": "multiple_choice",
+      "options": [
+        "Formal training",
+        "Mentorship",
+        "Experience-based",
+        "Observation",
+        "Trial and error"
+      ]
+    },
+    {
+      "id": "knowledge_348",
+      "question": "What's your preferred learning documentation?",
+      "type": "multiple_choice",
+      "options": [
+        "Detailed notes",
+        "Key points only",
+        "Visual summaries",
+        "Audio recordings",
+        "No documentation"
+      ]
+    },
+    {
+      "id": "knowledge_349",
+      "question": "How do you handle learning anxiety?",
+      "type": "multiple_choice",
+      "options": [
+        "Face directly",
+        "Gradual exposure",
+        "Seek support",
+        "Avoid triggers",
+        "Use coping strategies"
+      ]
+    },
+    {
+      "id": "knowledge_350",
+      "question": "What's your approach to learning ethics?",
+      "type": "multiple_choice",
+      "options": [
+        "Philosophical study",
+        "Case analysis",
+        "Personal reflection",
+        "Cultural exploration",
+        "Practical application"
+      ]
+    },
+    {
+      "id": "knowledge_351",
+      "question": "How do you prefer to learn communication?",
+      "type": "multiple_choice",
+      "options": [
+        "Practice speaking",
+        "Study theory",
+        "Observe others",
+        "Get feedback",
+        "Join groups"
+      ]
+    },
+    {
+      "id": "knowledge_352",
+      "question": "What's your attitude toward learning change?",
+      "type": "multiple_choice",
+      "options": [
+        "Embrace adaptability",
+        "Resist change",
+        "Analyze benefits",
+        "Gradual adjustment",
+        "Situational response"
+      ]
+    },
+    {
+      "id": "knowledge_353",
+      "question": "How do you approach learning problem-solving?",
+      "type": "multiple_choice",
+      "options": [
+        "Study methods",
+        "Practice problems",
+        "Learn from experts",
+        "Trial and error",
+        "Collaborative solving"
+      ]
+    },
+    {
+      "id": "knowledge_354",
+      "question": "What's your preferred learning reflection method?",
+      "type": "multiple_choice",
+      "options": [
+        "Written journaling",
+        "Verbal discussion",
+        "Mental review",
+        "Visual mapping",
+        "Structured analysis"
+      ]
+    },
+    {
+      "id": "knowledge_355",
+      "question": "How do you handle learning overload?",
+      "type": "multiple_choice",
+      "options": [
+        "Prioritize ruthlessly",
+        "Take breaks",
+        "Seek help",
+        "Reduce scope",
+        "Systematic approach"
+      ]
+    },
+    {
+      "id": "knowledge_356",
+      "question": "What's your approach to learning innovation?",
+      "type": "multiple_choice",
+      "options": [
+        "Study breakthroughs",
+        "Experiment freely",
+        "Collaborate with others",
+        "Challenge assumptions",
+        "Systematic creativity"
+      ]
+    },
+    {
+      "id": "knowledge_357",
+      "question": "How do you prefer to learn decision-making?",
+      "type": "multiple_choice",
+      "options": [
+        "Study frameworks",
+        "Practice scenarios",
+        "Learn from mistakes",
+        "Observe experts",
+        "Intuitive development"
+      ]
+    },
+    {
+      "id": "knowledge_358",
+      "question": "What's your attitude toward learning competition?",
+      "type": "multiple_choice",
+      "options": [
+        "Motivating factor",
+        "Stressful pressure",
+        "Learning opportunity",
+        "Avoid completely",
+        "Depends on context"
+      ]
+    },
+    {
+      "id": "knowledge_359",
+      "question": "How do you approach learning systems thinking?",
+      "type": "multiple_choice",
+      "options": [
+        "Study theory",
+        "Practice mapping",
+        "Real-world application",
+        "Collaborative analysis",
+        "Gradual building"
+      ]
+    },
+    {
+      "id": "knowledge_360",
+      "question": "What's your preferred learning community?",
+      "type": "multiple_choice",
+      "options": [
+        "Professional networks",
+        "Academic groups",
+        "Hobby communities",
+        "Online forums",
+        "Local meetups"
+      ]
+    }
+  ]
+}

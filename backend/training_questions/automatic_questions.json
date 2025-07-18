@@ -1,0 +1,1645 @@
+{
+  "category": "Automatic questions to extend known knowledge",
+  "category_key": "automatic",
+  "existing_answers": [],
+  "predefined_questions": [
+    {
+      "id": "auto_1",
+      "question": "What topics would you like to be asked about regularly?",
+      "type": "text"
+    },
+    {
+      "id": "auto_2",
+      "question": "How often would you like to receive knowledge-building questions?",
+      "type": "multiple_choice",
+      "options": [
+        "Daily",
+        "Weekly",
+        "Bi-weekly",
+        "Monthly",
+        "When I request them"
+      ]
+    },
+    {
+      "id": "auto_3",
+      "question": "What format works best for you to reflect on knowledge?",
+      "type": "multiple_choice",
+      "options": [
+        "Short questions",
+        "Deep reflections",
+        "Comparisons",
+        "Hypothetical scenarios",
+        "Mixed formats"
+      ]
+    },
+    {
+      "id": "auto_4",
+      "question": "Which areas of your knowledge need the most development?",
+      "type": "text"
+    },
+    {
+      "id": "auto_5",
+      "question": "How do you prefer to track your learning progress?",
+      "type": "multiple_choice",
+      "options": [
+        "Written journal",
+        "Digital notes",
+        "Progress charts",
+        "Discussion with others",
+        "Mental reflection"
+      ]
+    }
+  ],
+  "additional_questions": [
+    {
+      "id": "auto_6",
+      "question": "What patterns do you notice in your learning habits?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_7",
+      "question": "How do you identify knowledge gaps in your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_8",
+      "question": "What triggers your curiosity about new topics?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_9",
+      "question": "How do you want to be reminded about learning goals?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_10",
+      "question": "What subjects do you wish you explored more automatically?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_11",
+      "question": "How do you prefer to receive learning challenges?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_12",
+      "question": "What role should AI play in your learning journey?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_13",
+      "question": "How do you want to track your intellectual growth?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_14",
+      "question": "What automated systems would help your learning?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_15",
+      "question": "How do you prefer to discover new areas of interest?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_16",
+      "question": "What questions do you wish you asked yourself more often?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_17",
+      "question": "How do you want to be challenged intellectually?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_18",
+      "question": "What learning reminders would be most helpful?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_19",
+      "question": "How do you prefer to review and consolidate knowledge?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_20",
+      "question": "What automated feedback would improve your learning?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_21",
+      "question": "How do you want to connect different areas of knowledge?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_22",
+      "question": "What learning patterns would you like to develop?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_23",
+      "question": "How do you prefer to be prompted for reflection?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_24",
+      "question": "What automated suggestions would enhance your growth?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_25",
+      "question": "How do you want to measure your learning effectiveness?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_26",
+      "question": "What personalized learning experiences do you desire?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_27",
+      "question": "How do you prefer to be guided in knowledge exploration?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_28",
+      "question": "What automated tools would support your learning goals?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_29",
+      "question": "How do you want to be encouraged in your learning journey?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_30",
+      "question": "What learning analytics would be most valuable to you?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_31",
+      "question": "How do you prefer to receive adaptive learning content?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_32",
+      "question": "What automated insights would improve your self-understanding?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_33",
+      "question": "How do you want to be supported in developing new skills?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_34",
+      "question": "What learning automation would save you the most time?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_35",
+      "question": "How do you prefer to be reminded of your learning objectives?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_36",
+      "question": "What automated connections would enhance your knowledge?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_37",
+      "question": "How do you want to be challenged based on your progress?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_38",
+      "question": "What learning personalization would be most beneficial?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_39",
+      "question": "How do you prefer to receive context-aware learning prompts?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_40",
+      "question": "What automated evaluation would help track your growth?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_41",
+      "question": "How do you want to be guided through complex topics?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_42",
+      "question": "What learning automation would keep you most engaged?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_43",
+      "question": "How do you prefer to discover connections between concepts?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_44",
+      "question": "What automated support would improve your retention?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_45",
+      "question": "How do you want to be assisted in applying knowledge?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_46",
+      "question": "What learning automation would boost your confidence?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_47",
+      "question": "How do you prefer to receive personalized learning paths?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_48",
+      "question": "What automated insights would enhance your decision-making?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_49",
+      "question": "How do you want to be guided in critical thinking?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_50",
+      "question": "What learning automation would improve your problem-solving?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_51",
+      "question": "How do you prefer to be supported in creative thinking?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_52",
+      "question": "What automated tools would enhance your communication skills?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_53",
+      "question": "How do you want to be assisted in emotional intelligence?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_54",
+      "question": "What learning automation would improve your leadership?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_55",
+      "question": "How do you prefer to be guided in personal development?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_56",
+      "question": "Your preferred learning reminder frequency is:",
+      "type": "multiple_choice",
+      "options": [
+        "Multiple times daily",
+        "Once daily",
+        "Few times weekly",
+        "Weekly",
+        "As needed"
+      ]
+    },
+    {
+      "id": "auto_57",
+      "question": "For automated learning, you prefer:",
+      "type": "multiple_choice",
+      "options": [
+        "Structured curriculum",
+        "Adaptive content",
+        "Random challenges",
+        "Goal-oriented",
+        "Mixed approaches"
+      ]
+    },
+    {
+      "id": "auto_58",
+      "question": "Your ideal learning prompt timing is:",
+      "type": "multiple_choice",
+      "options": [
+        "Morning reflection",
+        "Throughout the day",
+        "Evening review",
+        "Weekend deep dives",
+        "Flexible timing"
+      ]
+    },
+    {
+      "id": "auto_59",
+      "question": "For knowledge tracking, you prefer:",
+      "type": "multiple_choice",
+      "options": [
+        "Visual progress",
+        "Detailed analytics",
+        "Simple checkmarks",
+        "Narrative summaries",
+        "No tracking"
+      ]
+    },
+    {
+      "id": "auto_60",
+      "question": "Your automated learning style preference is:",
+      "type": "multiple_choice",
+      "options": [
+        "Question-based",
+        "Scenario-based",
+        "Comparison-based",
+        "Story-based",
+        "Mixed formats"
+      ]
+    },
+    {
+      "id": "auto_61",
+      "question": "For learning recommendations, you prefer:",
+      "type": "multiple_choice",
+      "options": [
+        "AI-generated",
+        "Peer-suggested",
+        "Expert-curated",
+        "Self-directed",
+        "Combined sources"
+      ]
+    },
+    {
+      "id": "auto_62",
+      "question": "Your preferred challenge level is:",
+      "type": "multiple_choice",
+      "options": [
+        "Slightly difficult",
+        "Moderately challenging",
+        "Highly challenging",
+        "Adaptive difficulty",
+        "Varies by topic"
+      ]
+    },
+    {
+      "id": "auto_63",
+      "question": "For learning content, you prefer:",
+      "type": "multiple_choice",
+      "options": [
+        "Bite-sized pieces",
+        "Comprehensive modules",
+        "Interactive exercises",
+        "Multimedia content",
+        "Text-based"
+      ]
+    },
+    {
+      "id": "auto_64",
+      "question": "Your automated feedback preference is:",
+      "type": "multiple_choice",
+      "options": [
+        "Immediate feedback",
+        "Delayed reflection",
+        "Peer feedback",
+        "Self-assessment",
+        "Mixed feedback"
+      ]
+    },
+    {
+      "id": "auto_65",
+      "question": "For learning motivation, you prefer:",
+      "type": "multiple_choice",
+      "options": [
+        "Achievement badges",
+        "Progress tracking",
+        "Social recognition",
+        "Personal satisfaction",
+        "External rewards"
+      ]
+    },
+    {
+      "id": "auto_66",
+      "question": "Your ideal learning environment is:",
+      "type": "multiple_choice",
+      "options": [
+        "Quiet spaces",
+        "Background stimulation",
+        "Social settings",
+        "Outdoor locations",
+        "Varies by topic"
+      ]
+    },
+    {
+      "id": "auto_67",
+      "question": "For knowledge application, you prefer:",
+      "type": "multiple_choice",
+      "options": [
+        "Practical exercises",
+        "Theoretical analysis",
+        "Real-world projects",
+        "Simulated scenarios",
+        "Discussion-based"
+      ]
+    },
+    {
+      "id": "auto_68",
+      "question": "Your learning schedule preference is:",
+      "type": "multiple_choice",
+      "options": [
+        "Fixed schedule",
+        "Flexible timing",
+        "Deadline-driven",
+        "Mood-based",
+        "Opportunity-based"
+      ]
+    },
+    {
+      "id": "auto_69",
+      "question": "For learning support, you prefer:",
+      "type": "multiple_choice",
+      "options": [
+        "Automated guidance",
+        "Human mentorship",
+        "Peer learning",
+        "Self-directed",
+        "Hybrid approach"
+      ]
+    },
+    {
+      "id": "auto_70",
+      "question": "Your knowledge retention method is:",
+      "type": "multiple_choice",
+      "options": [
+        "Spaced repetition",
+        "Active recall",
+        "Note-taking",
+        "Teaching others",
+        "Practical application"
+      ]
+    },
+    {
+      "id": "auto_71",
+      "question": "Additional automatic learning question 1: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_72",
+      "question": "Additional automatic learning question 2: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_73",
+      "question": "Additional automatic learning question 3: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_74",
+      "question": "Additional automatic learning question 4: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_75",
+      "question": "Additional automatic learning question 5: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_76",
+      "question": "Additional automatic learning question 6: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_77",
+      "question": "Additional automatic learning question 7: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_78",
+      "question": "Additional automatic learning question 8: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_79",
+      "question": "Additional automatic learning question 9: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_80",
+      "question": "Additional automatic learning question 10: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_81",
+      "question": "Additional automatic learning question 11: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_82",
+      "question": "Additional automatic learning question 12: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_83",
+      "question": "Additional automatic learning question 13: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_84",
+      "question": "Additional automatic learning question 14: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_85",
+      "question": "Additional automatic learning question 15: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_86",
+      "question": "Additional automatic learning question 16: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_87",
+      "question": "Additional automatic learning question 17: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_88",
+      "question": "Additional automatic learning question 18: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_89",
+      "question": "Additional automatic learning question 19: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_90",
+      "question": "Additional automatic learning question 20: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_91",
+      "question": "Additional automatic learning question 21: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_92",
+      "question": "Additional automatic learning question 22: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_93",
+      "question": "Additional automatic learning question 23: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_94",
+      "question": "Additional automatic learning question 24: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_95",
+      "question": "Additional automatic learning question 25: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_96",
+      "question": "Additional automatic learning question 26: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_97",
+      "question": "Additional automatic learning question 27: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_98",
+      "question": "Additional automatic learning question 28: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_99",
+      "question": "Additional automatic learning question 29: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_100",
+      "question": "Additional automatic learning question 30: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_101",
+      "question": "Additional automatic learning question 31: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_102",
+      "question": "Additional automatic learning question 32: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_103",
+      "question": "Additional automatic learning question 33: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_104",
+      "question": "Additional automatic learning question 34: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_105",
+      "question": "Additional automatic learning question 35: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_106",
+      "question": "Additional automatic learning question 36: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_107",
+      "question": "Additional automatic learning question 37: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_108",
+      "question": "Additional automatic learning question 38: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_109",
+      "question": "Additional automatic learning question 39: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_110",
+      "question": "Additional automatic learning question 40: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_111",
+      "question": "Additional automatic learning question 41: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_112",
+      "question": "Additional automatic learning question 42: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_113",
+      "question": "Additional automatic learning question 43: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_114",
+      "question": "Additional automatic learning question 44: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_115",
+      "question": "Additional automatic learning question 45: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_116",
+      "question": "Additional automatic learning question 46: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_117",
+      "question": "Additional automatic learning question 47: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_118",
+      "question": "Additional automatic learning question 48: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_119",
+      "question": "Additional automatic learning question 49: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_120",
+      "question": "Additional automatic learning question 50: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_121",
+      "question": "Additional automatic learning question 51: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_122",
+      "question": "Additional automatic learning question 52: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_123",
+      "question": "Additional automatic learning question 53: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_124",
+      "question": "Additional automatic learning question 54: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_125",
+      "question": "Additional automatic learning question 55: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_126",
+      "question": "Additional automatic learning question 56: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_127",
+      "question": "Additional automatic learning question 57: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_128",
+      "question": "Additional automatic learning question 58: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_129",
+      "question": "Additional automatic learning question 59: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_130",
+      "question": "Additional automatic learning question 60: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_131",
+      "question": "Additional automatic learning question 61: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_132",
+      "question": "Additional automatic learning question 62: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_133",
+      "question": "Additional automatic learning question 63: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_134",
+      "question": "Additional automatic learning question 64: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_135",
+      "question": "Additional automatic learning question 65: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_136",
+      "question": "Additional automatic learning question 66: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_137",
+      "question": "Additional automatic learning question 67: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_138",
+      "question": "Additional automatic learning question 68: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_139",
+      "question": "Additional automatic learning question 69: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_140",
+      "question": "Additional automatic learning question 70: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_141",
+      "question": "Additional automatic learning question 71: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_142",
+      "question": "Additional automatic learning question 72: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_143",
+      "question": "Additional automatic learning question 73: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_144",
+      "question": "Additional automatic learning question 74: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_145",
+      "question": "Additional automatic learning question 75: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_146",
+      "question": "Additional automatic learning question 76: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_147",
+      "question": "Additional automatic learning question 77: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_148",
+      "question": "Additional automatic learning question 78: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_149",
+      "question": "Additional automatic learning question 79: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_150",
+      "question": "Additional automatic learning question 80: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_151",
+      "question": "Additional automatic learning question 81: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_152",
+      "question": "Additional automatic learning question 82: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_153",
+      "question": "Additional automatic learning question 83: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_154",
+      "question": "Additional automatic learning question 84: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_155",
+      "question": "Additional automatic learning question 85: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_156",
+      "question": "Additional automatic learning question 86: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_157",
+      "question": "Additional automatic learning question 87: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_158",
+      "question": "Additional automatic learning question 88: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_159",
+      "question": "Additional automatic learning question 89: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_160",
+      "question": "Additional automatic learning question 90: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_161",
+      "question": "Additional automatic learning question 91: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_162",
+      "question": "Additional automatic learning question 92: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_163",
+      "question": "Additional automatic learning question 93: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_164",
+      "question": "Additional automatic learning question 94: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_165",
+      "question": "Additional automatic learning question 95: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_166",
+      "question": "Additional automatic learning question 96: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_167",
+      "question": "Additional automatic learning question 97: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_168",
+      "question": "Additional automatic learning question 98: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_169",
+      "question": "Additional automatic learning question 99: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_170",
+      "question": "Additional automatic learning question 100: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_171",
+      "question": "Additional automatic learning question 101: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_172",
+      "question": "Additional automatic learning question 102: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_173",
+      "question": "Additional automatic learning question 103: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_174",
+      "question": "Additional automatic learning question 104: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_175",
+      "question": "Additional automatic learning question 105: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_176",
+      "question": "Additional automatic learning question 106: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_177",
+      "question": "Additional automatic learning question 107: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_178",
+      "question": "Additional automatic learning question 108: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_179",
+      "question": "Additional automatic learning question 109: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_180",
+      "question": "Additional automatic learning question 110: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_181",
+      "question": "Additional automatic learning question 111: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_182",
+      "question": "Additional automatic learning question 112: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_183",
+      "question": "Additional automatic learning question 113: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_184",
+      "question": "Additional automatic learning question 114: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_185",
+      "question": "Additional automatic learning question 115: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_186",
+      "question": "Additional automatic learning question 116: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_187",
+      "question": "Additional automatic learning question 117: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_188",
+      "question": "Additional automatic learning question 118: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_189",
+      "question": "Additional automatic learning question 119: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_190",
+      "question": "Additional automatic learning question 120: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_191",
+      "question": "Additional automatic learning question 121: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_192",
+      "question": "Additional automatic learning question 122: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_193",
+      "question": "Additional automatic learning question 123: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_194",
+      "question": "Additional automatic learning question 124: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_195",
+      "question": "Additional automatic learning question 125: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_196",
+      "question": "Additional automatic learning question 126: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_197",
+      "question": "Additional automatic learning question 127: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_198",
+      "question": "Additional automatic learning question 128: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_199",
+      "question": "Additional automatic learning question 129: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_200",
+      "question": "Additional automatic learning question 130: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_201",
+      "question": "Additional automatic learning question 131: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_202",
+      "question": "Additional automatic learning question 132: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_203",
+      "question": "Additional automatic learning question 133: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_204",
+      "question": "Additional automatic learning question 134: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_205",
+      "question": "Additional automatic learning question 135: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_206",
+      "question": "Additional automatic learning question 136: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_207",
+      "question": "Additional automatic learning question 137: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_208",
+      "question": "Additional automatic learning question 138: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_209",
+      "question": "Additional automatic learning question 139: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_210",
+      "question": "Additional automatic learning question 140: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_211",
+      "question": "Additional automatic learning question 141: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_212",
+      "question": "Additional automatic learning question 142: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_213",
+      "question": "Additional automatic learning question 143: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_214",
+      "question": "Additional automatic learning question 144: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_215",
+      "question": "Additional automatic learning question 145: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_216",
+      "question": "Additional automatic learning question 146: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_217",
+      "question": "Additional automatic learning question 147: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_218",
+      "question": "Additional automatic learning question 148: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_219",
+      "question": "Additional automatic learning question 149: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_220",
+      "question": "Additional automatic learning question 150: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_221",
+      "question": "Additional automatic learning question 151: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_222",
+      "question": "Additional automatic learning question 152: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_223",
+      "question": "Additional automatic learning question 153: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_224",
+      "question": "Additional automatic learning question 154: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_225",
+      "question": "Additional automatic learning question 155: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_226",
+      "question": "Additional automatic learning question 156: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_227",
+      "question": "Additional automatic learning question 157: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_228",
+      "question": "Additional automatic learning question 158: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_229",
+      "question": "Additional automatic learning question 159: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_230",
+      "question": "Additional automatic learning question 160: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_231",
+      "question": "Additional automatic learning question 161: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_232",
+      "question": "Additional automatic learning question 162: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_233",
+      "question": "Additional automatic learning question 163: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_234",
+      "question": "Additional automatic learning question 164: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_235",
+      "question": "Additional automatic learning question 165: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_236",
+      "question": "Additional automatic learning question 166: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_237",
+      "question": "Additional automatic learning question 167: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_238",
+      "question": "Additional automatic learning question 168: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_239",
+      "question": "Additional automatic learning question 169: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_240",
+      "question": "Additional automatic learning question 170: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_241",
+      "question": "Additional automatic learning question 171: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_242",
+      "question": "Additional automatic learning question 172: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_243",
+      "question": "Additional automatic learning question 173: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_244",
+      "question": "Additional automatic learning question 174: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_245",
+      "question": "Additional automatic learning question 175: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_246",
+      "question": "Additional automatic learning question 176: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_247",
+      "question": "Additional automatic learning question 177: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_248",
+      "question": "Additional automatic learning question 178: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_249",
+      "question": "Additional automatic learning question 179: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_250",
+      "question": "Additional automatic learning question 180: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_251",
+      "question": "Additional automatic learning question 181: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_252",
+      "question": "Additional automatic learning question 182: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_253",
+      "question": "Additional automatic learning question 183: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_254",
+      "question": "Additional automatic learning question 184: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "auto_255",
+      "question": "Additional automatic learning question 185: How would you like to be supported in this area?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    }
+  ]
+}

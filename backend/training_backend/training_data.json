@@ -1,0 +1,232 @@
+[
+  {
+    "question_id": "personality_1",
+    "question": "How do you typically handle stress?",
+    "answer": [
+      "Take breaks and recharge"
+    ],
+    "answer_type": "multiple_choice",
+    "category": "Questions about my feelings and 5 personalities",
+    "timestamp": "2025-07-16T10:47:48.345989"
+  },
+  {
+    "question_id": "graph_1",
+    "question": "What key concepts define who you are?",
+    "answer": "altruism, curiousity and philosophy",
+    "answer_type": "text",
+    "category": "Iteratively add to a knowledge graph",
+    "timestamp": "2025-07-16T10:53:01.726965"
+  },
+  {
+    "question_id": "graph_2",
+    "question": "How do your interests and skills connect to each other?",
+    "answer": "good",
+    "answer_type": "text",
+    "category": "Iteratively add to a knowledge graph",
+    "timestamp": "2025-07-16T10:53:17.295432"
+  },
+  {
+    "question_id": "graph_3",
+    "question": "What experiences have shaped your current knowledge?",
+    "answer": "good2",
+    "answer_type": "text",
+    "category": "Iteratively add to a knowledge graph",
+    "timestamp": "2025-07-16T10:53:21.114729"
+  },
+  {
+    "question_id": "graph_4",
+    "question": "Which areas of knowledge would you like to explore connections for?",
+    "answer": [
+      "Hobbies"
+    ],
+    "answer_type": "multiple_choice",
+    "category": "Iteratively add to a knowledge graph",
+    "timestamp": "2025-07-16T10:53:27.030327"
+  },
+  {
+    "question_id": "graph_5",
+    "question": "How do you see your knowledge evolving over time?",
+    "answer": "good3",
+    "answer_type": "text",
+    "category": "Iteratively add to a knowledge graph",
+    "timestamp": "2025-07-16T10:53:33.580869"
+  },
+  {
+    "question_id": "knowledge_1",
+    "question": "What are your main areas of expertise?",
+    "answer": "good2",
+    "answer_type": "text",
+    "category": "Questions about my knowledge",
+    "timestamp": "2025-07-16T10:54:15.577939"
+  },
+  {
+    "question_id": "knowledge_2",
+    "question": "Which subjects do you find most challenging?",
+    "answer": "good2",
+    "answer_type": "text",
+    "category": "Questions about my knowledge",
+    "timestamp": "2025-07-16T10:54:17.124589"
+  },
+  {
+    "question_id": "knowledge_3",
+    "question": "What's your preferred learning style?",
+    "answer": [
+      "Kinesthetic"
+    ],
+    "answer_type": "multiple_choice",
+    "category": "Questions about my knowledge",
+    "timestamp": "2025-07-16T10:54:18.322754"
+  },
+  {
+    "question_id": "knowledge_4",
+    "question": "How do you typically approach learning new topics?",
+    "answer": [
+      "Find a mentor/teacher"
+    ],
+    "answer_type": "multiple_choice",
+    "category": "Questions about my knowledge",
+    "timestamp": "2025-07-16T10:54:19.760017"
+  },
+  {
+    "question_id": "knowledge_5",
+    "question": "What knowledge would you like to develop further?",
+    "answer": "good2",
+    "answer_type": "text",
+    "category": "Questions about my knowledge",
+    "timestamp": "2025-07-16T10:54:21.186653"
+  },
+  {
+    "question_id": "moral_1",
+    "question": "What core values guide your decisions?",
+    "answer": "list me all the setting optino i have \nfor these functions",
+    "answer_type": "text",
+    "category": "Moral questions",
+    "timestamp": "2025-07-16T10:58:43.044186"
+  },
+  {
+    "question_id": "moral_2",
+    "question": "When facing an ethical dilemma, you typically:",
+    "answer": [
+      "Seek guidance"
+    ],
+    "answer_type": "multiple_choice",
+    "category": "Moral questions",
+    "timestamp": "2025-07-16T10:58:44.334945"
+  },
+  {
+    "question_id": "moral_3",
+    "question": "How important is it to you to help others?",
+    "answer": [
+      "Somewhat important"
+    ],
+    "answer_type": "multiple_choice",
+    "category": "Moral questions",
+    "timestamp": "2025-07-16T10:58:45.351975"
+  },
+  {
+    "question_id": "moral_4",
+    "question": "What does 'doing the right thing' mean to you?",
+    "answer": "list me all the setting optino i have \nfor these functions",
+    "answer_type": "text",
+    "category": "Moral questions",
+    "timestamp": "2025-07-16T10:58:46.535234"
+  },
+  {
+    "question_id": "moral_5",
+    "question": "How do you handle situations where your values conflict?",
+    "answer": "list me all the setting optino i have \nfor these functions",
+    "answer_type": "text",
+    "category": "Moral questions",
+    "timestamp": "2025-07-16T10:58:47.781808"
+  },
+  {
+    "question_id": "moral_1",
+    "question": "What core values guide your decisions?",
+    "answer": "list me all the setting optino i have \nfor these functionslist me all the setting optino i have \nfor these functions",
+    "answer_type": "text",
+    "category": "Moral questions",
+    "timestamp": "2025-07-16T10:58:58.111114"
+  },
+  {
+    "question_id": "moral_2",
+    "question": "When facing an ethical dilemma, you typically:",
+    "answer": [
+      "Seek guidance"
+    ],
+    "answer_type": "multiple_choice",
+    "category": "Moral questions",
+    "timestamp": "2025-07-16T10:58:59.235704"
+  },
+  {
+    "question_id": "moral_3",
+    "question": "How important is it to you to help others?",
+    "answer": [
+      "Extremely important"
+    ],
+    "answer_type": "multiple_choice",
+    "category": "Moral questions",
+    "timestamp": "2025-07-16T10:59:01.385981"
+  },
+  {
+    "question_id": "moral_4",
+    "question": "What does 'doing the right thing' mean to you?",
+    "answer": "list me all the setting optino i have \nfor these functionslist me all the setting optino i have \nfor these functions",
+    "answer_type": "text",
+    "category": "Moral questions",
+    "timestamp": "2025-07-16T10:59:03.219191"
+  },
+  {
+    "question_id": "moral_5",
+    "question": "How do you handle situations where your values conflict?",
+    "answer": "list me all the setting optino i have \nfor these functionslist me all the setting optino i have \nfor these functions",
+    "answer_type": "text",
+    "category": "Moral questions",
+    "timestamp": "2025-07-16T10:59:04.358584"
+  },
+  {
+    "question_id": "pref_1",
+    "question": "What's your ideal way to spend free time?",
+    "answer": "\n",
+    "answer_type": "text",
+    "category": "Preferences",
+    "timestamp": "2025-07-16T11:16:21.932656"
+  },
+  {
+    "question_id": "pref_2",
+    "question": "In work/study environments, you prefer:",
+    "answer": [
+      "Quiet and focused"
+    ],
+    "answer_type": "multiple_choice",
+    "category": "Preferences",
+    "timestamp": "2025-07-16T11:16:23.451242"
+  },
+  {
+    "question_id": "pref_3",
+    "question": "What type of challenges do you enjoy most?",
+    "answer": [
+      "Social interactions"
+    ],
+    "answer_type": "multiple_choice",
+    "category": "Preferences",
+    "timestamp": "2025-07-16T11:16:24.624217"
+  },
+  {
+    "question_id": "pref_4",
+    "question": "How do you prefer to communicate?",
+    "answer": [
+      "Video calls"
+    ],
+    "answer_type": "multiple_choice",
+    "category": "Preferences",
+    "timestamp": "2025-07-16T11:16:25.874146"
+  },
+  {
+    "question_id": "pref_5",
+    "question": "What kind of feedback do you find most helpful?",
+    "answer": "hello",
+    "answer_type": "text",
+    "category": "Preferences",
+    "timestamp": "2025-07-16T11:16:27.420258"
+  }
+]

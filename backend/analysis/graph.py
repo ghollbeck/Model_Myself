@@ -40,6 +40,9 @@ class KnowledgeGraph:
         
         # Add main Training node
         self.graph.add_node("Training", type="training_main")
+
+        # Main Documents node (for extracted knowledge) - keep same blue color in frontend
+        self.graph.add_node("Documents", type="document_main")
         
         # Add training category subnodes
         for training_category, kg_category in TRAINING_CATEGORY_MAP.items():
@@ -56,6 +59,7 @@ class KnowledgeGraph:
         node_id = f"{category}:{question[:30]}"
         self.graph.add_node(node_id, question=question, answer=answer, **(extra or {}), type="qa")
         self.graph.add_edge(category, node_id)
+        return node_id  # Return the node identifier so callers can link elsewhere
     
     def add_training_entry(self, training_category: str, question_id: str, question: str, answer: Any, answer_type: str, timestamp: str):
         """

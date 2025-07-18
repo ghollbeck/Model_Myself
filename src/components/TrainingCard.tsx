@@ -7,6 +7,7 @@ interface TrainingCardProps {
     setShowTrainingDropdown: (show: boolean) => void;
     handleTrainingSelect: (option: string) => void;
     onStartTraining: () => void;
+    loadingCategories?: boolean;
 }
 
 const TrainingCard: React.FC<TrainingCardProps> = ({
@@ -15,7 +16,8 @@ const TrainingCard: React.FC<TrainingCardProps> = ({
     showTrainingDropdown,
     setShowTrainingDropdown,
     handleTrainingSelect,
-    onStartTraining
+    onStartTraining,
+    loadingCategories = false
 }) => {
     const dropdownRef = useRef<HTMLDivElement>(null);
     const buttonRef = useRef<HTMLButtonElement>(null);
@@ -45,44 +47,54 @@ const TrainingCard: React.FC<TrainingCardProps> = ({
         <h3>🎯 Training</h3>
         <div className="training-section">
             <h4 style={{color: '#495057', fontSize: '1.1em', marginBottom: '15px'}}>Q&A Training Options:</h4>
-            <div className="dropdown" style={{ position: 'relative' }}>
-                <button 
-                    ref={buttonRef}
-                    className="dropdown-btn"
-                    onClick={() => setShowTrainingDropdown(!showTrainingDropdown)}
-                >
-                    <span>{selectedTraining || 'Select Training Type'}</span>
-                    <span>▼</span>
-                </button>
-                {showTrainingDropdown && (
-                    <div ref={dropdownRef} className="dropdown-content">
-                        {trainingOptions.map((option, index) => (
-                            <div 
-                                key={index}
-                                className="dropdown-item"
-                                onClick={() => handleTrainingSelect(option)}
-                                style={{
-                                    borderBottom: index < trainingOptions.length - 1 ? '1px solid #f0f0f0' : 'none'
-                                }}
-                                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f5f5f5'}
-                                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'white'}
-                            >
-                                {option}
-                            </div>
-                        ))}
-                    </div>
-                )}
-            </div>
-            {selectedTraining && (
-                <div className="selected-training">
-                    <p>Selected: <strong>{selectedTraining}</strong></p>
-                    <button 
-                        className="start-training-btn"
-                        onClick={onStartTraining}
-                    >
-                        Start Training
-                    </button>
+            
+            {loadingCategories ? (
+                <div style={{textAlign: 'center', padding: '20px', color: '#666'}}>
+                    Loading training categories...
                 </div>
+            ) : (
+                <>
+                    <div className="dropdown" style={{ position: 'relative' }}>
+                        <button 
+                            ref={buttonRef}
+                            className="dropdown-btn"
+                            onClick={() => setShowTrainingDropdown(!showTrainingDropdown)}
+                            disabled={trainingOptions.length === 0}
+                        >
+                            <span>{selectedTraining || 'Select Training Type'}</span>
+                            <span>▼</span>
+                        </button>
+                        {showTrainingDropdown && (
+                            <div ref={dropdownRef} className="dropdown-content">
+                                {trainingOptions.map((option, index) => (
+                                    <div 
+                                        key={index}
+                                        className="dropdown-item"
+                                        onClick={() => handleTrainingSelect(option)}
+                                        style={{
+                                            borderBottom: index < trainingOptions.length - 1 ? '1px solid #f0f0f0' : 'none'
+                                        }}
+                                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f5f5f5'}
+                                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'white'}
+                                    >
+                                        {option}
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                    {selectedTraining && (
+                        <div className="selected-training">
+                            <p>Selected: <strong>{selectedTraining}</strong></p>
+                            <button 
+                                className="start-training-btn"
+                                onClick={onStartTraining}
+                            >
+                                Start Training
+                            </button>
+                        </div>
+                    )}
+                </>
             )}
         </div>
     </div>

@@ -5,6 +5,23 @@ This file logs all changes made to the Model Myself project codebase. It serves 
 
 ## Latest Changes (2024-01-XX)
 
+### 2025-01-XX - Knowledge Graph Color Scheme Update
+**Status**: ✅ COMPLETED
+**Description**: Simplified color scheme for knowledge graph visualization
+
+#### Changes Made:
+- **Simplified Color Logic**: Updated `KnowledgeGraphD3.tsx` to use simplified color scheme
+- **Training Nodes**: All training-related nodes (training_main, training_category, training_qa) now display in red (#ff6b6b)
+- **Other Nodes**: All non-training nodes now display in gray (#808080)
+- **Performance**: Removed complex color mapping logic for better performance
+- **Visual Consistency**: Cleaner, more consistent visual hierarchy
+
+#### Technical Details:
+- Modified node color logic in `KnowledgeGraphD3.tsx` 
+- Removed dependency on `CATEGORY_COLORS` for non-training nodes
+- Simplified conditional logic for node coloring
+- Maintained tooltip functionality and hierarchical structure
+
 ### 2025-01-XX - Training Feature Implementation
 **Status**: ✅ COMPLETED
 **Description**: Implemented comprehensive training system with predefined questions and popup interface

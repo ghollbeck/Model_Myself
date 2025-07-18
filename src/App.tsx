@@ -9,6 +9,7 @@ import TrainingPopup from './components/TrainingPopup';
 import Logs from './components/Logs';
 import ResponseDisplay from './components/ResponseDisplay';
 import KnowledgeGraphD3, { KnowledgeGraphHandle } from './components/KnowledgeGraphD3';
+import { getTrainingCategories } from './utils/api';
 
 const App: React.FC = () => {
     const [response, setResponse] = useState<string>('');
@@ -28,6 +29,8 @@ const App: React.FC = () => {
     const [popupContent, setPopupContent] = useState<string>('');
     const [popupTitle, setPopupTitle] = useState<string>('');
     const [showTrainingPopup, setShowTrainingPopup] = useState<boolean>(false);
+    const [trainingCategories, setTrainingCategories] = useState<any[]>([]);
+    const [loadingCategories, setLoadingCategories] = useState<boolean>(false);
 
     const dropdownRef = useRef<HTMLDivElement>(null);
     const uploadDropdownRef = useRef<HTMLDivElement>(null);
@@ -305,10 +308,34 @@ const App: React.FC = () => {
         setLogs(prev => [...prev, logEntry]);
     };
 
+    const loadTrainingCategories = async () => {
+        try {
+            setLoadingCategories(true);
+            log('Loading training categories from backend...');
+            
+            const data = await getTrainingCategories();
+            setTrainingCategories(data.categories);
+            
+            log(`Training categories loaded: ${data.categories.length} categories`);
+            data.categories.forEach((category: any) => {
+                log(`  - ${category.category}: ${category.total_questions} questions`);
+            });
+            
+        } catch (error: any) {
+            log(`Error loading training categories: ${error.message}`);
+            setError(error.message);
+        } finally {
+            setLoadingCategories(false);
+        }
+    };
+
     useEffect(() => {
         log('Frontend application started');
         log('Hello World from Frontend!');
         log('MongoDB integration enabled - port 8088');
+        
+        // Load training categories on startup
+        loadTrainingCategories();
     }, []);
 
     // Handle click outside dropdown to close it
@@ -500,7 +527,6 @@ const App: React.FC = () => {
         setSelectedTraining(option);
         setShowTrainingDropdown(false);
         log(`Training option selected: ${option}`);
-        // TODO: Implement training functionality
     };
 
     const handleUploadTypeSelect = (option: string) => {
@@ -538,6 +564,8 @@ const App: React.FC = () => {
             knowledgeGraphRef.current.refresh();
             log('Knowledge graph refreshed successfully');
         }
+        // Refresh categories to update question counts
+        loadTrainingCategories();
     };
 
     const formatFileSize = (bytes: number): string => {
@@ -595,12 +623,13 @@ const App: React.FC = () => {
                     formatDate={formatDate}
                 />
                 <TrainingCard
-                    trainingOptions={trainingOptions}
+                    trainingOptions={trainingCategories.map(cat => `${cat.category} (${cat.total_questions} questions)`)}
                     selectedTraining={selectedTraining}
                     showTrainingDropdown={showTrainingDropdown}
                     setShowTrainingDropdown={setShowTrainingDropdown}
                     handleTrainingSelect={handleTrainingSelect}
                     onStartTraining={handleStartTraining}
+                    loadingCategories={loadingCategories}
                 />
                 <InferenceCard
                     onInferenceClick={handleInference}
@@ -627,7 +656,7 @@ const App: React.FC = () => {
             />
             <TrainingPopup
                 showPopup={showTrainingPopup}
-                category={selectedTraining}
+                category={selectedTraining.split(' (')[0]} // Extract category name without question count
                 onClose={() => setShowTrainingPopup(false)}
                 onLog={log}
                 onTrainingComplete={handleTrainingComplete}

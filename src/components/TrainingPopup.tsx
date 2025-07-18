@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import { getTrainingQuestions, saveTrainingAnswer } from '../utils/api';
 
 interface Question {
     id: string;
@@ -7,6 +7,9 @@ interface Question {
     type: 'text' | 'multiple_choice';
     placeholder?: string;
     options?: string[];
+    answered?: boolean;
+    existing_answer?: string | string[];
+    answer_timestamp?: string;
 }
 
 interface TrainingPopupProps {
@@ -25,8 +28,11 @@ const TrainingPopup: React.FC<TrainingPopupProps> = ({ showPopup, category, onCl
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string>('');
     const [answers, setAnswers] = useState<any[]>([]);
-
-    const API_BASE_URL = 'http://localhost:8089';
+    const [hasAnswered, setHasAnswered] = useState(false);
+    const [isSaving, setIsSaving] = useState(false);
+    const [progressData, setProgressData] = useState<{answered_questions: number, progress_percentage: number} | null>(null);
+    const [unsavedAnswers, setUnsavedAnswers] = useState<Set<number>>(new Set());
+    const [unsavedAnswerData, setUnsavedAnswerData] = useState<{[key: number]: string | string[]}>({});
 
     useEffect(() => {
         if (showPopup && category) {
@@ -34,23 +40,49 @@ const TrainingPopup: React.FC<TrainingPopupProps> = ({ showPopup, category, onCl
         }
     }, [showPopup, category]);
 
+    useEffect(() => {
+        // Load existing answer for current question
+        if (questions.length > 0 && currentQuestionIndex < questions.length) {
+            const currentQuestion = questions[currentQuestionIndex];
+            if (currentQuestion.answered && currentQuestion.existing_answer) {
+                if (currentQuestion.type === 'multiple_choice') {
+                    setSelectedOptions(Array.isArray(currentQuestion.existing_answer) ? currentQuestion.existing_answer : [currentQuestion.existing_answer]);
+                } else {
+                    setAnswer(typeof currentQuestion.existing_answer === 'string' ? currentQuestion.existing_answer : currentQuestion.existing_answer[0] || '');
+                }
+                setHasAnswered(true);
+            } else {
+                setAnswer('');
+                setSelectedOptions([]);
+                setHasAnswered(false);
+            }
+        }
+    }, [currentQuestionIndex, questions]);
+
     const fetchQuestions = async () => {
         try {
             setLoading(true);
             setError('');
             onLog(`Fetching questions for category: ${category}`);
             
-            const response = await axios.get(`${API_BASE_URL}/training/questions/${encodeURIComponent(category)}`);
+            const data = await getTrainingQuestions(category);
             
-            setQuestions(response.data.questions);
+            setQuestions(data.questions);
+            setProgressData({
+                answered_questions: data.answered_questions,
+                progress_percentage: data.progress_percentage
+            });
             setCurrentQuestionIndex(0);
             setAnswer('');
             setSelectedOptions([]);
             setAnswers([]);
+            setHasAnswered(false);
+            setUnsavedAnswers(new Set());
+            setUnsavedAnswerData({});
             
-            onLog(`Loaded ${response.data.questions.length} questions for ${category}`);
+            onLog(`Loaded ${data.questions.length} questions for ${category} (${data.answered_questions} already answered)`);
         } catch (err: any) {
-            const errorMessage = err.response?.data?.detail || err.message || 'Failed to fetch questions';
+            const errorMessage = err.message || 'Failed to fetch questions';
             setError(errorMessage);
             onLog(`Error fetching questions: ${errorMessage}`);
         } finally {
@@ -58,64 +90,132 @@ const TrainingPopup: React.FC<TrainingPopupProps> = ({ showPopup, category, onCl
         }
     };
 
-    const handleNextQuestion = async () => {
-        if (!questions[currentQuestionIndex]) return;
-        
-        const currentQuestion = questions[currentQuestionIndex];
-        const currentAnswer = currentQuestion.type === 'multiple_choice' ? selectedOptions : answer;
-        
-        // Validate answer
-        if (!currentAnswer || (Array.isArray(currentAnswer) && currentAnswer.length === 0)) {
-            setError('Please provide an answer before proceeding');
+    const saveProgress = async () => {
+        if (unsavedAnswers.size === 0) {
+            setError('No unsaved answers to save');
             return;
         }
 
         try {
-            setLoading(true);
+            setIsSaving(true);
             setError('');
             
-            // Prepare answer data
-            const answerData = {
-                question_id: currentQuestion.id,
-                question: currentQuestion.question,
-                answer: currentAnswer,
-                answer_type: currentQuestion.type,
-                category: category,
-                timestamp: new Date().toISOString()
-            };
+            const updatedQuestions = [...questions];
+            const savedAnswers: any[] = [];
+            
+            // Save all unsaved answers
+            for (const questionIndex of Array.from(unsavedAnswers)) {
+                const question = questions[questionIndex];
+                if (!question) continue;
+                
+                // Get the answer from our stored unsaved answer data
+                const answerToSave = unsavedAnswerData[questionIndex];
+                
+                // Validate answer
+                if (!answerToSave || (Array.isArray(answerToSave) && answerToSave.length === 0)) {
+                    continue; // Skip if no valid answer
+                }
 
-            // Save answer to backend
-            await axios.post(`${API_BASE_URL}/training/answer`, answerData);
+                // Prepare answer data
+                const answerData = {
+                    question_id: question.id,
+                    question: question.question,
+                    answer: answerToSave,
+                    answer_type: question.type,
+                    category: category,
+                    timestamp: new Date().toISOString()
+                };
+
+                // Save answer using the API function
+                await saveTrainingAnswer(answerData);
+                
+                // Update the question as answered
+                updatedQuestions[questionIndex] = {
+                    ...updatedQuestions[questionIndex],
+                    answered: true,
+                    existing_answer: answerToSave,
+                    answer_timestamp: answerData.timestamp
+                };
+                
+                savedAnswers.push(answerData);
+            }
+            
+            // Update questions state
+            setQuestions(updatedQuestions);
+            
+            // Update progress
+            const answeredCount = updatedQuestions.filter(q => q.answered).length;
+            setProgressData({
+                answered_questions: answeredCount,
+                progress_percentage: (answeredCount / updatedQuestions.length) * 100
+            });
             
             // Add to local answers array
-            setAnswers(prev => [...prev, answerData]);
+            setAnswers(prev => [...prev, ...savedAnswers]);
             
-            onLog(`Answer saved for question ${currentQuestionIndex + 1}/${questions.length}`);
+            // Clear unsaved answers
+            setUnsavedAnswers(new Set());
+            setUnsavedAnswerData({});
             
-            // Move to next question or finish
-            if (currentQuestionIndex < questions.length - 1) {
-                setCurrentQuestionIndex(currentQuestionIndex + 1);
-                setAnswer('');
-                setSelectedOptions([]);
-            } else {
-                // All questions completed
-                onLog(`Training session completed for ${category}!`);
-                onLog('Knowledge graph will be updated automatically...');
-                
-                // Call completion callback to refresh knowledge graph
-                if (onTrainingComplete) {
-                    onTrainingComplete();
-                }
-                
-                onClose();
+            onLog(`Progress saved for ${savedAnswers.length} question(s)`);
+            
+            // Call completion callback to refresh knowledge graph
+            if (onTrainingComplete) {
+                onTrainingComplete();
             }
             
         } catch (err: any) {
-            const errorMessage = err.response?.data?.detail || err.message || 'Failed to save answer';
+            const errorMessage = err.message || 'Failed to save progress';
             setError(errorMessage);
-            onLog(`Error saving answer: ${errorMessage}`);
+            onLog(`Error saving progress: ${errorMessage}`);
         } finally {
-            setLoading(false);
+            setIsSaving(false);
+        }
+    };
+
+    const handleNextQuestion = () => {
+        if (currentQuestionIndex < questions.length - 1) {
+            setCurrentQuestionIndex(currentQuestionIndex + 1);
+            setError('');
+        } else {
+            // All questions completed
+            onLog(`Training session completed for ${category}!`);
+            onLog('All answers have been saved automatically.');
+            onClose();
+        }
+    };
+
+    const handlePreviousQuestion = () => {
+        if (currentQuestionIndex > 0) {
+            setCurrentQuestionIndex(currentQuestionIndex - 1);
+            setError('');
+        }
+    };
+
+    const handleAnswerChange = (newAnswer: string | string[]) => {
+        if (Array.isArray(newAnswer)) {
+            setSelectedOptions(newAnswer);
+        } else {
+            setAnswer(newAnswer);
+        }
+        setHasAnswered(true);
+        
+        // Track this question as having an unsaved answer if it has content
+        if (newAnswer && (Array.isArray(newAnswer) ? newAnswer.length > 0 : newAnswer.trim().length > 0)) {
+            setUnsavedAnswers(prev => new Set([...Array.from(prev), currentQuestionIndex]));
+            setUnsavedAnswerData(prev => ({ ...prev, [currentQuestionIndex]: newAnswer }));
+        } else {
+            // If answer is empty, remove from unsaved answers
+            setUnsavedAnswers(prev => {
+                const newSet = new Set(Array.from(prev));
+                newSet.delete(currentQuestionIndex);
+                return newSet;
+            });
+            setUnsavedAnswerData(prev => {
+                const newData = { ...prev };
+                delete newData[currentQuestionIndex];
+                return newData;
+            });
         }
     };
 
@@ -123,7 +223,7 @@ const TrainingPopup: React.FC<TrainingPopupProps> = ({ showPopup, category, onCl
         const currentQuestion = questions[currentQuestionIndex];
         if (currentQuestion.type === 'multiple_choice') {
             // For multiple choice, allow only one selection
-            setSelectedOptions([option]);
+            handleAnswerChange([option]);
         }
     };
 
@@ -134,6 +234,10 @@ const TrainingPopup: React.FC<TrainingPopupProps> = ({ showPopup, category, onCl
         setSelectedOptions([]);
         setError('');
         setAnswers([]);
+        setHasAnswered(false);
+        setProgressData(null);
+        setUnsavedAnswers(new Set());
+        setUnsavedAnswerData({});
         onClose();
     };
 
@@ -141,6 +245,8 @@ const TrainingPopup: React.FC<TrainingPopupProps> = ({ showPopup, category, onCl
 
     const currentQuestion = questions[currentQuestionIndex];
     const progress = questions.length > 0 ? ((currentQuestionIndex + 1) / questions.length) * 100 : 0;
+    const currentAnswer = currentQuestion?.type === 'multiple_choice' ? selectedOptions : answer;
+    const hasCurrentAnswer = currentAnswer && (Array.isArray(currentAnswer) ? currentAnswer.length > 0 : currentAnswer.length > 0);
 
     return (
         <div className="popup-overlay" onClick={handleClose}>
@@ -154,9 +260,16 @@ const TrainingPopup: React.FC<TrainingPopupProps> = ({ showPopup, category, onCl
                     <div className="progress-bar">
                         <div className="progress-fill" style={{ width: `${progress}%` }}></div>
                     </div>
-                    <p className="progress-text">
-                        Question {currentQuestionIndex + 1} of {questions.length}
-                    </p>
+                    <div className="progress-info">
+                        <p className="progress-text">
+                            Question {currentQuestionIndex + 1} of {questions.length}
+                        </p>
+                        {progressData && (
+                            <p className="progress-stats">
+                                {progressData.answered_questions} answered ({progressData.progress_percentage.toFixed(1)}% complete)
+                            </p>
+                        )}
+                    </div>
                 </div>
 
                 <div className="training-category">
@@ -168,44 +281,76 @@ const TrainingPopup: React.FC<TrainingPopupProps> = ({ showPopup, category, onCl
 
                 {currentQuestion && !loading && (
                     <div className="question-container">
-                        <h4 className="question-text">{currentQuestion.question}</h4>
+                        <div className="question-header">
+                            <h4 className="question-text">{currentQuestion.question}</h4>
+                            {currentQuestion.answered && (
+                                <span className="answered-indicator">✓ Answered</span>
+                            )}
+                        </div>
                         
-                        {currentQuestion.type === 'text' && (
-                            <div className="text-input-container">
-                                <textarea
-                                    value={answer}
-                                    onChange={(e) => setAnswer(e.target.value)}
-                                    placeholder={currentQuestion.placeholder || 'Enter your answer...'}
-                                    className="training-textarea"
-                                    rows={4}
-                                />
-                            </div>
-                        )}
+                        <div className="question-content">
+                            {currentQuestion.type === 'text' && (
+                                <div className="text-input-container">
+                                    <textarea
+                                        value={answer}
+                                        onChange={(e) => handleAnswerChange(e.target.value)}
+                                        placeholder={currentQuestion.placeholder || 'Enter your answer...'}
+                                        className="training-textarea"
+                                        rows={4}
+                                    />
+                                </div>
+                            )}
 
-                        {currentQuestion.type === 'multiple_choice' && currentQuestion.options && (
-                            <div className="multiple-choice-container">
-                                {currentQuestion.options.map((option, index) => (
-                                    <div 
-                                        key={index}
-                                        className={`choice-option ${selectedOptions.includes(option) ? 'selected' : ''}`}
-                                        onClick={() => handleOptionSelect(option)}
-                                    >
-                                        <div className="choice-radio">
-                                            {selectedOptions.includes(option) && <div className="radio-selected"></div>}
+                            {currentQuestion.type === 'multiple_choice' && currentQuestion.options && (
+                                <div className="multiple-choice-container">
+                                    {currentQuestion.options.map((option, index) => (
+                                        <div 
+                                            key={index}
+                                            className={`choice-option ${selectedOptions.includes(option) ? 'selected' : ''}`}
+                                            onClick={() => handleOptionSelect(option)}
+                                        >
+                                            <div className="choice-radio">
+                                                {selectedOptions.includes(option) && <div className="radio-selected"></div>}
+                                            </div>
+                                            <span className="choice-text">{option}</span>
                                         </div>
-                                        <span className="choice-text">{option}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        )}
+                                    ))}
+                                </div>
+                            )}
+                        </div>
 
                         <div className="training-actions">
+                            <div className="navigation-buttons">
+                                <button 
+                                    className="nav-btn prev-btn"
+                                    onClick={handlePreviousQuestion}
+                                    disabled={currentQuestionIndex === 0}
+                                >
+                                    ← Previous
+                                </button>
+                                
+                                <button 
+                                    className="nav-btn next-btn"
+                                    onClick={handleNextQuestion}
+                                    disabled={currentQuestionIndex === questions.length - 1}
+                                >
+                                    Next →
+                                </button>
+                            </div>
+                            
                             <button 
-                                className="next-btn"
-                                onClick={handleNextQuestion}
-                                disabled={loading || (!answer && selectedOptions.length === 0)}
+                                className="save-progress-btn"
+                                onClick={saveProgress}
+                                disabled={isSaving || unsavedAnswers.size === 0}
                             >
-                                {currentQuestionIndex === questions.length - 1 ? 'Finish' : 'Next'}
+                                {isSaving ? 'Saving...' : `Save Progress ${unsavedAnswers.size > 0 ? `(${unsavedAnswers.size})` : ''}`}
+                            </button>
+                            
+                            <button 
+                                className="finish-btn"
+                                onClick={handleClose}
+                            >
+                                {currentQuestionIndex === questions.length - 1 ? 'Finish' : 'Close'}
                             </button>
                         </div>
                     </div>

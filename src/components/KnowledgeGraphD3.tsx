@@ -11,6 +11,8 @@ interface NodeDatum extends d3.SimulationNodeDatum {
   training_category?: string;
   answer_type?: string;
   timestamp?: string;
+  filename?: string;
+  document_id?: string;
 }
 
 interface LinkDatum {
@@ -142,16 +144,13 @@ const KnowledgeGraphD3 = forwardRef<KnowledgeGraphHandle>((props, ref) => {
       .enter().append('circle')
       .attr('r', NODE_RADIUS)
       .attr('fill', d => {
-        if (d.type === 'training_main') {
-          return TRAINING_MAIN_COLOR;
+        if (d.type === 'document_main' || d.type === 'document_instance') {
+          return '#4169e1'; // Blue for document nodes
         }
-        if (d.type === 'training_category') {
-          return TRAINING_CATEGORY_COLOR;
+        if (d.type === 'training_main' || d.type === 'training_category' || d.type === 'training_qa') {
+          return '#ff6b6b'; // Red for all training-related nodes
         }
-        if (d.type === 'training_qa') {
-          return TRAINING_NODE_COLOR;
-        }
-        return CATEGORY_COLORS[d.id] || CATEGORY_COLORS[d.type || ''] || '#ccc';
+        return '#808080'; // Gray for all other nodes
       })
       .attr('stroke', '#333')
       .attr('stroke-width', 2)

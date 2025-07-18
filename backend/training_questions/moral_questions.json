@@ -1,0 +1,1937 @@
+{
+  "category": "Moral questions",
+  "category_key": "moral",
+  "existing_answers": [
+    {
+      "question_id": "moral_1",
+      "question": "What core values guide your decisions?",
+      "answer": "list me all the setting optino i have \nfor these functions",
+      "answer_type": "text",
+      "category": "Moral questions",
+      "timestamp": "2025-07-16T10:58:43.044186"
+    },
+    {
+      "question_id": "moral_2",
+      "question": "When facing an ethical dilemma, you typically:",
+      "answer": [
+        "Seek guidance"
+      ],
+      "answer_type": "multiple_choice",
+      "category": "Moral questions",
+      "timestamp": "2025-07-16T10:58:44.334945"
+    },
+    {
+      "question_id": "moral_3",
+      "question": "How important is it to you to help others?",
+      "answer": [
+        "Somewhat important"
+      ],
+      "answer_type": "multiple_choice",
+      "category": "Moral questions",
+      "timestamp": "2025-07-16T10:58:45.351975"
+    },
+    {
+      "question_id": "moral_4",
+      "question": "What does 'doing the right thing' mean to you?",
+      "answer": "list me all the setting optino i have \nfor these functions",
+      "answer_type": "text",
+      "category": "Moral questions",
+      "timestamp": "2025-07-16T10:58:46.535234"
+    },
+    {
+      "question_id": "moral_5",
+      "question": "How do you handle situations where your values conflict?",
+      "answer": "list me all the setting optino i have \nfor these functions",
+      "answer_type": "text",
+      "category": "Moral questions",
+      "timestamp": "2025-07-16T10:58:47.781808"
+    },
+    {
+      "question_id": "moral_1",
+      "question": "What core values guide your decisions?",
+      "answer": "list me all the setting optino i have \nfor these functionslist me all the setting optino i have \nfor these functions",
+      "answer_type": "text",
+      "category": "Moral questions",
+      "timestamp": "2025-07-16T10:58:58.111114"
+    },
+    {
+      "question_id": "moral_2",
+      "question": "When facing an ethical dilemma, you typically:",
+      "answer": [
+        "Seek guidance"
+      ],
+      "answer_type": "multiple_choice",
+      "category": "Moral questions",
+      "timestamp": "2025-07-16T10:58:59.235704"
+    },
+    {
+      "question_id": "moral_3",
+      "question": "How important is it to you to help others?",
+      "answer": [
+        "Extremely important"
+      ],
+      "answer_type": "multiple_choice",
+      "category": "Moral questions",
+      "timestamp": "2025-07-16T10:59:01.385981"
+    },
+    {
+      "question_id": "moral_4",
+      "question": "What does 'doing the right thing' mean to you?",
+      "answer": "list me all the setting optino i have \nfor these functionslist me all the setting optino i have \nfor these functions",
+      "answer_type": "text",
+      "category": "Moral questions",
+      "timestamp": "2025-07-16T10:59:03.219191"
+    },
+    {
+      "question_id": "moral_5",
+      "question": "How do you handle situations where your values conflict?",
+      "answer": "list me all the setting optino i have \nfor these functionslist me all the setting optino i have \nfor these functions",
+      "answer_type": "text",
+      "category": "Moral questions",
+      "timestamp": "2025-07-16T10:59:04.358584"
+    }
+  ],
+  "predefined_questions": [
+    {
+      "id": "moral_1",
+      "question": "What core values guide your decisions?",
+      "type": "text"
+    },
+    {
+      "id": "moral_2",
+      "question": "When facing an ethical dilemma, you typically:",
+      "type": "multiple_choice",
+      "options": [
+        "Consider consequences",
+        "Follow principles",
+        "Seek guidance",
+        "Trust intuition",
+        "Weigh all perspectives"
+      ]
+    },
+    {
+      "id": "moral_3",
+      "question": "How important is it to you to help others?",
+      "type": "multiple_choice",
+      "options": [
+        "Extremely important",
+        "Very important",
+        "Somewhat important",
+        "Depends on situation",
+        "Not a priority"
+      ]
+    },
+    {
+      "id": "moral_4",
+      "question": "What does 'doing the right thing' mean to you?",
+      "type": "text"
+    },
+    {
+      "id": "moral_5",
+      "question": "How do you handle situations where your values conflict?",
+      "type": "text"
+    }
+  ],
+  "additional_questions": [
+    {
+      "id": "moral_6",
+      "question": "Additional moral question 1: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_7",
+      "question": "Additional moral question 2: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_8",
+      "question": "Additional moral question 3: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_9",
+      "question": "Additional moral question 4: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_10",
+      "question": "Additional moral question 5: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_11",
+      "question": "Additional moral question 6: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_12",
+      "question": "Additional moral question 7: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_13",
+      "question": "Additional moral question 8: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_14",
+      "question": "Additional moral question 9: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_15",
+      "question": "Additional moral question 10: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_16",
+      "question": "Additional moral question 11: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_17",
+      "question": "Additional moral question 12: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_18",
+      "question": "Additional moral question 13: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_19",
+      "question": "Additional moral question 14: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_20",
+      "question": "Additional moral question 15: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_21",
+      "question": "Additional moral question 16: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_22",
+      "question": "Additional moral question 17: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_23",
+      "question": "Additional moral question 18: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_24",
+      "question": "Additional moral question 19: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_25",
+      "question": "Additional moral question 20: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_26",
+      "question": "Additional moral question 21: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_27",
+      "question": "Additional moral question 22: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_28",
+      "question": "Additional moral question 23: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_29",
+      "question": "Additional moral question 24: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_30",
+      "question": "Additional moral question 25: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_31",
+      "question": "Additional moral question 26: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_32",
+      "question": "Additional moral question 27: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_33",
+      "question": "Additional moral question 28: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_34",
+      "question": "Additional moral question 29: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_35",
+      "question": "Additional moral question 30: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_36",
+      "question": "Additional moral question 31: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_37",
+      "question": "Additional moral question 32: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_38",
+      "question": "Additional moral question 33: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_39",
+      "question": "Additional moral question 34: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_40",
+      "question": "Additional moral question 35: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_41",
+      "question": "Additional moral question 36: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_42",
+      "question": "Additional moral question 37: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_43",
+      "question": "Additional moral question 38: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_44",
+      "question": "Additional moral question 39: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_45",
+      "question": "Additional moral question 40: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_46",
+      "question": "Additional moral question 41: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_47",
+      "question": "Additional moral question 42: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_48",
+      "question": "Additional moral question 43: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_49",
+      "question": "Additional moral question 44: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_50",
+      "question": "Additional moral question 45: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_51",
+      "question": "Additional moral question 46: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_52",
+      "question": "Additional moral question 47: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_53",
+      "question": "Additional moral question 48: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_54",
+      "question": "Additional moral question 49: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_55",
+      "question": "Additional moral question 50: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_56",
+      "question": "Additional moral question 51: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_57",
+      "question": "Additional moral question 52: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_58",
+      "question": "Additional moral question 53: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_59",
+      "question": "Additional moral question 54: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_60",
+      "question": "Additional moral question 55: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_61",
+      "question": "Additional moral question 56: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_62",
+      "question": "Additional moral question 57: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_63",
+      "question": "Additional moral question 58: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_64",
+      "question": "Additional moral question 59: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_65",
+      "question": "Additional moral question 60: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_66",
+      "question": "Additional moral question 61: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_67",
+      "question": "Additional moral question 62: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_68",
+      "question": "Additional moral question 63: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_69",
+      "question": "Additional moral question 64: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_70",
+      "question": "Additional moral question 65: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_71",
+      "question": "Additional moral question 66: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_72",
+      "question": "Additional moral question 67: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_73",
+      "question": "Additional moral question 68: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_74",
+      "question": "Additional moral question 69: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_75",
+      "question": "Additional moral question 70: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_76",
+      "question": "Additional moral question 71: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_77",
+      "question": "Additional moral question 72: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_78",
+      "question": "Additional moral question 73: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_79",
+      "question": "Additional moral question 74: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_80",
+      "question": "Additional moral question 75: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_81",
+      "question": "Additional moral question 76: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_82",
+      "question": "Additional moral question 77: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_83",
+      "question": "Additional moral question 78: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_84",
+      "question": "Additional moral question 79: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_85",
+      "question": "Additional moral question 80: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_86",
+      "question": "Additional moral question 81: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_87",
+      "question": "Additional moral question 82: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_88",
+      "question": "Additional moral question 83: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_89",
+      "question": "Additional moral question 84: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_90",
+      "question": "Additional moral question 85: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_91",
+      "question": "Additional moral question 86: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_92",
+      "question": "Additional moral question 87: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_93",
+      "question": "Additional moral question 88: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_94",
+      "question": "Additional moral question 89: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_95",
+      "question": "Additional moral question 90: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_96",
+      "question": "Additional moral question 91: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_97",
+      "question": "Additional moral question 92: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_98",
+      "question": "Additional moral question 93: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_99",
+      "question": "Additional moral question 94: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_100",
+      "question": "Additional moral question 95: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_101",
+      "question": "Additional moral question 96: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_102",
+      "question": "Additional moral question 97: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_103",
+      "question": "Additional moral question 98: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_104",
+      "question": "Additional moral question 99: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_105",
+      "question": "Additional moral question 100: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_106",
+      "question": "Additional moral question 101: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_107",
+      "question": "Additional moral question 102: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_108",
+      "question": "Additional moral question 103: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_109",
+      "question": "Additional moral question 104: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_110",
+      "question": "Additional moral question 105: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_111",
+      "question": "Additional moral question 106: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_112",
+      "question": "Additional moral question 107: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_113",
+      "question": "Additional moral question 108: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_114",
+      "question": "Additional moral question 109: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_115",
+      "question": "Additional moral question 110: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_116",
+      "question": "Additional moral question 111: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_117",
+      "question": "Additional moral question 112: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_118",
+      "question": "Additional moral question 113: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_119",
+      "question": "Additional moral question 114: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_120",
+      "question": "Additional moral question 115: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_121",
+      "question": "Additional moral question 116: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_122",
+      "question": "Additional moral question 117: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_123",
+      "question": "Additional moral question 118: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_124",
+      "question": "Additional moral question 119: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_125",
+      "question": "Additional moral question 120: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_126",
+      "question": "Additional moral question 121: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_127",
+      "question": "Additional moral question 122: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_128",
+      "question": "Additional moral question 123: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_129",
+      "question": "Additional moral question 124: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_130",
+      "question": "Additional moral question 125: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_131",
+      "question": "Additional moral question 126: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_132",
+      "question": "Additional moral question 127: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_133",
+      "question": "Additional moral question 128: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_134",
+      "question": "Additional moral question 129: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_135",
+      "question": "Additional moral question 130: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_136",
+      "question": "Additional moral question 131: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_137",
+      "question": "Additional moral question 132: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_138",
+      "question": "Additional moral question 133: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_139",
+      "question": "Additional moral question 134: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_140",
+      "question": "Additional moral question 135: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_141",
+      "question": "Additional moral question 136: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_142",
+      "question": "Additional moral question 137: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_143",
+      "question": "Additional moral question 138: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_144",
+      "question": "Additional moral question 139: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_145",
+      "question": "Additional moral question 140: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_146",
+      "question": "Additional moral question 141: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_147",
+      "question": "Additional moral question 142: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_148",
+      "question": "Additional moral question 143: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_149",
+      "question": "Additional moral question 144: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_150",
+      "question": "Additional moral question 145: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_151",
+      "question": "Additional moral question 146: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_152",
+      "question": "Additional moral question 147: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_153",
+      "question": "Additional moral question 148: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_154",
+      "question": "Additional moral question 149: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_155",
+      "question": "Additional moral question 150: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_156",
+      "question": "Additional moral question 151: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_157",
+      "question": "Additional moral question 152: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_158",
+      "question": "Additional moral question 153: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_159",
+      "question": "Additional moral question 154: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_160",
+      "question": "Additional moral question 155: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_161",
+      "question": "Additional moral question 156: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_162",
+      "question": "Additional moral question 157: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_163",
+      "question": "Additional moral question 158: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_164",
+      "question": "Additional moral question 159: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_165",
+      "question": "Additional moral question 160: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_166",
+      "question": "Additional moral question 161: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_167",
+      "question": "Additional moral question 162: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_168",
+      "question": "Additional moral question 163: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_169",
+      "question": "Additional moral question 164: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_170",
+      "question": "Additional moral question 165: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_171",
+      "question": "Additional moral question 166: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_172",
+      "question": "Additional moral question 167: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_173",
+      "question": "Additional moral question 168: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_174",
+      "question": "Additional moral question 169: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_175",
+      "question": "Additional moral question 170: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_176",
+      "question": "Additional moral question 171: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_177",
+      "question": "Additional moral question 172: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_178",
+      "question": "Additional moral question 173: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_179",
+      "question": "Additional moral question 174: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_180",
+      "question": "Additional moral question 175: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_181",
+      "question": "Additional moral question 176: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_182",
+      "question": "Additional moral question 177: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_183",
+      "question": "Additional moral question 178: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_184",
+      "question": "Additional moral question 179: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_185",
+      "question": "Additional moral question 180: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_186",
+      "question": "Additional moral question 181: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_187",
+      "question": "Additional moral question 182: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_188",
+      "question": "Additional moral question 183: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_189",
+      "question": "Additional moral question 184: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_190",
+      "question": "Additional moral question 185: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_191",
+      "question": "Additional moral question 186: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_192",
+      "question": "Additional moral question 187: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_193",
+      "question": "Additional moral question 188: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_194",
+      "question": "Additional moral question 189: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_195",
+      "question": "Additional moral question 190: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_196",
+      "question": "Additional moral question 191: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_197",
+      "question": "Additional moral question 192: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_198",
+      "question": "Additional moral question 193: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_199",
+      "question": "Additional moral question 194: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_200",
+      "question": "Additional moral question 195: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_201",
+      "question": "Additional moral question 196: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_202",
+      "question": "Additional moral question 197: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_203",
+      "question": "Additional moral question 198: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_204",
+      "question": "Additional moral question 199: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_205",
+      "question": "Additional moral question 200: How do you approach this aspect of your life?",
+      "type": "text",
+      "placeholder": "Share your thoughts..."
+    },
+    {
+      "id": "moral_206",
+      "question": "Additional moral multiple choice question 1: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_207",
+      "question": "Additional moral multiple choice question 2: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_208",
+      "question": "Additional moral multiple choice question 3: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_209",
+      "question": "Additional moral multiple choice question 4: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_210",
+      "question": "Additional moral multiple choice question 5: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_211",
+      "question": "Additional moral multiple choice question 6: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_212",
+      "question": "Additional moral multiple choice question 7: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_213",
+      "question": "Additional moral multiple choice question 8: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_214",
+      "question": "Additional moral multiple choice question 9: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_215",
+      "question": "Additional moral multiple choice question 10: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_216",
+      "question": "Additional moral multiple choice question 11: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_217",
+      "question": "Additional moral multiple choice question 12: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_218",
+      "question": "Additional moral multiple choice question 13: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_219",
+      "question": "Additional moral multiple choice question 14: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_220",
+      "question": "Additional moral multiple choice question 15: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_221",
+      "question": "Additional moral multiple choice question 16: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_222",
+      "question": "Additional moral multiple choice question 17: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_223",
+      "question": "Additional moral multiple choice question 18: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_224",
+      "question": "Additional moral multiple choice question 19: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_225",
+      "question": "Additional moral multiple choice question 20: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_226",
+      "question": "Additional moral multiple choice question 21: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_227",
+      "question": "Additional moral multiple choice question 22: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_228",
+      "question": "Additional moral multiple choice question 23: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_229",
+      "question": "Additional moral multiple choice question 24: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_230",
+      "question": "Additional moral multiple choice question 25: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_231",
+      "question": "Additional moral multiple choice question 26: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_232",
+      "question": "Additional moral multiple choice question 27: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_233",
+      "question": "Additional moral multiple choice question 28: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_234",
+      "question": "Additional moral multiple choice question 29: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_235",
+      "question": "Additional moral multiple choice question 30: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_236",
+      "question": "Additional moral multiple choice question 31: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_237",
+      "question": "Additional moral multiple choice question 32: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_238",
+      "question": "Additional moral multiple choice question 33: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_239",
+      "question": "Additional moral multiple choice question 34: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_240",
+      "question": "Additional moral multiple choice question 35: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_241",
+      "question": "Additional moral multiple choice question 36: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_242",
+      "question": "Additional moral multiple choice question 37: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_243",
+      "question": "Additional moral multiple choice question 38: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_244",
+      "question": "Additional moral multiple choice question 39: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_245",
+      "question": "Additional moral multiple choice question 40: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_246",
+      "question": "Additional moral multiple choice question 41: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_247",
+      "question": "Additional moral multiple choice question 42: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_248",
+      "question": "Additional moral multiple choice question 43: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_249",
+      "question": "Additional moral multiple choice question 44: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_250",
+      "question": "Additional moral multiple choice question 45: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_251",
+      "question": "Additional moral multiple choice question 46: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_252",
+      "question": "Additional moral multiple choice question 47: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_253",
+      "question": "Additional moral multiple choice question 48: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_254",
+      "question": "Additional moral multiple choice question 49: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    },
+    {
+      "id": "moral_255",
+      "question": "Additional moral multiple choice question 50: What is your preference?",
+      "type": "multiple_choice",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D",
+        "Option E"
+      ]
+    }
+  ]
+}

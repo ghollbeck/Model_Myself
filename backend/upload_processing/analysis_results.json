@@ -1,0 +1,19 @@
+[
+  {
+    "document_id": "affa4953-df94-4da8-ada5-3183c3246786",
+    "filename": "_chat 8 copy.txt",
+    "file_type": "text/plain",
+    "file_size": 122448,
+    "analysis_type": "knowledge_extraction",
+    "status": "completed",
+    "results": {
+      "knowledge_extraction": {
+        "error": "ANTHROPIC_API_KEY environment variable is not set"
+      }
+    },
+    "error_message": null,
+    "started_at": "2025-07-17T00:42:08.181576",
+    "completed_at": "2025-07-17T00:42:08.203907",
+    "processing_time_seconds": 0.020463
+  }
+]
