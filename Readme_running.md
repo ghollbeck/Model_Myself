@@ -562,7 +562,7 @@ Each category contains comprehensive mock information:
 1. **Setup**: Run `./setup_mongodb.sh` to install and configure MongoDB
 2. **Start Backend**: `python main.py` (runs on port 8088)
 3. **Start Frontend**: `npm start` (runs on port 3000)
-4. **Access**: Open http://localhost:3000
+4. **Access**: Open http://localhost:3001
 5. **Upload**: Drag & drop files or use file picker
 6. **Manage**: View statistics, download, or delete documents
 
@@ -936,7 +936,7 @@ Model_Myself/
 
 #### Startup Instructions
 1. **Backend**: `cd backend && python main.py` (runs on localhost:8000)
-2. **Frontend**: `npm run` (runs on localhost:3000)
+2. **Frontend**: `npm run` (runs on localhost:3001)
 3. **Dependencies**: Install with `cd backend && pip install -r requirements.txt` and `npm install`
 
 #### API Endpoints
@@ -967,7 +967,7 @@ Model_Myself/
 - **Framework**: FastAPI (Python)
 - **Server**: Uvicorn ASGI server
 - **Logging**: Python logging module with file and console handlers
-- **CORS**: Configured for localhost:3000 frontend access
+- **CORS**: Configured for localhost:3001 frontend access
 - **Response Format**: JSON with structured message format
 
 ### Communication Flow

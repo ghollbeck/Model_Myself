@@ -101,12 +101,12 @@ npm start
 ## 🧪 Testing the Implementation
 
 ### 1. Access the Application
-- Frontend: http://localhost:3000
+- Frontend: http://localhost:3001
 - Backend API: http://localhost:8088
 - Health Check: http://localhost:8088/health
 
 ### 2. Test Document Upload
-1. Open http://localhost:3000
+1. Open http://localhost:3001
 2. Use the "Document Upload" card
 3. Drag & drop files or click to select
 4. Click "Upload to MongoDB"
@@ -209,7 +209,7 @@ The implementation is production-ready and includes:
 - ✅ Error handling
 - ✅ Modern UI/UX
 
-You can now upload documents and they will be stored in MongoDB with full management capabilities accessible at http://localhost:3000 with the backend running on port 8088 as requested.
+You can now upload documents and they will be stored in MongoDB with full management capabilities accessible at http://localhost:3001 with the backend running on port 8088 as requested.
 
 ## 📊 Performance Features
 

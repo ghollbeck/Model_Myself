@@ -57,7 +57,7 @@ npm install
 npm run
 ```
 
-The frontend will be available at `http://localhost:3000`
+The frontend will be available at `http://localhost:3001`
 
 ## Features
 

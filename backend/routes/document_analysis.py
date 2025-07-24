@@ -146,51 +146,68 @@ async def get_document_info(document_id: str):
     """Get document information from MongoDB or local storage"""
     logger.debug(f"get_document_info() called with id={document_id}")
     try:
-        if mongodb_connected:
+        # Get current MongoDB connection status from main module
+        main_mod = sys.modules.get("main")
+        current_mongodb_connected = False
+        current_database = None
+        
+        if main_mod:
+            current_mongodb_connected = getattr(main_mod, "mongodb_connected", False)
+            current_database = getattr(main_mod, "database", None)
+        
+        logger.debug(f"Current MongoDB connection status: {current_mongodb_connected}")
+        
+        if current_mongodb_connected and current_database is not None:
             from bson import ObjectId
-            document = await database[COLLECTION_NAME].find_one({"_id": ObjectId(document_id)})
-            if document:
-                return {
-                    "id": str(document["_id"]),
-                    "filename": document["filename"],
-                    "file_type": document["file_type"],
-                    "file_size": document["file_size"],
-                    "content_type": document["content_type"],
-                    "upload_date": document["upload_date"],
-                    "category": document.get("category", ""),
-                    "local_path": None
-                }
+            try:
+                document = await current_database[COLLECTION_NAME].find_one({"_id": ObjectId(document_id)})
+                logger.debug(f"MongoDB query result: {document is not None}")
+                if document:
+                    return {
+                        "id": str(document["_id"]),
+                        "filename": document["filename"],
+                        "file_type": document["file_type"],
+                        "file_size": document["file_size"],
+                        "content_type": document["content_type"],
+                        "upload_date": document["upload_date"],
+                        "category": document.get("category", ""),
+                        "file_id": document.get("file_id"),  # Include file_id for GridFS retrieval
+                        "local_path": None
+                    }
+            except Exception as e:
+                logger.error(f"MongoDB query failed: {e}")
+                # Fall through to local storage
+        
+        # Local storage fallback
+        if callable(load_local_metadata):
+            metadata = load_local_metadata()
         else:
-            # Local storage
-            if callable(load_local_metadata):
-                metadata = load_local_metadata()
-            else:
-                # Direct file loading if import failed
-                try:
-                    with open(METADATA_FILE, 'r') as f:
-                        metadata = json.load(f)
-                except:
-                    metadata = []
+            # Direct file loading if import failed
+            try:
+                with open(METADATA_FILE, 'r') as f:
+                    metadata = json.load(f)
+            except:
+                metadata = []
 
-            logger.debug(f"Loaded local metadata entries: {len(metadata)}")
-            if metadata:
-                sample_ids = [m.get('id') for m in metadata[:10]]
-                logger.debug(f"First 10 document IDs in metadata: {sample_ids}")
+        logger.debug(f"Loaded local metadata entries: {len(metadata)}")
+        if metadata:
+            sample_ids = [m.get('id') for m in metadata[:10]]
+            logger.debug(f"First 10 document IDs in metadata: {sample_ids}")
 
-            document = next((doc for doc in metadata if doc["id"] == document_id), None)
-            if not document:
-                logger.warning(f"Document id {document_id} not found in local metadata. Total entries: {len(metadata)}")
-            if document:
-                return {
-                    "id": document["id"],
-                    "filename": document["filename"],
-                    "file_type": document["file_type"],
-                    "file_size": document["file_size"],
-                    "content_type": document["content_type"],
-                    "upload_date": document["upload_date"],
-                    "category": document.get("category", ""),
-                    "local_path": document.get("local_path")
-                }
+        document = next((doc for doc in metadata if doc["id"] == document_id), None)
+        if not document:
+            logger.warning(f"Document id {document_id} not found in local metadata. Total entries: {len(metadata)}")
+        if document:
+            return {
+                "id": document["id"],
+                "filename": document["filename"],
+                "file_type": document["file_type"],
+                "file_size": document["file_size"],
+                "content_type": document["content_type"],
+                "upload_date": document["upload_date"],
+                "category": document.get("category", ""),
+                "local_path": document.get("local_path")
+            }
     except Exception as e:
         logger.error(f"Error getting document info for {document_id}: {e}")
     return None
@@ -251,49 +268,78 @@ async def analyze_document_placeholder(document_info: dict, analysis_types: List
         logger.warning(f"Knowledge extraction returned error: {kg_res['error']}")
     if kg_res and isinstance(kg_res, dict) and kg_res.get("entries") and KnowledgeGraph:
         try:
+            logger.info(f"Processing {len(kg_res['entries'])} knowledge graph entries from document analysis")
             kg = KnowledgeGraph()
             # Load existing graph if present
             try:
                 kg.load("knowledge_graph.pkl")
-            except Exception:
-                pass
+                logger.info(f"Loaded existing knowledge graph with {len(kg.graph.nodes)} nodes and {len(kg.graph.edges)} edges")
+            except Exception as e:
+                logger.info(f"No existing knowledge graph found, creating new one: {e}")
 
             # Ensure main Documents hub exists
             if "Documents" not in kg.graph:
                 kg.graph.add_node("Documents", type="document_main", color="blue")
+                logger.info("🔵 Created main 'Documents' hub node - marked BLUE (type=document_main)")
+            else:
+                logger.info("🔵 Main 'Documents' hub node already exists - ensuring BLUE color")
+                kg.graph.nodes["Documents"]["color"] = "blue"  # Ensure it stays blue
 
             # Create (or fetch existing) node for this specific document
             doc_node_id = f"Doc_{document_info['id']}"
             if doc_node_id not in kg.graph:
                 kg.graph.add_node(
                     doc_node_id,
-                    type="document_instance",
+                    type="document_instance",  # This ensures blue color in frontend visualization
                     filename=document_info.get("filename", ""),
                     document_id=document_info["id"],
-                    color="blue"
+                    file_type=document_info.get("file_type", ""),
+                    file_size=document_info.get("file_size", 0),
+                    upload_date=str(document_info.get("upload_date", "")),
+                    analysis_timestamp=datetime.now().isoformat(),
+                    color="blue"  # Explicit blue color marking for knowledge graph visualization
                 )
                 kg.graph.add_edge("Documents", doc_node_id)
+                logger.info(f"🔵 Created BLUE document node: {doc_node_id} for file '{document_info.get('filename', '')}' (type=document_instance)")
+            else:
+                # Update existing node with latest analysis timestamp
+                kg.graph.nodes[doc_node_id]["analysis_timestamp"] = datetime.now().isoformat()
+                logger.info(f"🔵 Updated existing BLUE document node: {doc_node_id} with new analysis timestamp")
 
             # Add each extracted entry and connect to this document node
-            for entry in kg_res["entries"]:
+            added_entries = 0
+            for i, entry in enumerate(kg_res["entries"]):
                 category = entry.get("category", "Knowledge")
                 question = entry.get("question", "Unknown question")
                 answer = entry.get("answer", "")
 
+                logger.debug(f"Processing entry {i+1}: Category='{category}', Question='{question[:50]}...', Answer='{answer[:50]}...'")
+
                 # Use fallback category if unknown
                 try:
                     node_id = kg.add_entry(category, question, answer)
-                except ValueError:
+                    logger.debug(f"Added knowledge entry with node ID: {node_id}")
+                except ValueError as e:
+                    logger.warning(f"Category '{category}' not valid, using 'Knowledge' fallback: {e}")
                     node_id = kg.add_entry("Knowledge", question, answer)
 
                 kg.add_relationship(doc_node_id, node_id, "contains")
+                logger.debug(f"Added relationship: {doc_node_id} -> {node_id} (contains)")
+                added_entries += 1
 
+            logger.info(f"Successfully processed {added_entries} knowledge graph entries")
+            
+            # Save the updated graph
             kg.save("knowledge_graph.pkl")
+            logger.info(f"Saved updated knowledge graph with {len(kg.graph.nodes)} nodes and {len(kg.graph.edges)} edges to knowledge_graph.pkl")
+            
             logger.info(
-                f"Stored {len(kg_res['entries'])} entries to knowledge graph under node {doc_node_id}"
+                f"Knowledge graph integration complete: {added_entries} entries from document '{document_info.get('filename', '')}' stored under node {doc_node_id}"
             )
         except Exception as e:
             logger.error(f"Failed to store entries in knowledge graph: {e}")
+            import traceback
+            logger.error(f"Knowledge graph error traceback: {traceback.format_exc()}")
 
     return results
 
@@ -368,6 +414,13 @@ async def process_document_analysis(document_id: str, analysis_types: List[str])
 @router.get("/routes")
 async def get_available_routes():
     """Get information about all available document analysis routes"""
+    # Get current MongoDB connection status from main module
+    main_mod = sys.modules.get("main")
+    current_mongodb_connected = False
+    
+    if main_mod:
+        current_mongodb_connected = getattr(main_mod, "mongodb_connected", False)
+    
     routes_info = {
         "analysis_routes": [
             {
@@ -403,7 +456,7 @@ async def get_available_routes():
             }
         ],
         "upload_system_info": {
-            "storage_mode": "MongoDB" if mongodb_connected else "Local Storage",
+            "storage_mode": "MongoDB" if current_mongodb_connected else "Local Storage",
             "upload_endpoint": "/upload",
             "documents_endpoint": "/documents",
             "supported_formats": ["txt", "pdf", "doc", "docx", "json", "csv", "md", "html", "xml"]

@@ -13,6 +13,10 @@ interface NodeDatum extends d3.SimulationNodeDatum {
   timestamp?: string;
   filename?: string;
   document_id?: string;
+  file_type?: string;
+  file_size?: number;
+  upload_date?: string;
+  analysis_timestamp?: string;
 }
 
 interface LinkDatum {
@@ -118,16 +122,84 @@ const KnowledgeGraphD3 = forwardRef<KnowledgeGraphHandle>((props, ref) => {
 
     const g = svg.append('g');
 
-    // Simulation with responsive forces optimized for mobile
-    const linkDistance = isMobile ? 60 : Math.min(120, width * 0.15);
-    const chargeStrength = isMobile ? -150 : -Math.min(350, width * 0.4);
-    const collisionRadius = isMobile ? NODE_RADIUS + 2 : NODE_RADIUS + 5;
+    // Enhanced simulation with better clustering and positioning
+    const linkDistance = isMobile ? 40 : 280; // Reduced base distance
+    const chargeStrength = isMobile ? -100 : -2000; // Reduced repulsion for tighter clustering
+    const collisionRadius = isMobile ? NODE_RADIUS + 1 : NODE_RADIUS + 3; // Smaller collision for tighter groups
+    
+    // Create positioning zones for different node types
+    const centerX = width / 2;
+    const centerY = height / 2;
+    const radius = Math.min(width, height) * 0.25; // Zone radius
+    
+    // Define positions for main hubs in a circular arrangement
+    const hubPositions: Record<string, {x: number, y: number}> = {
+      'Documents': { x: centerX, y: centerY - radius * 0.8 }, // Top
+      'Training': { x: centerX - radius * 0.7, y: centerY + radius * 0.4 }, // Bottom left
+      'Knowledge': { x: centerX + radius * 0.3, y: centerY - radius * 0.3 }, // Top right
+      'Feelings': { x: centerX - radius * 0.8, y: centerY - radius * 0.1 }, // Left
+      'Personalities': { x: centerX + radius * 0.8, y: centerY + radius * 0.1 }, // Right
+      'Preferences': { x: centerX + radius * 0.5, y: centerY + radius * 0.6 }, // Bottom right
+      'Morals': { x: centerX - radius * 0.3, y: centerY + radius * 0.7 }, // Bottom
+      'ImportanceOfPeople': { x: centerX - radius * 0.6, y: centerY - radius * 0.6 }, // Top left
+      'AutomaticQuestions': { x: centerX + radius * 0.7, y: centerY - radius * 0.2 } // Right middle
+    };
     
     const simulation = d3.forceSimulation<NodeDatum>(data.nodes)
-      .force('link', d3.forceLink<NodeDatum, LinkDatum>(data.links).id(d => d.id).distance(linkDistance))
+      .force('link', d3.forceLink<NodeDatum, LinkDatum>(data.links)
+        .id(d => d.id)
+        .distance(d => {
+          // Variable link distances based on relationship type
+          if (d.relation === 'contains') return linkDistance * 0.6; // Tighter connection for document contents
+          if (d.source === 'Documents' || d.target === 'Documents') return linkDistance * 1.8; // Medium distance to document hub
+          if (d.source === 'Training' || d.target === 'Training') return linkDistance * 0.8; // Medium distance to training hub
+          return linkDistance; // Default distance
+        })
+        .strength(1.2) // Stronger links for better clustering
+      )
       .force('charge', d3.forceManyBody().strength(chargeStrength))
-      .force('center', d3.forceCenter(width / 2, height / 2))
-      .force('collision', d3.forceCollide(collisionRadius));
+      .force('center', d3.forceCenter(centerX, centerY))
+      .force('collision', d3.forceCollide(collisionRadius))
+      // Add positioning forces for main hub nodes
+      .force('positioning', d3.forceX<NodeDatum>()
+        .x(d => {
+          if (hubPositions[d.id]) return hubPositions[d.id].x;
+          // For category nodes, position them closer to center
+          if (d.type === 'category') return centerX + (Math.random() - 0.5) * radius * 0.5;
+          return centerX;
+        })
+        .strength(d => {
+          if (hubPositions[d.id]) return 0.3; // Strong positioning for main hubs
+          if (d.type === 'category') return 0.1; // Moderate positioning for categories  
+          return 0.05; // Weak positioning for other nodes
+        })
+      )
+      .force('positioning-y', d3.forceY<NodeDatum>()
+        .y(d => {
+          if (hubPositions[d.id]) return hubPositions[d.id].y;
+          // For category nodes, position them closer to center
+          if (d.type === 'category') return centerY + (Math.random() - 0.5) * radius * 0.5;
+          return centerY;
+        })
+        .strength(d => {
+          if (hubPositions[d.id]) return 0.3; // Strong positioning for main hubs
+          if (d.type === 'category') return 0.1; // Moderate positioning for categories
+          return 0.05; // Weak positioning for other nodes
+        })
+      )
+      // Add radial clustering force to group node types
+      .force('radial', d3.forceRadial<NodeDatum>()
+        .radius(d => {
+          if (d.type === 'document_main' || d.type === 'training_main') return radius * 0.6; // Main hubs at medium distance
+          if (d.type === 'category') return radius * 0.4; // Categories closer to center
+          if (d.type === 'document_instance') return radius * 0.3; // Document instances close to center
+          if (d.type === 'training_category') return radius * 0.5; // Training categories at medium distance
+          return radius * 0.8; // QA nodes further out but contained
+        })
+        .x(centerX)
+        .y(centerY)
+        .strength(0.1) // Gentle radial clustering
+      );
 
     // Draw links
     const link = g.append('g')
@@ -147,10 +219,25 @@ const KnowledgeGraphD3 = forwardRef<KnowledgeGraphHandle>((props, ref) => {
         if (d.type === 'document_main' || d.type === 'document_instance') {
           return '#4169e1'; // Blue for document nodes
         }
-        if (d.type === 'training_main' || d.type === 'training_category' || d.type === 'training_qa') {
-          return '#ff6b6b'; // Red for all training-related nodes
+        if (d.type === 'training_main') {
+          return TRAINING_MAIN_COLOR; // Blue for main training hub
         }
-        return '#808080'; // Gray for all other nodes
+        if (d.type === 'training_category') {
+          return TRAINING_CATEGORY_COLOR; // Light blue for training categories
+        }
+        if (d.type === 'training_qa') {
+          return TRAINING_NODE_COLOR; // Red for training Q&A nodes
+        }
+        if (d.type === 'category') {
+          return CATEGORY_COLORS[d.id] || '#808080'; // Use defined category colors
+        }
+        // For Q&A nodes, inherit color from parent category
+        for (const [category, color] of Object.entries(CATEGORY_COLORS)) {
+          if (d.id.startsWith(category + ':')) {
+            return color;
+          }
+        }
+        return '#808080'; // Gray for other nodes
       })
       .attr('stroke', '#333')
       .attr('stroke-width', 2)
@@ -163,7 +250,28 @@ const KnowledgeGraphD3 = forwardRef<KnowledgeGraphHandle>((props, ref) => {
     node.on('mouseover', (event, d) => {
       let tooltipContent = `<strong>${d.id}</strong><br/>`;
       
-      if (d.type === 'training_main') {
+      if (d.type === 'document_main') {
+        tooltipContent += `<em>📁 Documents Hub</em><br/>`;
+        tooltipContent += `<em>Contains all analyzed documents and their extracted knowledge</em>`;
+      } else if (d.type === 'document_instance') {
+        tooltipContent += `<em>📄 Document:</em> ${d.filename || 'Unknown file'}<br/>`;
+        if (d.file_type) {
+          tooltipContent += `<em>Type:</em> ${d.file_type}<br/>`;
+        }
+        if (d.file_size) {
+          const sizeKB = Math.round(d.file_size / 1024);
+          tooltipContent += `<em>Size:</em> ${sizeKB} KB<br/>`;
+        }
+        if (d.upload_date) {
+          const uploadDate = new Date(d.upload_date).toLocaleDateString();
+          tooltipContent += `<em>Uploaded:</em> ${uploadDate}<br/>`;
+        }
+        if (d.analysis_timestamp) {
+          const analysisDate = new Date(d.analysis_timestamp).toLocaleDateString();
+          tooltipContent += `<em>Analyzed:</em> ${analysisDate}<br/>`;
+        }
+        tooltipContent += `<em>Contains extracted knowledge from document analysis</em>`;
+      } else if (d.type === 'training_main') {
         tooltipContent += `<em>Main training hub containing all training categories</em>`;
       } else if (d.type === 'training_category') {
         tooltipContent += `<em>Training Category:</em> ${d.training_category}<br/>`;

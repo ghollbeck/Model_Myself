@@ -378,7 +378,7 @@ class KnowledgeGraphExtractor(BaseProcessor):
         # Maximum tokens in prompt to avoid overrun
         self.max_prompt_chars = self.config.get("max_prompt_chars", 8000)
         # OpenAI model name (can be overridden via env var or config)
-        self.model_name = self.config.get("model", os.getenv("ANTHROPIC_MODEL", "claude-3-sonnet-20240229"))
+        self.model_name = self.config.get("model", os.getenv("ANTHROPIC_MODEL", "claude-3-haiku-20240307"))
 
     async def process(self, content: str, document_info: Dict[str, Any]) -> Dict[str, Any]:
         """Call LLM to extract knowledge graph entries from content"""
@@ -401,7 +401,9 @@ class KnowledgeGraphExtractor(BaseProcessor):
                 "from raw user text. For any facts you can identify that relate to the user's "
                 "personality, memories, preferences, morals, feelings, or general knowledge, "
                 "output a JSON array where each element has: category, question, answer. "
-                "Return ONLY valid JSON. Use existing categories if clear, otherwise pick the closest."
+                "IMPORTANT: Keep answers concise (1-2 sentences max). Always return a JSON array "
+                "(even if only one entry), not a single object. Use existing categories if clear, "
+                "otherwise pick the closest. Return ONLY valid JSON array - no other text or explanation."
             )
             user_prompt = f"""Extract knowledge graph entries from the following text:\n\n""" + content
 
@@ -410,35 +412,43 @@ class KnowledgeGraphExtractor(BaseProcessor):
 
             def _call_anthropic():
                 try:
-                    # Use messages (Claude 3)
+                    logger.info(f"Making Anthropic API call with model: {self.model_name}")
+                    logger.debug(f"System prompt: {system_prompt}")
+                    logger.debug(f"User prompt length: {len(user_prompt)} characters")
+                    logger.debug(f"Content preview: {content[:200]}...")
+                    
+                    # Use messages API (Claude 3) - this is the current supported API
                     resp = client.messages.create(
                         model=self.model_name,
-                        max_tokens=512,
+                        max_tokens=1024,  # Increased from 512 to ensure complete JSON responses
                         temperature=0.2,
                         system=system_prompt,
                         messages=[{"role": "user", "content": user_prompt}]
                     )
+                    
+                    logger.info(f"Anthropic API call successful - Response usage: {getattr(resp, 'usage', 'N/A')}")
+                    
                     # Combine text blocks
                     text_blocks = []
-                    for block in resp.content:
+                    for i, block in enumerate(resp.content):
                         if hasattr(block, "text"):
                             text_blocks.append(block.text)
-                    return "".join(text_blocks)
-                except Exception:
-                    # Fallback to completion API if messages not supported
-                    prompt = f"{anthropic.HUMAN_PROMPT} {system_prompt}\n{user_prompt}{anthropic.AI_PROMPT}"
-                    resp = client.completions.create(
-                        model="claude-v1",
-                        max_tokens_to_sample=512,
-                        temperature=0.2,
-                        prompt=prompt
-                    )
-                    return resp.completion
+                            logger.debug(f"Response block {i}: {block.text[:100]}...")
+                    
+                    full_response = "".join(text_blocks)
+                    logger.info(f"Combined response length: {len(full_response)} characters")
+                    return full_response
+                except Exception as e:
+                    logger.error(f"Anthropic Messages API call failed: {e}")
+                    raise e
 
             content_str = await loop.run_in_executor(None, _call_anthropic)
 
             # ---------------- Robust JSON parsing ----------------
             raw_output = content_str.strip()
+            logger.debug(f"Raw LLM output: {raw_output[:500]}...")  # Log first 500 chars for debugging
+            
+            # Remove code fences if present
             if raw_output.startswith("```"):
                 # Remove leading and trailing fences and optional language tag
                 # Pattern: ```json\n...\n```
@@ -447,42 +457,80 @@ class KnowledgeGraphExtractor(BaseProcessor):
                     raw_output = "```".join(parts[1:-1])  # middle section(s)
                 raw_output = raw_output.lstrip().removeprefix("json").lstrip("\n").strip()
 
+            # Try to find JSON array/object if wrapped in text
+            json_match = re.search(r'(\[.*\]|\{.*\})', raw_output, re.DOTALL)
+            if json_match:
+                raw_output = json_match.group(1)
+
+            logger.debug(f"Cleaned output for JSON parsing: {raw_output[:300]}...")
+
             try:
                 entries = _json.loads(raw_output)
+                logger.debug(f"Successfully parsed JSON with {len(entries) if isinstance(entries, list) else 'unknown'} entries")
+                
+                # Handle single object by converting to array
+                if isinstance(entries, dict):
+                    logger.info("LLM returned single object, converting to array")
+                    entries = [entries]
+                    
             except Exception as e:
                 logger.error(
-                    f"Failed to parse LLM JSON output after cleanup: {e}\nSnippet: {raw_output[:300]}"
+                    f"Failed to parse LLM JSON output: {e}\nRaw output: {raw_output[:500]}"
                 )
-                return {"error": "LLM output parse error"}
+                return {"error": f"LLM output parse error: {str(e)}", "raw_output": raw_output[:200]}
 
             logger.info(
                 f"KnowledgeGraphExtractor parsed {len(entries) if isinstance(entries, list) else 'unknown'} entries from LLM"
             )
 
             if not isinstance(entries, list):
+                logger.error(f"LLM output not a JSON array, got type: {type(entries)}")
                 return {"error": "LLM output not a JSON array"}
 
             # Validate each entry structure
             valid_entries = []
-            for entry in entries:
+            invalid_entries = []
+            for i, entry in enumerate(entries):
                 if (
                     isinstance(entry, dict)
                     and "category" in entry
                     and "question" in entry
                     and "answer" in entry
                 ):
-                    valid_entries.append({
+                    valid_entry = {
                         "category": str(entry["category"].strip()),
                         "question": str(entry["question"].strip()),
                         "answer": str(entry["answer"].strip())
-                    })
+                    }
+                    valid_entries.append(valid_entry)
+                    logger.debug(f"Valid entry {i+1}: {valid_entry['category']} - {valid_entry['question'][:50]}...")
+                else:
+                    invalid_entries.append({"index": i, "entry": entry, "missing_fields": [
+                        field for field in ["category", "question", "answer"] 
+                        if field not in entry or not str(entry.get(field, "")).strip()
+                    ]})
+                    logger.warning(f"Invalid entry {i+1}: {entry} - Missing or empty fields")
+            
+            logger.info(f"Entry validation complete: {len(valid_entries)} valid, {len(invalid_entries)} invalid")
+            
+            if invalid_entries:
+                logger.warning(f"Invalid entries details: {invalid_entries}")
+                
             if not valid_entries:
+                logger.error("No valid entries extracted from LLM response")
                 return {"error": "No valid entries extracted"}
 
+            logger.info(f"Knowledge extraction successful: {len(valid_entries)} entries ready for knowledge graph integration")
             return {
                 "entries": valid_entries,
                 "entry_count": len(valid_entries),
-                "model": self.model_name
+                "invalid_count": len(invalid_entries),
+                "model": self.model_name,
+                "processing_stats": {
+                    "total_raw_entries": len(entries),
+                    "valid_entries": len(valid_entries),
+                    "invalid_entries": len(invalid_entries)
+                }
             }
         except Exception as e:
             logger.error(f"Knowledge graph extraction failed: {e}")

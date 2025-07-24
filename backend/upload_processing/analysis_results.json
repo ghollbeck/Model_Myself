@@ -1,6 +1,6 @@
 [
   {
-    "document_id": "affa4953-df94-4da8-ada5-3183c3246786",
+    "document_id": "6882688cefa535ab38b104cd",
     "filename": "_chat 8 copy.txt",
     "file_type": "text/plain",
     "file_size": 122448,
@@ -8,12 +8,64 @@
     "status": "completed",
     "results": {
       "knowledge_extraction": {
-        "error": "ANTHROPIC_API_KEY environment variable is not set"
+        "error": "LLM output parse error: Expecting ',' delimiter: line 20 column 42 (char 1212)",
+        "raw_output": "[\n  {\n    \"category\": \"Personality\",\n    \"question\": \"What can be inferred about Jisbel's personality?\",\n    \"answer\": \"Jisbel seems to be a caring and thoughtful person who is willing to communicate "
       }
     },
     "error_message": null,
-    "started_at": "2025-07-17T00:42:08.181576",
-    "completed_at": "2025-07-17T00:42:08.203907",
-    "processing_time_seconds": 0.020463
+    "started_at": "2025-07-24T22:12:57.729996",
+    "completed_at": "2025-07-24T22:13:01.300396",
+    "processing_time_seconds": 3.570014
+  },
+  {
+    "document_id": "6882694f762e17e142359544",
+    "filename": "_chat 8 copy.txt",
+    "file_type": "text/plain",
+    "file_size": 122448,
+    "analysis_type": "knowledge_extraction",
+    "status": "completed",
+    "results": {
+      "knowledge_extraction": {
+        "entries": [
+          {
+            "category": "Personality",
+            "question": "What is Jisbel's personality like?",
+            "answer": "Jisbel seems to be a caring and thoughtful person who is focused on their own growth and therapy."
+          },
+          {
+            "category": "Memories",
+            "question": "What past experiences or struggles have Jisbel and Gabor had together?",
+            "answer": "Jisbel and Gabor have had some disagreements and struggles in the past, but Jisbel acknowledges the efforts Gabor has made to understand them and the love they have shown."
+          },
+          {
+            "category": "Preferences",
+            "question": "What are Jisbel's future plans and preferences?",
+            "answer": "Jisbel is planning to start a master's program in international law in February, and may do an internship in Japan. They are also focused on their physical and mental health through therapy and medication."
+          },
+          {
+            "category": "Feelings",
+            "question": "How does Jisbel feel about their relationship with Gabor?",
+            "answer": "Jisbel seems to have mixed feelings about their relationship with Gabor, acknowledging the difficulties they have faced but also expressing appreciation for Gabor's efforts and a desire to potentially meet up again."
+          },
+          {
+            "category": "General Knowledge",
+            "question": "What are Gabor's future plans?",
+            "answer": "Gabor plans to finish his master's degree in 2025, potentially do a thesis in the US, and then explore options like starting a company, doing another master's, or taking a vacation. He is also focused on personal growth and being ready for a new relationship."
+          }
+        ],
+        "entry_count": 5,
+        "invalid_count": 0,
+        "model": "claude-3-haiku-20240307",
+        "processing_stats": {
+          "total_raw_entries": 5,
+          "valid_entries": 5,
+          "invalid_entries": 0
+        }
+      }
+    },
+    "error_message": null,
+    "started_at": "2025-07-24T22:13:20.964717",
+    "completed_at": "2025-07-24T22:13:25.320215",
+    "processing_time_seconds": 4.355282
   }
 ]

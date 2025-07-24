@@ -246,5 +246,77 @@
     "answer_type": "multiple_choice",
     "category": "Preferences",
     "timestamp": "2025-07-16T22:08:24.375000+00:00"
+  },
+  {
+    "question_id": "personality_10",
+    "question": "How has your personality evolved over the years?",
+    "answer": "r",
+    "answer_type": "text",
+    "category": "Questions about my feelings and 5 personalities",
+    "timestamp": "2025-07-24T17:01:12.535000+00:00"
+  },
+  {
+    "question_id": "personality_11",
+    "question": "What personality traits do you think you inherited vs developed?",
+    "answer": "r",
+    "answer_type": "text",
+    "category": "Questions about my feelings and 5 personalities",
+    "timestamp": "2025-07-24T17:01:12.548000+00:00"
+  },
+  {
+    "question_id": "personality_12",
+    "question": "How do you express your emotions differently in various situations?",
+    "answer": "r",
+    "answer_type": "text",
+    "category": "Questions about my feelings and 5 personalities",
+    "timestamp": "2025-07-24T17:01:12.557000+00:00"
+  },
+  {
+    "question_id": "personality_13",
+    "question": "What triggers your strongest emotional responses?",
+    "answer": "r",
+    "answer_type": "text",
+    "category": "Questions about my feelings and 5 personalities",
+    "timestamp": "2025-07-24T17:01:12.561000+00:00"
+  },
+  {
+    "question_id": "personality_14",
+    "question": "How do you handle criticism of your personality?",
+    "answer": "t",
+    "answer_type": "text",
+    "category": "Questions about my feelings and 5 personalities",
+    "timestamp": "2025-07-24T17:01:12.569000+00:00"
+  },
+  {
+    "question_id": "personality_15",
+    "question": "What personality traits help you in relationships?",
+    "answer": " z",
+    "answer_type": "text",
+    "category": "Questions about my feelings and 5 personalities",
+    "timestamp": "2025-07-24T17:01:12.572000+00:00"
+  },
+  {
+    "question_id": "personality_16",
+    "question": "How do you adapt your personality in professional settings?",
+    "answer": "t",
+    "answer_type": "text",
+    "category": "Questions about my feelings and 5 personalities",
+    "timestamp": "2025-07-24T17:01:12.574000+00:00"
+  },
+  {
+    "question_id": "personality_17",
+    "question": "What aspects of your personality do you find most challenging?",
+    "answer": "e",
+    "answer_type": "text",
+    "category": "Questions about my feelings and 5 personalities",
+    "timestamp": "2025-07-24T17:01:12.577000+00:00"
+  },
+  {
+    "question_id": "personality_18",
+    "question": "How do you maintain authenticity while adapting to social situations?",
+    "answer": "w",
+    "answer_type": "text",
+    "category": "Questions about my feelings and 5 personalities",
+    "timestamp": "2025-07-24T17:01:12.579000+00:00"
   }
 ]

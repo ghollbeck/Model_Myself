@@ -32,7 +32,7 @@ backend/*.log
 backend/.env
 backend/venv/
 backend/__pycache__/
-backend/uploads/
+# backend/uploads/
 backend/.mypy_cache/
 backend/.pytest_cache/
 backend/.DS_Store

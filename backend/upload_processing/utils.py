@@ -51,25 +51,35 @@ async def get_file_content(document_info: Dict[str, Any]) -> Optional[str]:
             database = None
             fs_bucket = None
         
-        if mongodb_connected and fs_bucket:
+        logger.debug(f"get_file_content - MongoDB connected: {mongodb_connected}")
+        
+        if mongodb_connected and fs_bucket is not None:
             # Get from MongoDB GridFS
             file_id = document_info.get("file_id")
+            logger.debug(f"Attempting to retrieve file with ID: {file_id}")
             if file_id:
-                grid_out = await fs_bucket.open_download_stream(file_id)
-                content_bytes = await grid_out.read()
-                
-                # Try to decode as text
                 try:
-                    return content_bytes.decode('utf-8')
-                except UnicodeDecodeError:
-                    # Try other encodings
-                    for encoding in ['latin-1', 'cp1252', 'iso-8859-1']:
-                        try:
-                            return content_bytes.decode(encoding)
-                        except UnicodeDecodeError:
-                            continue
-                    logger.warning(f"Could not decode content for file {document_info.get('filename')}")
+                    grid_out = await fs_bucket.open_download_stream(file_id)
+                    content_bytes = await grid_out.read()
+                    logger.debug(f"Retrieved {len(content_bytes)} bytes from GridFS")
+                    
+                    # Try to decode as text
+                    try:
+                        return content_bytes.decode('utf-8')
+                    except UnicodeDecodeError:
+                        # Try other encodings
+                        for encoding in ['latin-1', 'cp1252', 'iso-8859-1']:
+                            try:
+                                return content_bytes.decode(encoding)
+                            except UnicodeDecodeError:
+                                continue
+                        logger.warning(f"Could not decode content for file {document_info.get('filename')}")
+                        return None
+                except Exception as e:
+                    logger.error(f"Error retrieving file from GridFS: {e}")
                     return None
+            else:
+                logger.warning(f"No file_id found in document_info for {document_info.get('filename')}")
         else:
             # Get from local storage
             local_path = document_info.get("local_path")
